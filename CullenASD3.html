@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Cullen Family DNA - Population Model for ASD Studies</TITLE>
+<META NAME="KEYWORDS" CONTENT="dna, genetics, cullen, genealogy">
+<META NAME="DESCRIPTION" CONTENT="DNA testing and study of physical traits as applied to Cullen family history.">
+</HEAD>
+
+<BODY BACKGROUND="DNATile.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="DNATrait.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="DNATrait.html">DNA & Family Traits</A> page.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Population Model<BR>for ASD Studies<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Population Model Used for the Study of ASD Statistics</B></FONT></CENTER>
+
+<br><br><center><img src="ASDTree.gif" border="0" width="400" height="300"></center>
+
+<br><br><b>The (crude) diagram above describes the STR mutation model and population distribution for an assumed mutation rate ( w ) equal to 0.1 per generation in this example. The mutations in this model are assumed to be single-step symmetric and constraint-free. The Average Mutation Period ( m<sub>p</sub> )is the reciprocal of the mutation rate and is expressed in average generations per mutation. The very first generation is Generation 0 ( G<sub>0</sub> or G=0 ) and is at the top of the triangle with a mutational population ( P<sub>G</sub> ) of one. Subsequent generations have a mutational population twenty times that of the previous generation. The mutational population is that population required such that the least likely STR values have on average one occurrence each - these would be the STR values at the outside ends of each generation with a count ( or what we will call a T-value ) of one. We've defined the mutational population this way so that the sums of the probabilities of all the possible STR values will add up to one in accordance with traditional probability distributions. The mutational population is defined as:</b>
+
+<br><br><center><table width="25%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr><td align="center"><b>P<sub>G</sub> = ( 2 <sup>.</sup> m<sub>p</sub> )<sup>G</sup></b></td></tr></table></center>
+
+<br><br><b>The mutational population is simply twice the average mutation period raised to the G'th power and is equal to the sum of all the T-values in that row. We use twice the average mutation period because we need to account for mutations in the positive and negative directions. The value R along the base of the triangle is the relative change in the STR repeat value since the founding generation. An STR repeat value one higher than the founder would result in an R value of (+1). An STR repeat value one lower than the founder would result in an R value of (-1). The T-value can thus be interpreted as: the expected number out of the mutational population ( P<sub>G</sub> ) for any given generation ( G ) that will on average have a final relative change in STR repeat value ( R ) as compared to the STR repeat value of the founding haplotype.</b>
+
+<br><br><b>Generation One. There is one chance in ten of a mutation occurring and one chance in two that the mutation will occur in the positive direction. There is also one chance in two that, if a mutation does occur, it will occur in the negative direction. Therefore, in a population of twenty we should expect, on average, one mutation in the positive direction and one in the negative direction. The lines connecting Generations Zero and One show this statistical average. Every T-value in every generation in the tree behaves the same way. Whatever the T-value is at that point, it is multiplied by twenty ( 2 * m<sub>p</sub> ). One in twenty will mutate in the positive direction ( slanted line down to the right ) and one in twenty will mutate in the negative direction ( slanted line down to the left ). Eighteen ( 2 * m<sub>p</sub> - 2 ) out of twenty will continue straight down the triangle with no relative change in STR repeat counts.</b>
+
+<br><br><b>Each new generation is defined by the generation prior. In fact, each T-value in the new generation is the sum of the values on the connecting lines radiating down to it. For example: Generation Three, R = -1, the T-value is 975. The lines connecting down to it from Generation Two have T-values of 1 + 648 + 326 = 975. The mutation population for Generation Three is P<sub>3</sub> = 8000 so we can say that, with a mutation rate of 0.1, there is a 975/8000 chance (12.19%) that a STR repeat value will have an observed change by one count in the negative direction by the third generation from the founder. There is an equal chance that a STR repeat value will have an observed change by one count in the positive direction. The chance that there will be no observed change in STR repeat counts by three generations would be 5940/8000 or 74.25% chance. The total of all probabilities in any given generation will always be 100%.</b>
+
+<br><br><b>Overall, there is an expected pattern in the T-values defining the mutational tree. Each row of T-values is in fact a set of trinomial coefficients resulting from raising a characteristic polynomial to the power of the generation ( G ). The specific polynomial ( using z as the generic variable ) is dependent on the average mutation period and is:</b>
+
+<br><br><center><table width="25%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr><td align="center"><b>[ 1 + ( 2 <sup>.</sup> m<sub>p</sub> - 2)z + z<sup>2</sup> ]<sup>G</sup></b></td></tr></table></center>
+
+<br><br><b>We'll now take note that the distribution of STR repeat values in a haplotype population is actually a trinomial distribution that closely approximates the normal distribution for large values of G as compared to m<sub>p</sub>. With the information we have now, it would be appropriate at this point to uncover the statistical properties of our trinomial distribution. For any generation the expected or mean value of R is equal to zero trivially since our trinomial distribution is symmetric about zero. The variance is a bit trickier but can be most easily accomplished by using an alternative formula for variance, sometimes referred to as the running sum formula for variance. The regular variance formula can also be used to obtain identical results with an extra algebraic manipulation. Variance here will be denoted by ( v ) and the running sum equation is:</b>
+
+<br><br><center><table width="50%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr valign="middle"><td align="right"><b>v = </b></td>
+<td align="center"><b>Sum(R<sup>2</sup>) - [ Sum(R) ]<sup>2</sup> / P<sub>G</sub><br><hr width="80%" size="1">P<sub>G</sub></b></td></tr>
+</table></center>
+
+<br><br><b>The easy part of the trick here is to realize that the second term in the numerator is equal to zero since the sum of all R is equal to zero. The not-so-easy part of the trick is to realize that the sum of the squares of all R can be derived from the trinomial properties of the mutational tree. For any generation ( G ), the sum of the squares of all R is equal to two times ( G ) times P<sub>(G-1)</sub> or the mutational population of the previous generation ( G - 1 ). Substitute this into the running sum equation for variance and we have:</b>
+
+<br><br><center><table width="40%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr valign="middle"><td align="right"><b>v = </b></td>
+<td align="center"><b>2 <sup>.</sup> G <sup>.</sup> P<sub>(G-1)</sub><hr width="80%" size="1">P<sub>G</sub></b></td></tr>
+</table></center>
+
+<br><br><b>If you recall, the ratio of the mutational populations between any generation and the generation prior is twice the mutational period ( m<sub>p</sub> ), which leaves ' 2 <sup>.</sup> m<sub>p</sub> ' in the denominator.</b>
+
+<br><br><center><table width="30%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr valign="middle"><td align="right"><b>v = </b></td>
+<td align="center"><b>2 <sup>.</sup> G<hr width="80%" size="1">2 <sup>.</sup> m<sub>p</sub></b></td></tr>
+</table></center>
+
+<br><br><b>The '2' in the numerator cancels the '2' in the denominator. Recall finally that the mutational period is just the inverse of the mutation rate ( w ) and we are left with:</b>
+
+<br><br><center><table width="20%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr valign="middle"><td align="right"><b>v = </b></td>
+<td align="center"><b> G <sup>.</sup> w </b></td></tr>
+</table></center>
+
+<br><br><b>Which proves what we already suspect. The variance in STR repeat values in an ideal theoretical haplotype population increases linearly with time at a rate determined by the mutation rate. This proof verifies the idea of variance increasing linearly over time and also verifies that such increases are perfectly in agreement with the concept of the inability of ASD calculations to determine ( in theory ) the number of identical haplotype founders that are responsible for a descendant haplotype population. The T-values from the trinomial summation agree with the concept of a single haplotype founder being responsible for all descendants in a family-tree arrangement. The figures also agree with the concept of every member of a haplotype population being descended from separate yet identical haplotype founders. This simplifies computer simulation enormously.</b>
+
+<br><br><b>We will now develop the required mathematics to actually calculate the T-values. Raising polynomials to powers to find T-values quickly becomes an impossible task and we'll be required to perform the calculations for possibly many hundreds of generations from the founder. There is no simple closed form expression for the T-values in the mutational tree but there is a method much easier to implement as compared to taking the powers of a polynomial.</b>
+
+<br><br><b>The following summation will provide the T-value for any generation ( G ), for any relative change in STR repeat value ( R ). The intermediate variable ( k ) is used to reorder the numbering of ( R ) from a range of [ -G thru +G ] to a range of [ 0 thru 2G ]. This is accomplished simply by setting k = R + G. The binomial function with two arguments is the same as the Combination function found on many scientific calculators, nCr(a,b). In this application however, the numbers can get very large very quickly and so a good quality calculator or software package is required to perform the summation. The T-value equation is:</b>
+
+<p><center><table width="75%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr align="center"><td>&nbsp;</td><td><b>G</b></td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><b>T( G , k ) = </b></td><td align="center"><img src="Sigma.gif"></td><td><b>( 2<sup> . </sup>m<sub>p</sub>-2 )<sup>2i-k</sup><sup> . </sup>binomial( G , i )<sup> . </sup>binomial( i , k-i )</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 0</b></td><td>&nbsp;</td></tr>
+<tr><td align="center"><b>where...</b></td><td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td colspan="2"><b>G = Number of Generations from founder.<br>k = G + final relative change in STR repeat value (R).</b></td></tr>
+</table></center>
+
+<br><br><b>One very useful property of the T-value equation is the fact that, though the trinomial tree is composed of integers in the example given, any value for the average mutation period ( m<sub>p</sub> ) is allowed (integer or non-integer ) and the calculation will still provide proper results. The T-values by themselves are not particularly useful for our immediate needs but the results of the T-value equation can be used to calculate a probability distribution, D(G,k), that is just the ratio of the T-value, T(G,k), to the mutational population ( P<sub>G</sub> ) for the generation in question. I've kept the T-value equation separate from D(G,k) or the D-value because there are other uses for T-values besides calculating a probability distribution. The equation for D(G,k) is:</b>
+
+<br><br><center><table width="25%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr valign="middle"><td align="right"><b>D( G , k ) = </b></td>
+<td align="center"><b>T( G , k )<hr width="80%" size="1">P<sub>G</sub></b></td></tr>
+</table></center>
+
+<br><br><b>The value of D(G,k) will be a decimal ( between zero and one ) that represents the probability that an STR value will have an observed change in repeat count ( R ) after ( G ) generations at a given mutation rate ( w ). The value of D(G,k) can also be interpreted as the fraction of the mutational population ( or any sized population ) that will be found to have the change in value ( R ) after ( G ) generations at a given mutation rate ( w ). Note that there is more than one way for an STR repeat value to have an observed change in value ( R ), including any combination of the so-called 'back mutations'. In fact, there is an expression that one can use to calculate exactly how many possible separate mutation paths there are from the founder to the descendant - all that is required is to remove the factor within the summation that figures in the effects of mutation rate. For the calculation of the number of possible mutation paths, we are not so concerned with mutation rates and the probabilities associated with them but rather with whether or not the mutations actually occurred. The formula for possible mutation paths is as follows:</b>
+
+<p><center><table width="65%" border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0">
+<tr align="center"><td>&nbsp;</td><td><b>G</b></td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><b>Paths = </b></td><td align="center"><img src="Sigma.gif"></td><td><b>binomial( G , i )<sup> . </sup>binomial( i , k-i )</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 0</b></td><td>&nbsp;</td></tr>
+<tr><td align="center"><b>where...</b></td><td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td colspan="2"><b>G = Number of Generations from founder.<br>k = G + final relative change in STR repeat value (R).</b></td></tr>
+</table></center>
+
+<br><br><b>As an example of the application of D(G,k) I've run a computer simulation; fifty trials of 1024 members of a haplotype population all descended from separate yet identical haplotype founders. The population was founded 250 generations before present and the STR repeat value we will observe originated with a hypothetical value of zero. The mutation rate in the simulation was 0.00345 for an approximate average mutation period of 290 generations. We could pose the question - how many among the descendant population can be expected to have final STR repeat values of R=+1 ? How many can be expected to have final STR repeat values of R=+2 ? The D-value for R=+1 is 0.19976 or 19.976% which, when multiplied by 1024, turns out to be 204.55 and the D-value for R=+2 ( 0.04174 or 4.174% ), when multiplied by 1024, produces the result 42.74 ( normally we would round these results to integer values ). In the computer simulation the average number of members in the population who had final STR repeat values of R=+1 was 205.3 and the average number of members in the population who had final STR repeat values of R=+2 was 42.84 - which is in excellent agreement. A second run of the experiment produced R=+1 with 209.55 and R=+2 with 41.897 - also in good agreement with the theoretical calculation.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Kurtosis: Fourth Central Moment of the Trinomial Distribution</B></FONT></CENTER>
+
+
+
+<br><br><b>One source of our underestimation of haplotype population ages is the shape of the population distribution. Estimation of variance is accurate for distributions that are nearly normal in shape. Our haplotype populations are not normal distributions but trinomial distributions. The parameter that determines this shape or 'peakedness' is the fourth central moment or the kurtosis of the distribution. The fourth central moment is simply the expected value of the fourth power of an individual sample's distance from the mean of the distribution. The kurtosis is referenced of course to the normal distribution which has a kurtosis equal to three. High values of kurtosis indicate a very peaked distribution and a low value of kurtosis indicates a squat nearly flat-topped distribution.</b>
+
+<br><br><b>The derivation of the formula for kurtosis of the trinomial distribution is similar to our derivation of its variance. For the trinomial distribution of observed changes in STR repeat values ( R ), for any generation ( G ) of interest since the founding of the descendant haplotype population, kurtosis ( u<sub>4</sub> ) is also dependent on the average mutational period ( m<sub>p</sub> ) and has the value:</b>
+
+<br><br><center><table width="35%" bgcolor="#ffffff" border="0" cellpadding="3">
+<tr><td align="right"><b> u<sub>4</sub> = </b></td><td align="center"><b>G <sup>.</sup> ( 4 <sup>.</sup> G - 3 )<br><hr width="75%" size="1">m<sub>p</sub><sup>2</sup></b></td></tr></table></center>
+
+<br><br><b>Note that this is the raw value. The formula simply provides the value for the average data point raised to the fourth power. In order to make a comparison to the Normal Curve, the data points have to be referenced to the standard deviation of the trinomial distribution. The final value must also have '3' subtracted from it in order to agree with the normalized kurtosis of the Normal Curve. As the value of G is allowed to increase towards infinity for any value of  m<sub>p</sub>, both the Normal Distribution and the Trinomial Distribution will end up with the same mean, variance, skewness, and kurtosis. Once this 'normalization' is done, the formula for the kurtosis of the trinomial distribution is simply:</b>
+
+<br><br><center><table width="25%" bgcolor="#ffffff" border="0" cellpadding="3">
+<tr><td align="right"><b> u<sub>4</sub> = </b></td><td align="center"><b>m<sub>p</sub> - 3<br><hr width="75%" size="1">G</b></td></tr></table></center>
+
+<br><br><b>for any m<sub>p</sub>. Normally one finds that these types of equations are undefined for certain ranges of values. However the kurtosis is defined exactly by the above formula for the trinomial distribution when the average mutational period ( m<sub>p</sub> ) is less than or equal to three. The only constraints for our purposes is that  m<sub>p</sub> must be a positive value and G must be, in order to avoid infinities, greater than or equal to one. The value of kurtosis provides a measure of the shape of the distribution. It basically describes how the data points are shifted towards or away from the area between the peak and the tails. You have to be careful because you may alter the shape of the distribution in varying ways and still have the same value of kurtosis for the characteristic shape. In other words, different distributions with the same mean, variance, skewness, and kurtosis may still have different overall distributions. There are an infinite number of moments about the mean and all of them would have to be equal in order for the distributions to be equal.</b>
+
+<br><br><b>In any practical use, since we would not be able to supply a value of G for this equation, it would have to be adequate to insert the estimated age of the haplotype population ( G<sub>e</sub> ) in order to get an estimate of the kurtosis. Since the value of kurtosis is the average or expected value of the FOURTH powers of our individual R-values, any use of kurtosis would result in very large variations in calculated results.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Approximation of the Central Trinomial Coefficients</B></FONT></CENTER>
+
+
+
+<br><br><b>In a previous section of this page, a summation formula was given for the determination of the number of possible mutation paths since the founder for a given generation ( G ) and a final relative change in STR repeat value ( R ). The values obtained from the summation formula are the same as the Trinomial Coefficients, one type of multinomial coefficient of which the Binomial Coefficients ( from Pascal's Triangle ) is a member. The Central Trinomial Coefficients are just those coefficients running down the center column of the triangle. We interpret these values here to indicate the number of possible mutation paths that result in a final relative change in STR repeat value ( R ) of zero for a given generation ( G ). For certain types of calculations this figure is particularly useful but the summation formula is unavoidably slow in producing results for large values of ( G ).</b>
+
+<br><br><b>Since only a few digits of accuracy are required for most of these calculations, I've implemented an approximation method that produces results accurate to ten or eleven or more significant digits for generations exceeding about 1000. Results are accurate to nine significant digits for generations down to about 100 generations and accurate to seven significant digits down to about 21 generations. For generations less than or equal to twenty, I've reverted to the summation formula which boosts results back up to full accuracy of about twelve or thirteen significant digits with reasonable execution times.</b>
+
+<br><br><b>The calculation method I've implemented is to make use of the asymptotic formula and apply a least-squares approximation of the residual. For generations less than 100, a second least-squares approximation was applied to the second set of residuals to boost accuracy for smaller numbers of generations. Rather than apply a third approximation, the summation formula is applied in cases where ( G ) is less than or equal to twenty. In the following formula, ( pi ) is of course an approximation ( 3.14159265358979 ) and 'Sqrt' is the square root operator. ( E<sub>cc</sub> ) is the estimated value of the central coefficient and ( G ) is the number of generations. The following formula is the asymptotic equation, resulting from the comparison between the Normal and Trinomial Distributions, for the central coefficients:</b>
+
+<br><br><center><table width="35%" bgcolor="#ffffff" border="0" cellpadding="3">
+<tr><td align="right"><b> E<sub>cc</sub> = </b></td><td align="center"><b>Sqrt( 3 / G ) <sup>.</sup> 3<sup>G</sup><br><hr width="75%" size="1">2 <sup>.</sup> Sqrt( pi )</b></td></tr></table></center>
+
+<br><br><b>Note that it is no coincidence that there are threes in the above expression. The Trinomial Coefficients have a form that we would recognize as a mutational period of 1.5 generations and we frequently work with expressions containing the value of ( 2<sup>.</sup>m<sub>p</sub> ) which would be ( 3 ) in this case. If you're curious about altering the value of three in the above expression for other values of ( 2<sup>.</sup>m<sub>p</sub> ) then you're thinking along the right lines. For all values of ( G ), the following least-squares approximation of the residuals is applied as a correction to the value of ( E<sub>cc</sub> ) with a surprisingly simple form:</b>
+
+<br><br><center><table width="40%" bgcolor="#ffffff" border="0" cellpadding="3">
+<tr><td align="right"><b> E<sub>cc</sub> = </b></td><td align="center"><b>E<sub>cc</sub><br><hr width="75%" size="1">0.1875 / ( G - 0.1767 ) + 1</b></td></tr></table></center>
+
+<br><br><b>where you may have already noticed that the value ( 0.1875 ) is the decimal form of the fraction ( 3 / 16 ). Hmmm... The above two expressions can actually be considered one large expression as an estimator of the Central Trinomial Coefficients. For values of ( G ) less than or equal to 100, the following least-squares approximation of the residuals is applied, again as a correction to the value of ( E<sub>cc</sub> ):</b>
+
+<br><br><center><table width="40%" bgcolor="#ffffff" border="0" cellpadding="3">
+<tr><td align="right"><b> E<sub>cc</sub> = </b></td><td align="center"><b>E<sub>cc</sub><br><hr width="75%" size="1">1 - 0.04311 / G<sup>3.314</sup></b></td></tr></table></center>
+
+<br><br><b>which results in the final value of ( E<sub>cc</sub> ), the estimate of the Central Trinomial Coefficient of interest. Execution time of the above algorithm is very fast but the results are very very large numbers that quickly overflow the exponential format of most calculators or PC math software. For example, if we set the number of generations ( G ) equal to 5000, then the result on my TI-V200 calculator is a number equal to about 2.7907954431 EE +2383 ( accurate to about eleven significant digits ), a number with 2384 decimal digits. The execution time was about 0.21 seconds. The actual value, verified on computer, is 2.79079544311158 EE +2383.</b>
+
+<br><br><b>To circumvent numeric limitations in exponential formats, the calculation was done using base ten logarithms and by performing math on the mantissa and exponent separately. This allows much larger values of the Central Trinomial Coefficients to be calculated and examined. From the asymptotic formula given above, it can be seen that, as ( G ) approaches infinity, the ratio of E<sub>cc</sub>( G ) to E<sub>cc</sub>( G-1 ) approaches the value ( 3 ). Again, this value of ( 3 ) reflects what we will interpret as ( 2 <sup>.</sup> m<sub>p</sub>). In other words, if the average mutational period were some other value, then this ratio would be twice the value of the average mutational period or ( 2 <sup>.</sup> m<sub>p</sub> ). Using the algorithm above, E<sub>cc</sub>(1,000,001) = 2.635095 EE +477118 and E<sub>cc</sub>(1,000,000) = 8.783655 EE +477117 for a ratio of ( 2.999998 ). Also, as ( G ) approaches infinity, the ratio of log<sub>10</sub>[ E<sub>cc</sub>( G ) ] to ( G ) approaches log<sub>10</sub>( 3 ), a value which is approximately ( 0.47712125471966 ). Using the value for E<sub>cc</sub>( 1,000,000,000 ), which is about 8.1025179 EE +477121249, we take the log base ten of this figure and divide by one billion. The result is about ( 0.4771212499 ). If ( m<sub>p</sub> ) was allowed to have a different value then this ratio would approach log<sub>10</sub>( 2 <sup>.</sup> m<sub>p</sub> ) as ( G ) approached infinity. Though such large figures are not really relevant to our purposes, such observations make practical estimations possible for other values of ( m<sub>p</sub> ) we might wish to examine in the future.</b>
+
+
+
+<br><br><b>Document in progress...</b>
+
+
+<br><br>
+
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="index.html">Use your Back Button or click here to go to the Homepage</A></B></CENTER>
+
+</BODY>
+
+</HTML>
+

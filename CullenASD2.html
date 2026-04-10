@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Cullen Family DNA - ASD Calculation Concepts</TITLE>
+<META NAME="KEYWORDS" CONTENT="dna, genetics, cullen, genealogy">
+<META NAME="DESCRIPTION" CONTENT="DNA testing and study of physical traits as applied to Cullen family history.">
+</HEAD>
+
+<BODY BACKGROUND="DNATile.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="DNATrait.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="DNATrait.html">DNA & Family Traits</A> page.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Error Estimates of<BR>ASD Calculations<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Estimate of Statistical Error in ASD Haplotype Population Ages</B></FONT></CENTER>
+
+
+
+<br><br><b>From the wandering ant experiment, we saw how a wide margin of error accompanied the estimate of the number of steps the ant took in the twenty trial runs of 100 steps. With a little effort, this margin of error can be calculated. We saw how Variance is directly proportional to the number of steps taken by the ant in our experiment. In that simplistic scenario, Variance would in fact be equal to the number of steps, so that Variance would equal 100. Standard Deviation is directly related to Variance; you just take the square root of Variance to find Standard Deviation. In this case, the square root of 100 is 10 and so the Standard Deviation of the final results data would be equal to 10. What a Standard Deviation means is that the Mean value, plus or minus one Standard Deviation, is where you will find about 68.269% of your results. In other words you have about a 68% chance of being within one Standard Deviation of the Mean. This same statistical reasoning can be applied to the ASD calculation for age estimates of haplotype populations.</b>
+
+<br><br><b>The ASD method of aging haplotype populations is notorious for underestimation. However with careful calibration and selection of 'effective' mutation rates, this can be overcome with little effort. Computer studies suggest that ASD may commonly underestimate haplotype population ages by as much as 10% with a wide margin of variability depending on many factors, one of which is the simple statistical underestimation and uncertainty built into the results. One can make a reasonable estimate on how accurate these age estimates can be expected to be in the best case - all it takes is a little help from our friend the ant! For those of you who are quite familiar with statistics, the following section will be a review.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Statistical Sampling Error in ASD Calculations</B></FONT></CENTER>
+
+
+
+<br><br><b>One cause of underestimation in ASD calculations is due to sampling. Our experiment involves the process of trying to determine the variance of a population based on the variance of a sample. Standard statistics texts contain equations to handle these types of situations. In statistical estimation it is well known that this type of data does not follow the Normal Distribution and so does not fall under the Central Limit Theorem. The basic idea is that an estimate of the population variance based on a sample will be too low because there is not enough data to properly represent the 'tail' sections of the distribution. Our data will be more or less concentrated in one spot and not very well spread out, thus the lower variance. This effect is well documented in statistical literature and estimation of this type is handled with calculations involving values from tables of the Chi-Squared Distribution, not the Normal Distribution. Normally underestimation due to small samples is not an issue - if underestimation becomes an issue than you simply have too small a sample to draw any conclusions from. Get a larger sample. Unfortunately, those who do ASD calculations do not have that luxury and so they are forced to do the best they can with what they have.</b>
+
+<br><br><b>Underestimation of variance due to sampling is actually a minor issue but is covered here in detail since the estimation of variance with sometimes less than ideal sample sizes is a topic that is at the core of ASD calculations. To illustrate this effect let's return to the experimenter and the ant. Suppose our experimenter records the final position of the ant on a random walk of 100 steps over 5 trial runs. The variance of the five final positions will be recorded using the formula for the average squared distance over the five trial runs. Further let the experimenter record the results of 50,000 sets of these experiments. Our experimenter finds that the average variance over the 50,000 sets is an estimate of 80 ant steps; not anywhere near the actual 100 steps taken by the ant. The experimenter begins to get wise and suspects that maybe he's not observing enough trial runs so he repeats the experiment with another 50,000 sets of observations; this time though he observes 10 trial runs instead of just 5 and records the average squared distance over the 10 trial runs. The average variance over the 50,000 sets then figured out to be an estimate of 90 ant steps. This is of course a better estimate but he notices that his estimates still vary widely; about half the time his estimates are as low as 45 ant steps to as high as 135 ant steps. Curious! The experimenter conducts a series of experiments, each with an increasing number of trial runs. The results were:</b>
+
+
+<br><br><center><table width="80%" border="1" cellpadding="5" bgcolor="#ffffff"><tr><th colspan="6">Results: Each at 50,000 Sets of Trial Runs Observing 100 Ant Steps</th></tr>
+<tr align="center"><td><b>Observed<br>Trial Runs</b></td><td><b>5</b></td><td><b>10</b></td><td><b>20</b></td><td><b>40</b></td><td><b>80</b></td></tr>
+<tr align="center"><td><b>Avg Estimated<br>Variance</b></td><td><b>80.1536</b></td><td><b>90.1197</b></td><td><b>94.9507</b></td><td><b>97.4862</b></td><td><b>98.7468</b></td></tr>
+<tr align="center"><td><b>Standard Error<br>of the Estimate</b></td><td><b>56.5991</b></td><td><b>42.6275</b></td><td><b>31.0947</b></td><td><b>22.5946</b></td><td><b>16.1409</b></td></tr></table></center>
+
+
+<br><br><b>Notice there is an interesting pattern in the differences between the actual variance in the population and the estimates of the variance calculated from the samples. The actual known variance is 100. The estimated variance is short by about 20 for 5 trial runs, then by about 10 for 10 trial runs, then by 5, then by 2.5, and then finally by about 1.25 . As the size of the trial runs doubles, the difference drops in half. It seems as if the expected difference can be estimated from the number of trial runs observed and then corrected for. This is in fact one proper way to obtain an unbiased estimate of population variance from the variance observed in a sample. The equation is available from any basic statistics text and has been in use for many many years. Variance is defined as the sum of the squared differences divided by N, where N is the number of samples you are working with. To correct the expected statistical error and obtain an unbiased estimate of population variance, you may define the sample variance as the sum of the squared differences divided by (N-1). This applies to ASD calculations as well and a simple rule can be applied to generalize the correction required.</b>
+
+<br><br><center><table width="65%" border="0" cellpadding="5" bgcolor="#ffffcc"><tr align="center"><td><b><i>When calculating ASD for a haplotype population using N sample haplotypes, ASD is equal to twice the Sum of the Squared Differences of the marker values divided by (N-1).</i></b></td></tr></table></center>
+
+<br><br><b>This adjustment corrects the expected statistical error inherent in the way some ASD calculations are currently performed or in any other situation where a population variance is to be estimated from a sample. One requirement is that the population statistic must be distributed normally or at least approximately so for a decent estimate to be made. In this case the population statistic is the final position of the ant after a 100 step random walk and is normally distributed. The actual distribution is binomial but in a 100-step random walk the distribution very closely fits the normal distribution. Another requirement is that the population may be considered infinite in size as compared to the sample size. For most purposes, if your sample size is less than a tenth of the population, your results should still be reasonable. For any ASD calculations not performed with sample statistics, you need not repeat them. Simply multiply by a correction factor equal to N / (N-1), where N is the number of haplotypes you used in the original ASD calculation. If we repeat the above ant experiments and use the sample statistics instead, the results are:</b>
+
+
+<br><br><center><table width="80%" border="1" cellpadding="5" bgcolor="#ffffff"><tr><th colspan="6">Second Run of the Ant Experiment Using Sample Statistics</th></tr>
+<tr><th colspan="6">Results: Each at 50,000 Sets of Trial Runs Observing 100 Ant Steps</th></tr>
+<tr align="center"><td><b>Observed<br>Trial Runs</b></td><td><b>5</b></td><td><b>10</b></td><td><b>20</b></td><td><b>40</b></td><td><b>80</b></td></tr>
+<tr align="center"><td><b>Avg Estimated<br>Variance</b></td><td><b>99.6241</b></td><td><b>100.1339</b></td><td><b>99.9722</b></td><td><b>99.9861</b></td><td><b>99.9842</b></td></tr>
+<tr align="center"><td><b>Standard Error<br>of the Estimate</b></td><td><b>70.0660</b></td><td><b>47.3208</b></td><td><b>32.6990</b></td><td><b>23.1089</b></td><td><b>16.3377</b></td></tr></table></center>
+
+
+<br><br><b>The estimates are much closer to the actual variance of 100. The average of the above five estimates is 99.9401 which is close enough for our purposes. Note that not only does the estimate better reflect the actual variance of the population but the standard error of the estimates has gone up. This is simply due to each set of observations being divided by a different smaller constant resulting in a higher estimate. Either side of the standard error will likewise be multiplied by the same proportion, resulting in a wider margin and therefore a higher Standard Error of the results. As the number of Observed Trial Runs is increased to infinity, the Standard Error of the estimates will approach zero asymptotically.</b>
+
+<br><br><b>For those of you who are familiar with the statistics of the above ant experiment, you already know that the Standard Error of the estimated variance means that approximately 68.27% of the sets of trial runs resulted in estimated variances that were within the window defined by the average estimated variance plus or minus the stated standard error. You probably also realize that, since the distribution of the estimated variances is not a normal distribution, you cannot generalize the standard error accurately by extending out to multiples of the standard error and expect normal distribution percentages of the results to be included in the extended window. The Standard Error of the Estimate follows the Chi-Squared distribution and an inverse cumulative function, using the sample size and the 68.269% probability, describes the above Errors quite closely. However, these figures create trouble for us in more ways than one. Unlike the experimenter, we do not have the benefit of repeating an ASD calculation 50,000 times to obtain good average figures. The Chi-Squared distribution is very difficult to work with and normally tables must be consulted to obtain distribution values. We've also seen that not only is the stated standard error very large but it is not normally distributed - so there are no easy standard formulas. Keeping these things in mind - and since our experimenter has grown weary (not to mention the ants) - we'll leave the ant experiments behind us and move on to ASD calculations and their error estimates.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Population Model for Computer Simulation of ASD Calculations</B></FONT></CENTER>
+
+
+
+<br><br><b>For computer modelling of the ASD estimate for haplotype populations, I assume single-step, constraint-free mutations. For at least some of the STR markers used in ASD estimates of haplotype ages, this may be an accurate model. For actual mutation simulation, a classic Random Walk model is used. Such a model is reasonably accurate and, by virtue of its very nature, takes into account what are commonly referred to as 'back mutations'. Back mutations are not exceptions to the model, they are not special cases, and they make no difference in the final outcome. Back mutations are a misnomer for the normal expected behavior of the Random Walk model and so no mention of them need to be made. In fact, special treatment of so-called 'back mutations' would only undermine the natural behavior of the Random Walk model.</b>
+
+<br><br><b>One of the more curious properties of the Random Walk simulation as applied to idealized STR mutation modelling is the fact that ASD in this case is blind to one basic fact of the population; how many identical haplotype founders were there? Suppose a haplotype population was founded by a set of twins or triplets. Using ASD alone, there is no way to determine how many identical haplotype individuals there were in the original founding generation. If we have a haplotype population consisting of 100 individuals we wish to perform an ASD age estimate on, the calculations will be just as accurate in either of the two following cases: <br><br><blockquote>(1) The individuals are all descendants of a single haplotype founder and their STR mutations all follow separate paths.<br><br>(2) The individuals trace their ancestry back to separate founders, each with identical founding haplotypes. Their STR mutations also all follow separate paths.</blockquote>
+
+<br>The key to the behavior of the Random Walk model as applied to STR mutation simulation is the fact that each member of the population has STR mutations that have followed a separate path from the founding haplotype. This is actually an advantage that can be used to simplify and speed up computer models since it does away with the necessity of having to recreate the entire family tree on computer. However, such a simplification can only be applied in the simplest of population models such as the one we will be working with. In the table below are the results of 10,000 computer simulations on both of the cases mentioned in the previous paragraph. Here, a population of 1024 individual haplotypes is examined in two cases: all having descended through ten generations from one founding haplotype (Simulated Population column) and; all having descended through ten generations from separate yet identical haplotype founders (Random Walk column). The 'Theoretical Calculation' column provides the actual statistical distribution based on the mathematical model of this experiment. In this example one marker with a mutation rate of 0.5 per generation is examined and it is assumed to have a founding, and purely hypothetical, value of zero. In ASD calculations, the actual values of the markers do not matter - it is the variance of those values that's important. The figures in the table record the average observed distribution of STR repeat values after 10 generations of mutation, averaged over the 10,000 runs of the simulation.</b>
+
+
+<br><br><center><table width="95%" border="1" cellpadding="3" bgcolor="#ffffff">
+<tr align="center"><td><b>Final<br>Value</b></td><td><b>Theoretical<br>Calculation</b></td><td><b>Simulated<br>Population</b></td><td><b>Random<br>Walk</b></td><td><b>Final<br>Value</b></td><td><b>Simulated<br>Population</b></td><td><b>Random<br>Walk</b></td></tr>
+<tr align="center"><td><b>0</b></td><td>180.426</td><td>180.346</td><td>180.415</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr align="center"><td><b>-1</b></td><td>164.023</td><td>163.792</td><td>164.092</td><td><b>1</b></td><td>163.975</td><td>163.991</td></tr>
+<tr align="center"><td><b>-2</b></td><td>123.018</td><td>122.969</td><td>123.072</td><td><b>2</b></td><td>123.010</td><td>122.949</td></tr>
+<tr align="center"><td><b>-3</b></td><td>75.7031</td><td>75.9337</td><td>75.7117</td><td><b>3</b></td><td>75.7203</td><td>75.7935</td></tr>
+<tr align="center"><td><b>-4</b></td><td>37.8516</td><td>37.8337</td><td>37.8736</td><td><b>4</b></td><td>37.8846</td><td>37.8198</td></tr>
+<tr align="center"><td><b>-5</b></td><td>15.1406</td><td>15.2353</td><td>15.0702</td><td><b>5</b></td><td>15.2055</td><td>15.0915</td></tr>
+<tr align="center"><td><b>-6</b></td><td>4.7314</td><td>4.7649</td><td>4.7208</td><td><b>6</b></td><td>4.7592</td><td>4.7657</td></tr>
+<tr align="center"><td><b>-7</b></td><td>1.1133</td><td>1.1403</td><td>1.1115</td><td><b>7</b></td><td>1.1108</td><td>1.1251</td></tr>
+<tr align="center"><td><b>-8</b></td><td>0.1855</td><td>0.1871</td><td>0.1786</td><td><b>8</b></td><td>0.1957</td><td>0.1833</td></tr>
+<tr align="center"><td><b>-9</b></td><td>0.0195</td><td>0.0210</td><td>0.0160</td><td><b>9</b></td><td>0.0186</td><td>0.0172</td></tr>
+<tr align="center"><td><b>-10</b></td><td>0.00098</td><td>0.0003</td><td>0.0011</td><td><b>10</b></td><td>0.0060</td><td>0.0013</td></tr>
+</table></center>
+
+
+<br><br><b>A very close approximation to the observed distribution can be simulated by a random normal number generator by applying the correct mean and standard deviation. There are some statistically acceptable random normal generators out there but they usually require more time consuming calculations and so I've settled for the simple Random Walk method of obtaining population samples. All other statistical population parameters are then generated automatically. For a more detailed mathematical analysis of the population model, please refer to the separate article, <a href="CullenASD3.html">Population Model for ASD Studies</a>.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Chi-Squared Thumb-rules for Estimates of Expected ASD Errors</B></FONT></CENTER>
+
+
+
+<br><br><b>The estimates of expected error in ASD calculations can be a difficult concept for some to understand so I'll clarify the idea with a hypothetical example. Suppose that a hundred researchers around the world are interested in doing an ASD calculation to estimate the age of the same haplotype population. They each gather their own samples, say forty haplotypes in their samples and all the samples are different. Each researcher comes up with a calculated estimate based on their sample and then all the researchers get together to compare results. It's no surprise that they all have calculated different yet similar age estimates. To summarize their efforts, they calculate the average of their results to obtain an agreed upon estimate for the age of the haplotype population. To give an indication of the spread in their results, they calculate the standard deviation from the average of their hundred results. In this way the results of any future researcher can be statistically described ahead of time... their estimate will be the average plus or minus one standard deviation in 68.269% of all cases. This is a statement of the accuracy or relative precision of the calculation. In this example, suppose the calculated results indicated an average estimate for the age of the haplotype population as 139 Generations with a standard deviation of 12 Generations. With 68% confidence you can state that the age of the haplotype population is 139 Generations plus or minus 12 Generations - that is, somewhere between 127 and 151 Generations. With forty samples each, we may assume almost normal distribution of the results and extend the confidence to 95% and give an estimate based on two standard deviations. With 95% confidence you can state that the age of the haplotype population is 139 Generations plus or minus 24 Generations - that is, somewhere between 115 and 163 Generations.</b>
+
+<br><br><b>In the below table are the results of one of the sets of computer simulations of ASD estimates of a haplotype population. I repeated the simulation just for this article and it seems that in this particular run all the estimates are slightly higher than usual. Just a reminder that no two simulations are ever the same! In this particular set there are 70 haplotypes who are all individuals descended from the same haplotype founder 250 generations before present. The ASD calculation was repeated for various numbers of markers and, in this simple case, all markers have the same mutation rate of 0.00714 probability per generation. This is an average of 140 generations between mutations. The age estimates in the table were averages obtained during the given number of trial runs. The standard deviation was calculated from the results of the same number of trial runs to give an indication of the expected error of the age estimates. This would be a confidence level of about 68%. Double the standard deviation ( the usual applied figure is 1.96 times the standard deviation ) for a close approximation of the 95% confidence level estimate.</b>
+
+
+<br><br><center><table width="95%" border="1" cellpadding="3" bgcolor="#ffffff">
+<tr><th colspan="7">250 Generations; 70 Haplotypes; 1/140 Rate per Marker</th></tr>
+<tr><td><b>#Trials</b></td><td><b>5000</b></td><td><b>1500</b></td><td><b>1000</b></td><td><b>500</b></td><td><b>500</b></td><td><b>500</b></td></tr>
+<tr><td><b>#Markers</b></td><td><b>1</b></td><td><b>2</b></td><td><b>4</b></td><td><b>8</b></td><td><b>16</b></td><td><b>32</b></td></tr>
+<tr><td><b>Age
+Est</b></td><td>250.4312</td><td>250.5489</td><td>250.6625</td><td>250.3277</t
+d><td>250.6205</td><td>250.5670</td></tr>
+<tr><td><b>Std
+Dev</b></td><td>46.1748</td><td>31.9205</td><td>21.1157</td><td>15.3092</
+td><td>10.4704</td><td>6.7402</td></tr></table></center>
+
+
+<br><br><b>I like to call the figures in the 'Std Dev' row the 'Expected Errors' of the estimates so as not to confuse them with the 'Standard Error' often quoted for the calculated means of populations of various sample sizes. In this case however the calculation is very similar. Based on the Expected Errors I would recommend, for markers of similar mutation rate, that the number of markers multiplied by the size of the sample be at least 150 before considering performing an ASD calculation due to the very high Expected Errors for the age estimates.</b>
+
+<br><br><b>The Expected Errors are related most intimately with sample size but is also affected by other parameters in the ASD calculation. The ASD age estimate itself is a statistic with a Chi-Squared distribution that approximates a normal distribution when the size of the sample population is large. The Chi-Squared distribution is actually an infinite number of distributions, each described by a degree of freedom. In ASD calculations this is the size of the sample population minus one. Each distribution has its own expected value or mean, and each has its own standard deviation related to the degrees of freedom. These figures can be manipulated to be brought back into our calculations in a very simple way if we are careful with the way we actually perform our calculations.</b>
+
+<br><br><b>To describe the Expected Errors at the 68% confidence level, we can simplify the Chi-Squared distribution by taking advantage of its properties. The bounding values of the Chi-Squared statistic at the 68.269% confidence level is very close to the square root of twice the degrees of freedom. This figure is then multiplied by the estimated age of the haplotype population and then divided by the degrees of freedom to obtain the variance observed for an ASD calculation using only one marker. To reduce this result for more than one marker, this last result is divided by the square root of the number of markers used in the ASD calculation. This last step is not technically correct but is a common 'bending of the rules is okay here' scenario from which are obtained very adequate numerical results. The following formula is meant to show these relationships but is limited in the situations where it is actually applicable. The formula will work when there is one marker in the ASD calculation or when multiple markers are used, <u>if they all have the same mutation rate</u>. This is rarely the case and besides that, we will have no real need to make use of this formula for multiple STR markers.</b>
+
+
+<br><br><center><table width="60%" border="0" cellpadding="5" bgcolor="#ffffcc">
+<tr><th colspan="2"><font size="4">Chi-Squared Thumb-rule Formula</font></th></tr>
+<tr><td colspan="2"><b>In an ASD calculation where,<br>G<sub>e</sub> = Estimated age of haplotype population in generations<br>M = Number of markers used in the calculation<br>N = Number of haplotypes in the sample<br> &nbsp; then<br>E = the Expected Error in generations at the 68.269% confidence level and is given by:<br>&nbsp;</b></td></tr>
+<tr><td rowspan="3" align="right" width="15%"><font size="5"><b>E = </b></font></td>
+<td align="center"><font size="4"><b>G<sub>e</sub> * Sqrt( 2 )</b></font></td></tr>
+<td><hr width=70% size="2" color="#000000"></td></tr>
+<td align="center"><font size="4"><b>Sqrt( M ) * Sqrt( N - 1 )</b></font></td></tr>
+<tr><td colspan="2"><b>&nbsp;<br>such that the 68.269% confidence interval is defined by the value of 'G<sub>e</sub>' plus or minus the value calculated for 'E'.</b></td></tr>
+</table></center>
+
+
+<br><br><b>The equation above reflects what has been observed in the computer data - that to maintain a certain value for the Expected Error as the Estimated Age increases, it's necessary to either use more markers or to use a larger sample. In either case, the square roots in the bottom of the equation suggest what has been observed - that to cut your Expected Error in half it's necessary to increase either your sample size or the number of markers fourfold! Also, for two populations with all parameters the same except for the estimated age of one population being twice that of the other - the older population will also have an Expected Error twice that of the younger population. To even out their Expected Errors, the older population will need a fourfold increase in sample size or in the number of markers used in the age estimate (or some combination of increases). We'll bring down another copy of the table of data from our computer simulation and add another row for the calculated estimates of the Expected Errors so we can compare them to the actual values observed in the computer simulation.</b>
+
+
+<br><br><center><table width="95%" border="1" cellpadding="3" bgcolor="#ffffff">
+<tr><th colspan="7">250 Generations; 70 Haplotypes; 1/140 Rate per Marker per Generation</th></tr>
+<tr><td><b>#Trials</b></td><td><b>5000</b></td><td><b>1500</b></td><td><b>1000</b></td><td><b>500</b></td><td><b>500</b></td><td><b>500</b></td></tr>
+<tr><td><b>#Markers</b></td><td><b>1</b></td><td><b>2</b></td><td><b>4</b></td><td><b>8</b></td><td><b>16</b></td><td><b>32</b></td></tr>
+<tr><td><b>Age
+Est</b></td><td>250.4312</td><td>250.5489</td><td>250.6625</td><td>250.3277</t
+d><td>250.6205</td><td>250.5670</td></tr>
+<tr><td><b>Std
+Dev</b></td><td>46.1748</td><td>31.9205</td><td>21.1157</td><td>15.3092</
+td><td>10.4704</td><td>6.7402</td></tr>
+<tr><td><b>Calculated<br>Expected Error</b></td><td>42.6362</td><td>30.1484</td><td>21.3181</td><td>15.0742</td><td>10.6591</td><td>7.5371</td></tr></table></center>
+
+
+<br><br><b>We can see that so far our ideas on how Expected Errors should be calculated seem to hold up fairly well. Feel free to try the formula on the ant experiment data in the tables near the top of the page. In that application, 'A' is replaced by the estimate of the number of ant steps, 'N' is replaced by the number of observed trial runs, and 'M' is replaced by the number one since we only observed one type of ant step - thus the 'Sqrt(M)' factor in the denominator goes away. Just be sure to use the data in the second table titled 'Second Run of the Ant Experiment Using Sample Statistics'.</b>
+
+<br><br><b>It would have been nice if this was the end of the matter but there is one other consideration that affects the Expected Error of ASD calculations - and we've managed to avoid it up to this point. That would be the concept of EMS, or Estimated Mutational Steps, as determined from the average mutational period and the estimated age of the haplotype population. Because of the random nature of Y-DNA STR mutations, we have another variable and another statistical complication to untangle in order to account for the observed Expected Errors in the computer simulations.</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Effects of Mutation Rate on Estimates of Expected ASD Error</B></FONT></CENTER>
+
+
+
+<br><br><b>So far we have had great success in explaining the statistics behind the Expected Error in ASD calculations and, if you recall, this was all based on the Random Walk model of Y-DNA STR mutations. This model is fairly resilient over a wide range of parameters due to averaging over the number of samples used in the calculation. There are limits though to the extent at which STR mutations can be modelled by the mathematics of the Random Walk. This is particularly true for describing the Expected Errors observed in the computer simulations. The root cause of these limitations is the fact that, while the Random Walk model is defined by consistent time between steps in a random direction, actual STR mutational steps are separated by random time intervals. This is a Random Walk of a completely different kind.</b>
+
+<br><br><b>We have to introduce a new term here; Estimated Mutational Steps or EMS for short, which is defined by the time period of interest in generations multiplied by the mutation rate of the marker being considered. The Estimated Mutational Steps describes the average number of mutations that should be observed during the time period and is the actual number of mutations that the Random Walk model assumes in order for the age estimates of haplotype populations to be relatively accurate. Since STR mutations are random, the number of Actual Mutational Steps ( or AMS ) during the time period may be some number more or less. Here's the key; as long as EMS is large, then AMS divided by EMS will be a figure very close to one. In fact, the Random Walk model assumes that AMS/EMS is exactly equal to one at all times - which is actually not true at all. While this discrepancy does not affect the ASD estimated ages of haplotype populations to any great degree, it does have a more pronounced effect on the Expected Errors of the estimated ages. Our concern then will be to investigate the statistical nature of this effect when the value of AMS/EMS is significantly different from one. This occurs when the Average Mutational Period, which is the inverse of the Mutation Rate, has a value which is comparable to or larger than the time period of interest.</b>
+
+<br><br><b>As an example of this effect, I've performed another computer simulation on 100 haplotypes descended from a common ancestor 400 generations before present. We will be inspecting one STR repeat value with a very low mutation rate of 0.00025 per generation; that's a mutational period of 4000 generations. There were 4 sets of 500 trials in this experiment with the mean and variance being put through a combination formula to obtain the most likely estimate for the resulting data. Using the same statistical methods we've used before, we come up with an estimate for the age of the haplotype population of 363.92 generations. The expected error in this case was 117.40 generations. No matter how many sets of trials you attempt, the results will be very similar to those above - about 364 generations. This is a 9% underestimate and so is quite significant compared to the usual ability of our methods so far to estimate the variance in a haplotype population's STR values over time. In a second identical experiment with a mutational period of 1000 generations and a haplotype population founded 100 generations before present, the estimate was 95.98 generations with an expected error of 34.40 generations. This is a 4% underestimate.</b>
+
+<br><br><b>Note that this particular type of underestimation and the underestimation due to the founder effect which is accounted for by the use of the '1/3 fudge factor' are separate issues.</b>
+
+
+<br><br><b>This section in progress...</b>
+
+
+
+<br><br><CENTER><BR><FONT SIZE="5"><B>Combination of Individual STR Marker Estimates</B></FONT></CENTER>
+
+
+
+<br><br><b>It is the usual practice in ASD calculations to simply take the average of the individual STR marker estimates to derive a final estimate of the age of the haplotype descendant population. If all markers had the same mutation rate, this would be perfectly acceptable. As it is, no gross errors are introduced by the practice. However it is desirable to also arrive at an acceptably accurate figure for an overall expected error in our ASD estimates. To do so requires a combination of our individual marker error estimates and, in the process, we are able to also introduce a weighted average of our individual marker age estimates to arrive at the most likely overall age estimate of our haplotype population.</b>
+
+<br><br><b>The method is called the Combination of Estimates. The idea is that, given several estimates of the statistic in question, each will have their own mean and variance. In a weighted average, the estimates with the lower variance will receive the greater weight
+</b>
+
+
+<br><br><b>Document in progress...</b>
+
+
+<br><br>
+
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="index.html">Use your Back Button or click here to go to the Homepage</A></B></CENTER>
+
+</BODY>
+
+</HTML>
+

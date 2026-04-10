@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Cullen Family DNA - ASD Calculation Concepts</TITLE>
+<META NAME="KEYWORDS" CONTENT="dna, asd, calculation, tmrca, genetics, cullen, genealogy">
+<META NAME="DESCRIPTION" CONTENT="DNA testing and study of physical traits as applied to Cullen family history.">
+</HEAD>
+
+<BODY BACKGROUND="DNATile.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="DNATrait.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="DNATrait.html">DNA & Family Traits</A> page.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Cullen Family DNA<BR>ASD Calculation<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+<CENTER><BR><FONT SIZE="5"><B>Concept of ASD for Subclade Age Estimates</B></FONT></CENTER>
+
+<br><br><b>This page was inspired by the work that Ken Nordtvedt has done on the Haplogroup I subclades. His work on the Y-STR modal repeat values, geographic distribution and now relative ages is fascinating. His use of the ASD concept for determining relative ages of haplotype populations is very interesting and based on solid mathematics. Relative ages based on ASD, coupled with standard assumptions for STR mutation rates, enables estimates of the time of founding of populations in actual years before present. The concept is understandably difficult for many to comprehend. I've seen so many questions asked on this subject that I thought I'd give it my own mathematical treatment and try to give a good description of the concepts and methods behind the ASD calculation itself. There are some difficulties with the concept and, of course, assumptions have to be made but this is still a very convincing method for the task at hand.</b>
+
+
+<br><br><b>You can visit Ken's website at <a href="http://www.northwestanalysis.net">www.northwestanalysis.net</a>; &quot;Population Varieties within Y-Haplogroup I and their Extended Modal Haplotypes (And also R1b Varieties)&quot;. You can also read about his work on estimating the age of descendant haplotype populations and how variance can be affected by inhomogeneities in population growth.</b>
+
+
+<br><br><b>To me, the most interesting application of ASD is for estimating the ages of subclade populations and so this page will pertain most directly to that subject. Although subclade populations are defined by modal haplotypes and the modals are utilized to collect a population of haplotypes to work with, the modal haplotype itself is not considered in the ASD method of age estimate. Mathematically, the modal haplotype is represented by the population itself but it's important to note that the modal haplotype technically is NOT the ancestral haplotype. The ASD calculation estimates the time of founding of the population, regardless of what the common ancestor's haplotype actually was.</b>
+
+
+<br><br><b>ASD stands for &quot;Average Squared Distance&quot;, which is a term taken from statistical studies and is applied directly as a measure of variance of a population variable. It is also used in physics in studies of 'random walks', diffusion, brownian motion, and other chaotic systems. I believe the easiest way of understanding ASD is to look at the mathematics behind the 'random walk' concept since this applies almost directly to the concept of Y-DNA STR mutations.</b>
+
+
+<br><br><center><b><font size="5">Random Walks and The Central Limit Theorem</font></b></center>
+
+
+<br><br><b>Begin with an ant ( or whatever ) standing at position zero on a number line at time zero. The number line extends in the positive direction with positions 1, 2, 3, etc., and extends in the negative direction with positions -1, -2, -3, etc. Traditionally, students are told that the ant is highly intoxicated or otherwise unstable and disoriented! The idea is that the ant begins to wander or stagger. He takes steps of equal stride of one unit either in the positive or negative direction, at random, per unit of time. One step per unit of time; half the time he will stagger to the left and half the time to the right. In the long run the ant gets nowhere; his position on average, over many trials of long runs, will be right at zero. Suppose an experimenter decides to record the ant's progress over twenty trial runs, each trial run consisting of 100 steps. For each trial run, he records the ant's final position on the number line after his 100 steps.</b>
+
+
+<br><br><b>The results of the experiment, the final position of the ant after 100 steps for each of the twenty trial runs, were as follows: [0, 2, 10, -4, 2, -2, 6, 2, -2, 16, -2, 0, 6, 4, 8, 0, 22, -4, -14, -8]. Over the twenty trial runs the average final position, found by averaging the numbers in the list, is equal to 2.1 . That's not exactly equal to zero but it's close enough for statistical work! Based on the rather large values in the list one would reasonably assume, if there was no prior knowledge given, that the ant would had to have taken a large number of steps if he managed to stagger his way so far out on the number line. Intuition in this case serves you correctly and there are mathematical expressions to quantify what intuition suggests.</b>
+
+
+<br><br><b>Suppose the experimenter, excited about his recent findings, sent his results to a colleague overseas but forgot one important piece of data... the number of steps the ant took in the trial runs. This colleague, an incurable puzzle addict, takes it upon himself as a personal challenge to find out from the given data just how many steps the ant likely took in the trial runs to produce the given final positions. He knows already that the results can be described by the Central Limit Theorem which states that the variance of the final results grows linearly with the number of steps taken. This is exactly what intuition suggests; the more steps that were taken in each of the trial runs, the more spread out the recorded final positions will be. Our curious colleague is also aware that Variance is intimately related to Standard Deviation, another statistical measure of data spread. In fact, Variance is simply the square of Standard Deviation. In this simple example then, Variance should be equal to the number of steps taken, one of the basic concepts derived from the Central Limit Theorem.</b>
+
+
+<br><br><b>By typing the results into his calculator, our colleague then presses the Population Standard Deviation button and squares the result. The answer is 64.2 which is the Variance of the data set. Since Variance in this simple case is equal to the number of steps the ants took during the trial runs, we round the answer off to an integer and 64 is the final answer; the estimated number of steps the ant took in the trial runs. Our colleague is very pleased with himself - but somewhat misguided. Since twenty trial runs is a small sample size, our colleague would have been better off to use the Sample Standard Deviation button on his calculator to obtain a more realistic estimate. Also, 64 steps is just an estimate based on one set of twenty trial runs. Had the entire experiment been repeated fifty times, then fifty different estimates of the number of steps the ant took during the trial runs would have been produced. Some would have been higher and some would have been lower but, on average over many trial runs, perfectly accurate within statistical error. In fact, this has been done already. The average of fifty such experiments resulted in step estimates ranging from just 40 to over 150. The overall average for these fifty additional experiments was 91; not too far off from 100 statistically and, given the nature of the sampling in our experiment, predictably low. The standard deviation of the these step estimate results, a measure of the precision of our estimation, was a very worrisome figure of 27. Here are the results of the fifty step estimate calculations in table form:</b>
+
+
+<br><br><center><table width="70%" border="1" bgcolor="#ffffff" cellpadding="3">
+<tr align="center"><td>133</td><td>101</td><td>56</td><td>74</td><td>76</td><td>99</td><td>101</td><td>136</td><td>102</td><td>102</td></tr>
+<tr align="center"><td>75</td><td>91</td><td>119</td><td>76</td><td>83</td><td>91</td><td>40</td><td>112</td><td>48</td><td>117</td></tr>
+<tr align="center"><td>51</td><td>46</td><td>94</td><td>61</td><td>131</td><td>91</td><td>115</td><td>119</td><td>84</td><td>57</td></tr>
+<tr align="center"><td>136</td><td>97</td><td>95</td><td>114</td><td>66</td><td>62</td><td>78</td><td>83</td><td>102</td><td>72</td></tr>
+<tr align="center"><td>53</td><td>92</td><td>116</td><td>67</td><td>150</td><td>153</td><td>118</td><td>69</td><td>74</td><td>95</td></tr></table></center>
+
+
+<br><br><b>You can see how widely these estimates vary and age estimates of haplotype populations will vary just as widely. Consider also that we don't have the advantage of being able to rerun the ant experiment as many times as we want; we only have the data that is currently available and we can only perform the estimate calculation one time. Given what you have learned from the above wandering ant experiment, just how much trust do you think you can put into the relative precision of haplotype age estimates?.</b>
+
+
+<br><br><center><b><font size="5">ASD and Age Estimates of Descendant Haplotype Populations</font></b></center>
+
+
+<br><br><b>ASD is properly defined as the Average Squared Distance of all possible pairs of values in a list. In the example above this approach would not be practical as there are 190 possible pairs in a set of twenty data points. Actually, there is an easier way. Calculating the ASD is statistically and mathematically equivalent to summing the squares of the differences between each data point and the average of the data points and then dividing that result by the number of data points ( minus one for sampling ), and then multiplying by two. In other words, ASD is nothing more than variance times two. This is still not a very convenient calculation to put into a spreadsheet so we will make use of Standard Deviation, a built-in function on most spreadsheet programs. Note that this is the Population Standard Deviation, not the required Sample Standard Deviation. Sample Standard Deviation provides an estimate that compensates for small sample sizes. We can define ASD by taking the standard deviation of a data set, squaring it, and then multiplying by two. If sample variance is available in your spreadsheet program, then ASD is variance times two. If you ever wondered why Ken's ASD calculations involve proportionality constants with a factor equal to two, now you know. The definition of genealogical ASD differs slightly from that used in other areas of study but in the final analysis gives the same answers. I work with Excel most of the time and so an entry for an ASD calculation would appear like this:</b>
+
+
+<br><br><center><table width="50%" border="1" cellpadding="5" bgcolor="#ffffff"><tr align="center"><td><b>&nbsp; = STD ( A4 : A53 ) ^ 2 * (50/49) * 2 &nbsp;</b></td></tr></table></center>
+
+
+<br><br><b>The '(50/49)' in the above equation is necessary to convert the Population Standard Deviation in my version of Excel to the required Sample Standard Deviation. This example assumes that you had 50 pieces of data stored in cells A4 through A53. These data points, for example, would be the repeat values for a Y-STR marker for 50 different haplotypes in the population you wish to examine. Extra spaces were included in the function for readability here. The effect of the function is to obtain the Variance of the data and multiply it by two. This is the ASD function and provides the correct answer as compared to the other methods of calculating ASD. Note that the '*2' in the ASD calculation isn't really necessary. Ken Nordtvedt explains that ASD varies linearly with 2mG, where m is the mutation rate in probability per generation, and G is the number of generations since the founder of the haplotype population. Since two is a factor on both sides of the equation, it drops out. I will leave this as is however, to keep in line with the figures for ASD that Ken has already calculated.</b>
+
+
+<br><br><b>Ken provides <a href="http://www.northwestanalysis.net/demograph.html">an example</a> where 100 haplotypes are considered. 50 of the haplotypes have 12 repeats at a marker; 30 haplotypes have 11 repeats at the same marker; and 20 haplotypes have 13 repeats. The Sample Standard Deviation of this list equals approximately 0.7 and this number squared is equal to 0.49 which represents the number of steps that the ant has taken! Here we actually have expected mutational steps or the average number of times that we expect a mutation to have occurred. Ken's example mutation rate is given as 1/400 probability per generation so a mutational step is 400 years. Multiply 0.49 mutational steps by 400 generations per mutational step and you get Ken's 196 generations as the estimate for the founding of the haplotype population. If you accept the 25 years per generation that is commonly used for ancient times then we're talking somewhere in the neighborhood of 4,900 years before present.</b>
+
+
+<br><br><b>This is an estimate based on one marker. In practice it would be advisable to use as many markers as possible. The estimates from all the markers are averaged and this would be the final estimate for the age of the haplotype population. Fast markers are preferable as they will have mutated more times on average and the time between mutations will be closer to what is expected. Avoid multicopy markers. It's important to draw samples from all branches of the tree if at all possible; if samples are drawn from individuals who are all too closely related, the results of the calculation will be an estimate for the age of their most recent common ancestor rather than the estimate for the age of the founder of the haplotype population. Remember that the ASD calculation is an estimate; the age estimates have a pretty good sized standard deviation ( remember the ant story ) so don't rush to the history books to look up the date. Even the mutation rates are questionable and this in itself throws uncertainty into the whole endeavor of age estimates. The usually acceptable figure is a mutation rate that is roughly one-third of the currently accepted values for mutation rates.
+</b>
+
+
+<br><br><b>I'll finish this exercise with an example of ten haplotypes that are all members of a subclade that we wish to calculate an age estimate for. The constrained markers are those that we have used to identify the members and they will have the same value for all our haplotypes so we can't use them for calculation. We do have unconstrained markers, preferably the very fast, fast, and medium rate markers that we may make use of. This example is for demonstration purposes only. You may also download an Excel version of this spreadsheet <a href="ASDexp.xls">here</a>.</b>
+
+
+<br><br><center><table width="80%" border="1" cellpadding="4" bgcolor="#ffffff">
+<tr><td>&nbsp;</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td></tr>
+<tr><td>1</td><td colspan="10" align="center"><b>Example of ASD for Age Estimation of Haplotype Population</b></td></tr>
+<tr><td>2</td><td><b>Marker</b></td><td><b>390</b></td><td><b>19</b></td><td><b>391</b></td><td><b>439</b></td><td><b>392</b></td><td><b>458</b></td><td><b>447</b></td><td><b>449</b></td></tr>
+<tr><td>3</td><td><b>MutationRate</b></td><td>0.0044</td><td>0.0015</td><td>0.0034</td><td>0.0043</td><td>0.0015</td><td>0.0062</td><td>0.0042</td><td>0.007</td></tr>
+<tr><td>4</td><td><b>Fudge Factor</b></td><td>0.333</td><td>0.333</td><td>0.333</td><td>0.333</td><td>0.333</td><td>0.333</td><td>0.333</td><td>0.333</td></tr>
+<tr><td>5</td><td><b>h1</b></td><td>24</td><td>17</td><td>10</td><td>11</td><td>11</td><td>16</td><td>24</td><td>27</td></tr>
+<tr><td>6</td><td><b>h2</b></td><td>24</td><td>16</td><td>11</td><td>11</td><td>11</td><td>15</td><td>26</td><td>27</td></tr>
+<tr><td>7</td><td><b>h3</b></td><td>24</td><td>17</td><td>10</td><td>11</td><td>11</td><td>15</td><td>24</td><td>28</td></tr>
+<tr><td>8</td><td><b>h4</b></td><td>24</td><td>16</td><td>11</td><td>11</td><td>11</td><td>15</td><td>25</td><td>31</td></tr>
+<tr><td>9</td><td><b>h5</b></td><td>27</td><td>16</td><td>10</td><td>11</td><td>12</td><td>16</td><td>23</td><td>30</td></tr>
+<tr><td>10</td><td><b>h6</b></td><td>26</td><td>17</td><td>10</td><td>12</td><td>11</td><td>16</td><td>24</td><td>28</td></tr>
+<tr><td>11</td><td><b>h7</b></td><td>24</td><td>16</td><td>11</td><td>12</td><td>11</td><td>18</td><td>24</td><td>28</td></tr>
+<tr><td>12</td><td><b>h8</b></td><td>25</td><td>17</td><td>11</td><td>11</td><td>11</td><td>16</td><td>24</td><td>28</td></tr>
+<tr><td>13</td><td><b>h9</b></td><td>25</td><td>16</td><td>11</td><td>11</td><td>11</td><td>19</td><td>25</td><td>30</td></tr>
+<tr><td>14</td><td><b>h10</b></td><td>25</td><td>16</td><td>11</td><td>12</td><td>11</td><td>18</td><td>24</td><td>29</td></tr>
+<tr><td>15</td><td><b>ASD</b></td><td>2.133</td><td>0.533</td><td>0.533</td><td>0.467</td><td>0.2</td><td>4.089</td><td>1.356</td><td>3.644</td></tr>
+<tr><td>16</td><td><b>Gen</b></td><td>728</td><td>534</td><td>235</td><td>163</td><td>200</td><td>990</td><td>485</td><td>782</td></tr>
+<tr><td>17</td><td><b>GenAvg</b></td><td><b>515</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>18</td><td><b>YBP</b></td><td><b>12875</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+
+
+<br><br><b>In the above example we are examining ten haplotypes drawn from the databases and we wish to calculate an estimate for the time of the founder of the haplotype population. In this example, for sake of space, we've drawn too few samples (only ten) and have picked the markers to work with without any real regard and used too few of them at that. Our haplotypes are labeled h1 through h10. The mutation rates are common ones in the literature and not meant to be accurate for our purposes of example. The fudge factor is simply the figure one-third, a more or less accepted ratio that decreases the listed mutation rates so they better agree with what is observed in known populations that have been aged by other means.</b>
+
+
+<br><br><b>I will give the formulas to put into the spreadsheet for the Y-STR marker 390 and you can simply copy them across the sheet for the other markers. The upper-left cell is of course cell A1 and all other cells are referenced accordingly. For the ASD result of 1.92 for DYS390 you paste this function into cell B15 in the example: '=STD(B5:B14)^2*(10/9)*2'. Copy the cell and paste it across the sheet for the other markers. The row labeled 'Gen' is each marker's estimate of the number of generations since the founding of the haplotype population. For DYS390 you paste this function into cell B16 in the example: '=ROUND(B15/(2*B3*B4),0)'. Copy the cell and paste it across the sheet for the other markers. The 'GenAvg' is the average of the estimates that each marker has provided for the number of generations since the founding of the haplotype population. For this calculation, type the following function into cell B17 in the example: '=ROUND(AVG(B16:I16),0)'. This then is the estimated age of the haplotype population based on the variance observed in the Y-STR repeat values for the population. In this case, the final result is a figure of 515 generations. The last figure labeled 'YBP' simply multiplies this 515 generations by 25 and gives the estimated time of the founder of the haplotype population as 12,875 years before present.</b>
+
+
+
+<br><br><b>Document in progress...</b>
+
+
+<br><br>
+
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="index.html">Use your Back Button or click here to go to the Homepage</A></B></CENTER>
+
+</BODY>
+
+</HTML>
+

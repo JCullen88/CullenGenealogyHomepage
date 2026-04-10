@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Cullen Family DNA - ASD Calculation Concepts</TITLE>
+<META NAME="KEYWORDS" CONTENT="dna, asd, calculation, tmrca, genetics, cullen, genealogy">
+<META NAME="DESCRIPTION" CONTENT="ASD calculations and advanced methods using real and simulated populations, including variance distribution of simulated populations and difficult estimation for small groups and shallow trees.">
+</HEAD>
+
+<BODY BACKGROUND="DNATile.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="DNATrait.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="DNATrait.html">DNA & Family Traits</A> page.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Variance Analysis on<BR>Simulated Populations<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+
+<CENTER><BR><FONT SIZE="5"><B>One Marker ASD Calculations - Each Marker is an Age Estimate</B></FONT></CENTER>
+
+
+
+<br><br><b>When estimating the age of a haplotype population using the concept of ASD, we are typically working with as large a number of haplotypes as possible, each haplotype consisting of 25, 37, or more markers. We then employ ASD, which is simply twice the variance, as a measure of the 'spread' observed for that particular marker. As explained on another page of this section of the site, variance increases linearly with the age of the haplotype population in accordance with the Central Limit Theorem. The rate of this linear increase is determined by the marker's mutation rate which allows us to work the process in reverse - to calculate the amount of time it would take for a marker, with the specified mutation rate, to achieve the observed variance. What this means is that each marker is an estimate of the age of the haplotype population. The very simplest expression for estimated haplotype population age, based on one marker, is the sample variance divided by the mutation rate. Remember that the mutation rate is the probability of a mutation per generation ( or per transmission ). The estimated age is calculated for each marker and then the overall estimated age of the haplotype population is a sort of long-winded average over all the markers.</b>
+
+<br><br><b>Since the calculations from here on out will begin to get more involved and rely a little more heavily on other statistical concepts, I've decided to set aside the ASD for now and work strictly with variance. ASD can still be calculated for reference by multiplying the variance by two. Whenever possible I will supply links to outside sources of information on the concepts covered. Because of the increased complexity of the issues required to be dealt with we will also have to abandon the simplistic population models and develop a more sophisticated tree-building algorithm in order to generate more realistic simulations of haplotype populations. Ken Nordtvedt has developed what appears to me to be a particularly robust modelling scheme and so data here will have been generated using his algorithm. I will refer to this as the Nordtvedt Bifurcated Tree. The mutations themselves will continue to be somewhat idealistic; neutral, one-step symmetric, and constraint-free.</b>
+
+
+
+<br><br><center><b><font size="5">Fundamental Characteristics of the Distribution of Population STR Variance</font></b></center>
+
+
+<br><br><b>We've already had a brief introduction to the Chi-Squared distribution which can be used to model the distribution of the sample variances in our simulated population of single-marker haplotypes. This model has performed reasonably well as a statistical estimator but fails to match the observed data as more sophisticated or extreme situations are examined. This is due to the effects of the population parameters on the distribution of variance. These effects are not unknown in the natural world. While the Chi-Squared Distribution, and its parent the Gamma Distribution, are common enough in statistical work, we will have to resort to a model incorporating a distribution more often encountered in biological or medical fields of study. The distribution we are looking for must be able to describe the statistics of a binomial or trinomial process occurring in a population that is experiencing exponential growth. The distribution that has fit the data very well and that has given some insight into the process of genetic mutation in populations is the Log-normal Distribution. I find that the Log-normal Distribution also has a sense of 'elegance' as a solution to the question of variance or ASD distribution in populations of haplotypes. Certain characteristics of the Log-normal Distribution turn out to fit the observed phenomena in the distribution of variance in a haplotype population.</b>
+
+<br><br><b>We find the Log-normal Distribution in the study of Random Walks, Brownian Motion, diffusion, and other stochastic phenomena such as turbulence and heat transfer. There are applications in ecology, medicine, microbiology, and atmospheric sciences. For an excellent introduction to the Log-normal Distribution in nature and science, please refer to 'Log-normal Distributions across the Sciences: Keys and Clues' - Limpert, Stahel, & Abbt - BioScience May2001 Vol.51 No.5 . One particularly interesting article which spurred my interest in the Log-normal Distribution was 'Applying Branching Processes Theory for Building a Statistical Model for Scanning Electron Microscope Signals' - Cohen, Golan, & Rotman - Ben-Gurion University, Beer-Sheva, Israel. They describe the Log-normal distribution as the mathematically proper description of 'branching stochastic processes'. See also 'Lecture 8: From Random Walks to Diffusion - Division of Engineering and Applied Science, Harvard University - October 3, 2006' for the derivation of the Log-normal probability distribution function from a simple diffusion process.</b>
+
+<br><br><b>The most convincing evidence that the Log-normal distribution is the proper distribution for our purposes comes from the basic concept behind the idea of Log-normal data. Data that fits a Log-normal distribution will assume a normal distribution if we plot the logarithm of the distribution of the data points. Here one data point is the observed variance in STR repeat values within a population after a set period of exponential growth. Many thousands of simulations can be run to collect the required data to uncover the probability distribution of the observed variances. In the many simulations of STR mutations in growing populations, no matter how severely skewed the distribution, nearly normal distributions result from the replotting of the data using the logarithms of the data points.</b>
+
+<br><br><b>I will use an example to illustrate. We will consider one marker in a small population consisting of 64 individuals. The Mutation Rate of the marker is 0.04167 which, taking the inverse, gives a Mutational Period ( M<sub> p </sub> ) of 24 generations. The population phylogenetic tree, consisting of 24 generations, was founded by a single individual with a hypothetical marker repeat value of zero. The population is allowed to grow and experience genetic mutations at the typical father/son rates. At the end of the 24 generations, the alleles are counted up and a figure for variation of the alleles is calculated. 20,000 such trial runs are made and all variances observed are tallied into bins to form the final distribution shown below. As you can see, the distribution of variances is wide with a long tail at the high end of the distribution. The distributions, as expected, are also very noisy; they are not the smooth textbook probability distributions. For this reason I run each experiment with a minimum of 10,000 runs and a maximum bin width of 0.001 for good resolution and clearer trends of the data points.</b>
+
+<br><br><center><table width="98%" border="1" cellpadding="10"><tr><td><img src="Grf01.gif" width="630" height="520"></td><td><b>Observed distribution of variance in 20,000 trial runs of the simulated phylogenetic tree. The Log-normal distribution, derived directly from the data statistics, is plotted in red. Note the skewed distribution typical of most simulation outputs. Inset graph shows the same data plotted according to the natural logarithm of the variance, resulting in a Normal or Gaussian symmetrical distribution - an expected characteristic of Log-normal data.</b></td></tr></table></center><br>
+
+<br><br><b>Notice the symmetry of the inset graph showing the data plotted on a logarithmic scale. One of the surprises of running larger sets of trial runs with smaller bins is the sometimes stunning symmetry and underlying form of the data that shows up through the often chaotic small-scale variations. On the inset graph, the gray is the logarithmic variance data and the black is a trendline averaged over ten surrounding data points. There is no theoretical curve on the inset graph; the form and symmetry of the plot come directly from the data points themselves.</b>
+
+<br><br><b>The Log-normal distribution that fits the data is calculated through analysis of the raw data. A Log-normal distribution is defined by two parameters I will call 'mu' and 'sigma'. To define the parameters of the distribution that fits the observed data we simply work with the natural logarithms of the observed variances ( ln( v<sub> i </sub>) ) over the 20,000 trial runs instead of the figures for the variances themselves ( v<sub> i </sub> ). Then 'mu' is defined as the mean or expected value of ( ln( v<sub> i </sub>) ) and 'sigma' is defined as the standard deviation of the observed ( ln( v<sub> i </sub>) ). The values of 'mu' and 'sigma' define the Log-normal pdf by specifying the scale and shape of the distribution. Experiment variables that have the greatest effect on the size and shape of the Log-normal distribution are: the age of the tree in Generations ( G ) and the Mutational Period ( Mp ) which is the inverse of the mutation rate.</b>
+
+<br><br><b>These two variables also seem to work hand in hand. If ( N<sub>1</sub> = N<sub>2</sub> ) are two equal sized haplotype populations that are of unequal ages ( G<sub>1</sub> not = G<sub>2</sub> ), and each is sampled on a different different single marker ( M<sub>p1</sub> not = M<sub>p2</sub> ), the distributions of the observed variances in simulated experiments with two such populations will result in nearly identical variance distributions if M<sub>p1</sub> * G<sub>1</sub> is very nearly equal to M<sub>p2</sub> * G<sub>2</sub>. Ken Nordtvedt, in a correspondence regarding this idea, has said that there is a precedence for believing this to be true and that it may help simplify some of the probability work that needs to be done on these types of problems.</b>
+
+<br><br><b>The Log-normal representations of variance distributions are not always perfect. There are population effects that distort the variance distribution. What happens is that the mutations in the phylogenetic tree occurr randomly. Depending on where and when these mutations occurr in the tree, they cause varying amounts of change in variance in the descendant population. Couple this with further mutations in the descendant population and throughout the total population and you quickly have a complicated situation. The result is a series of variance distributions based on the expected number of mutations in the tree and the expected times they will occur. The variance distribution of the entire population is composed of many independent variance distributions based on the expectations of mutations throughout the phylogenetic tree.</b>
+
+<br><br><b>Ken Nordtvedt is working on how the probability of expected mutations in the phylogenetic tree can be accounted for using bayesian methods and how these quantified probabilities can be used to further understand problems we encounter in calculations such as the estimated ages of haplotype populations. His findings will be very interesting I am sure - and will prove to be very useful tools.</b>
+
+<br><br><b>To illustrate the composite nature of these variance distributions, I've chosen another set of simulations. This time we have a population of 2048 single-marker haplotypes descended from a single founder in a tree allowed to grow and mutate for 36 generations. The population growth rate is 1.2599 and the marker Mutation Period ( M<sub> p </sub> ) is 960 generations. Two separate experiments were executed; one with 50,000 trial runs at a bin size of 0.001 and another of 100,000 trial runs and a bin size of 0.0001 for extra resolution at small scales. Below is a plot of these very interesting results:</b>
+
+<br><br><center><table width="98%" border="1" cellpadding="10"><tr><td align="center"><img src="Grf02.gif" width="635" height="500"></td><td><b>Observed distribution of variance in 50,000 trial runs of the simulated phylogenetic tree. The derived Log-normal distribution is plotted in red. Inset graph is a higher resolution plot of the data points highlighted in turqoise in the larger plot. Note that the main distribution is composed of smaller distributions and possibly sub-distributions of these. These mini-founder events have distorted the main distribution by dragging probabilities further out on the tail, causing the derived Log-normal distribution to no longer match the data as expected.</b></td></tr></table></center><br>
+
+<br><br><center><table width="98%" border="1" cellpadding="10"><tr><td><b>Take a look at the plot above. There are two black dots on the x-axis, marking the outer boundaries of the high-resolution plot you see here. To produce useful data at a bin size of 0.0001 the trials had to be increased to 100,000 runs in order to collect the 8,000 odd data points within the target window at an intended average frequency of 20 counts per bin. The results illustrate the chaotic nature of these variance distributions, especially at small scales, regardless of how smooth the data may appear to be on a larger scale.</b></td><td align="center"><img src="Grf03.gif" width="640" height="530"></td></tr></table></center><br>
+
+<br><br><b>If you get the sense that maybe the composite variance distribution of the population STR alleles is composed of smaller Log-normal distributions, then you are essentially correct. They are Log-normal also, just as the parent distribution is. I'm quite sure that the probabilities that Ken Nordtvedt is calculating will fall into line with the observed distribution we've already seen in the plots above. This work we'll leave to Ken. My interest is more in the overall shape and scale of the observed distributions as population parameters are varied - which leads us to the next section.</b>
+
+
+
+<br><br><center><b><font size="5">Estimation of Log-normal Parameters from Distribution Statistics</font></b></center>
+
+
+
+<br><br><b></b>
+
+
+<br><br><b>Document in progress...</b>
+
+
+<br><br><center><table width="85%" border="1" cellpadding="10" bgcolor="#ffffcc"><tr><td><b><i>Hardware support for much of the work on this page includes: Microsoft QuickBasic v4.5 for data simulation, preparation, and some analysis; Texas Instruments' Voyage-200 PLT ( 12MHz M68000 CPU ) for some data simulation, algebraic manipulation, curve-fitting, and statistical analysis using Statistics / List Editor v1.03; Hewlett-Packard's HP50G+ ( 75MHz ARM CPU ) for some data simulation, algebraic operations involving advanced functions, and some statistical analysis; and OWBasic v3.5 on the Casio PV-S400Plus for cross-checking the data simulation random generator. The best stuff, as always, is worked out on pencil and paper ( CPU supplied by user ).</i></b></td></tr></table></center>
+
+
+
+
+<br><br>
+
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="index.html">Use your Back Button or click here to go to the Homepage</A></B></CENTER>
+
+</BODY>
+
+</HTML>
+

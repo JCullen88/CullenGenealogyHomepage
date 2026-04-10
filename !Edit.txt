@@ -1,0 +1,233 @@
+<DIV ALIGN="Center"><A HREF="http://www.zeldman.com/" target="_top"><IMG SRC="grzban.gif" WIDTH="234" HEIGHT="60" BORDER="0" ALT="Visit zeldman.com and see." TITLE="Visit zeldman.com and see." vspace="8"></A></DIV>
+* Update Log:
+Jun 25, 1998: (10:25am). Initial post of the site (FTP)
+Jun 26, 1998: Removed JimSig.gif and updated links to JimSig2.gif; Added IMG size attributes to charts (MainGene.html, JameFam.html, RudFath.html) (FTP)
+Jun 26, 1998: Added URL for index.html to HotBot, Alta Vista, Lycos (search engines) (done)
+Jun 26, 1998: Tables in Brief Page. Corrected link from JameFam.html to JameLett.html and back (FTP)
+Jun 26, 1998: Removed Cushman query from QuerPage.html (FTP)
+Jun 26, 1998: Anti-Spider e-mail addresses instituted for QuerPage.html (FTP)
+Jun 28, 1998: Update QuerPage.html and RudFath.html and posted TreeRud.gif with interlace test (FTP)
+Jun 29, 1998: Removed MailList.gif and verified site contents (FTP)
+Jun 29, 1998: Added Counter to index.html Note: Page load slower now and, later, tuck counter away in lower left corner (FTP)
+Jul 02, 1998: Posted LadyNott.html & LadyNott.jpg Revised MainGene.html and TreeCull.gif (photo marks) (FTP)
+Jul 03, 1998: Midified TreeCull.gif, TreeJame.gif, TreeRud.gif (bold lines) Updated QuerPage.html for DBenth (FTP)
+Jul 03, 1998: Modified House.html, SethPics.html (remove image HREF for return) (FTP)
+Jul 04, 1998: Cosmetics on MainGene.html, JameFam.html, RudFath.html and total revamp for index.html, CullOrig.html, and QuerPage.html (FTP)
+Jul 04, 1998: Added SiteMap.html, SiteMap.gif, Maplink.gif, ButtMap.gif and updated index.html, QuerPage.html, CullOrig.html, MainGene.html, JameFam.html, and RudFath.html for link to SiteMap.html (FTP)
+Jul 04, 1998: Edit graphics: ButtHome.gif, ButtOrig.gif, ButtGene.gif, ButtQuer.gif, ButtMap.gif, and ChainR.jpg (FTP)
+Jul 06, 1998: Added CullData.html, CullData.gif, ButtData.gif, WexStone.html, and Edited links for index.html, CullOrig.html, QuerPage.html, SiteMap.html, and SiteMap.gif (FTP)
+Jul 07, 1998: Temporarily removed WexStone.html due to authorship confusion (FTP)
+Jul 08, 1998: Added FamLinc.html and update CullData.html for link to (FTP)
+Jul 08, 1998: Updated ObitPage.html (FTP)
+Jul 10, 1998: Added JamePics.html, Henry6.jpg, nathan4.jpg, updated JameFam.html and TreeJame.gif for the links (FTP)
+Jul 10, 1998: Update FamLink.html with href to Nan Clark's surname pages for Lincolnshire (FTP)
+Jul 10, 1998: Updated Link.gif (FTP)
+Jul 11, 1998: Corrected photo mark in TreeCull.gif and Updated Sitemap.html SiteMap.gif (FTP)
+Jul 11, 1998: Edit ChainR.jpg (FTP)
+Jul 12, 1998: Added DubDir.html and updated CullData.html for the link. Corrected e-mail link to Jane O'Brien in DubDir.html (FTP)
+Jul 14, 1998: Posted draft copy of NovaScot.html, PerrPics.html, TreeNova.gif, Perrin.jpg (FTP)
+Jul 14, 1998: Update SiteMap.html, SiteMap.gif for NovaScot.html and PerrPics.html (FTP)
+Jul 14, 1998: Update About.html with Copyright Notice (FTP)
+Jul 15, 1998: Update CullOrig.html with Jim Roache's history of the name Cullen (FTP)
+Jul 15, 1998: Visitor #100
+Jul 18, 1998: Update ObitPage.html (FTP)
+Jul 22, 1998: Added NewfRegs.html and updated CullData.html for link (FTP)
+Jul 23, 1998: Bug fix for IE4 on opening pages (FTP)
+Jul 25, 1998: Update index.html for Rich Cullen's sites and some cleanup (FTP)
+Jul 25, 1998: Added LinkPage.html and update index.html, QuerPage.html (FTP)
+Jul 30, 1998: Added DubDir2.html and updated CullData.html for the link (FTP)
+Jul 31, 1998: Updated QuerPage.html, DubDir.html, CullData.html (FTP)
+Aug 07, 1998: Visitor #200
+Aug 12, 1998: Registered site with Excite (search engine) (done)
+Aug 12, 1998: Update RelFam.html and add Relate01.html (FTP)
+Aug 15, 1998: Update index.html, RelFam.html, LinkPage.html, CullOrig.html, CullData.html, QuerPage.html (FTP)
+Aug 16, 1998: Added Relate02.html WillCull.gif and updated RelFam.html for link (FTP)
+Aug 16, 1998: Update SiteMap.gif SiteMap.html (FTP)
+Aug 16, 1998: Added Relate03.html and updated RelFam.html for the link (FTP)
+Aug 17, 1998: Added Relate04.html and updated RelFam.html for the link (FTP)
+Aug 23, 1998: Visitor #300
+Aug 27, 1998: Added NottMen.html and updated CullData.html for the link (FTP)
+Sep 02, 1998: Added PeroWill.html and updated CullData.html for the link (FTP)
+Sep 08, 1998: Visitor #400
+Sep 10, 1998: Site Maintenance
+Sep 11, 1998: Site Maintenance
+Sep 12, 1998: Site Maintenance
+Sep 16, 1998: Added RichCo.html and TreeRich.gif
+Sep 17, 1998: Cosmetic touchup.
+Oct 06, 1998: Added MHCullen.html, Clouds.gif, update links (FTP)
+Oct 07, 1998: Visitor #500
+Oct 07, 1998: Added MHPosts.html and updated links (FTP)
+Oct 06, 1998: 
+Two Weeks of Overhaul and additions. Registered site with Webcrawler
+Oct 23, 1998: Visitor #600
+Oct 30, 1998: Registered site with Yahoo! (search engine) (done)
+Oct 31, 1998: Added JuanCull.html and updated links (FTP)
+Nov 08, 1998: Visitor #700
+Nov 14, 1998: Visitor #800
+Nov 22, 1998: Visitor #900
+Dec 01, 1998: Visitor #1000
+Dec 08, 1998: Visitor #1100
+Dec 18, 1998: Visitor #1200
+Dec 29, 1998: Visitor #1300
+Jan 07, 1999: Visitor #1400
+Jan 20, 1999: Visitor #1500
+Jan 30, 1999: Visitor #1600
+Feb 08, 1999: Visitor #1700
+Feb 16, 1999: Visitor #1800
+Feb 23, 1999: Visitor #1900
+Mar 01, 1999: Visitor #2000
+Mar 09, 1999: Visitor #2100
+Mar 13, 1999: In the AM, found only 21 visitors?
+   I have 100 visits per week so backlog.
+Mar 16, 1999: Visitor #2200
+Mar 23, 1999: Visitor #2300
+Mar 31, 1999: Visitor #2400
+Apr 14, 1999: Visitor #2500
+Apr 24, 1999: Visitor #2600
+May 04, 1999: Visitor #2700
+May 14, 1999: Visitor #2800
+May 23, 1999: Visitor #2900
+May 30, 1999: Visitor #3000
+Jun 10, 1999: Visitor #3100
+Jun 21, 1999: Visitor #3200
+Jul 01, 1999: Visitor #3300
+Jul 10, 1999: Visitor #3400
+Jul 21, 1999: Visitor #3500
+Jul 29, 1999: Visttor #3600
+Aug 06, 1999: Visitor #3700
+Aug 14, 1999: Visitor #3800
+Aug 24, 1999: Visitor #3900
+Aug 30, 1999: Visitor #4000
+Sep 07, 1999: Visitor #4100
+Sep 18, 1999: Visitor #4200
+Sep 26, 1999: Visitor #4300
+Oct 01, 1999: Visitor #4400
+Oct 09, 1999: Visitor #4500
+Oct 18, 1999: Visitor #4600
+Oct 27, 1999: Visitor #4700
+Nov 04, 1999: Visitor #4800
+Nov 13, 1999: Visitor #4900
+Nov 21, 1999: Visitor #5000
+Nov 28, 1999: Visitor #5100
+Dec 04, 1999: Visitor #5200
+Dec 11, 1999: Visitor #5300
+Dec 18, 1999: Visitor #5400
+Dec 27, 1999: Visitor #5500
+Jan 03, 2000: Visitor #5600
+Jan 09, 2000: Visitor #5700
+Jan 17, 2000: Visitor #5800
+Jan 25, 2000: Visitor #5900
+Feb 02, 2000: Visitor #6000
+Feb 09, 2000: Visitor #6100
+Feb 18, 2000: Visitor #6200
+Feb 25, 2000: Visitor #6300
+Mar 04, 2000: Visitor #6400
+Mar 10, 2000: Visitor #6500
+Mar 16, 2000: Visitor #6600
+Mar 20, 2000: Visitor #6700
+Mar 25, 2000: Visitor #6800
+Apr 01, 2000: Visitor #6900
+Apr 06, 2000: Visitor #7000
+Apr 13, 2000: Visitor #7100
+Apr 18, 2000: Visitor #7200
+Apr 24, 2000: Visitor #7300
+Apr 29, 2000: Visitor #7400
+May 05, 2000: Visitor #7500
+May 14, 2000: Visitor #7600
+May 21, 2000: Visitor #7700
+May 29, 2000: Visitor #7800
+Jun 05, 2000: Visitor #7900
+Jun 12, 2000: Visitor #8000
+Jun 20, 2000: Visitor #8100
+Jun 30, 2000: Visitor #8200
+Jul 10, 2000: Visitor #8300
+Jul 19, 2000: Visitor #8400
+Jul 26, 2000: Visitor #8500
+Aug 02, 2000: Visitor #8600
+Aug 22, 2000: Visitor #8700
+Aug 24, 2000: Visitor #8800
+Aug 26, 2000: Visitor #8900
+Aug 28, 2000: Visitor #9000
+Sep 01, 2000: Visitor #9100
+Sep 05, 2000: Visitor #9200
+Sep 10, 2000: Visitor #9300
+Sep 15, 2000: Visitor #9400
+Sep 21, 2000: Visitor #9500
+Sep 28, 2000: Visitor #9600
+Oct 06, 2000: Visitor #9700
+Oct 11, 2000: Visitor #9800
+Oct 18, 2000: Visitor #9900
+Oct 24, 2000: Visitor #10000
+Oct 30, 2000: Visitor #10100
+Nov 06, 2000: Visitor #10200
+Nov 12, 2000: Visitor #10300
+Nov 18, 2000: Visitor #10400
+Nov 25, 2000: Visitor #10500
+Nov 30, 2000: Visitor #10600
+Dec 07, 2000: Visitor #10700
+Dec 11, 2000: Visitor #10800
+Dec 19, 2000: Visitor #10900
+Dec 26, 2000: Visitor #11000
+Jan 01, 2001: Visitor #11100
+Jan 05, 2001: Visitor #11200
+Jan 09, 2001: Visitor #11300
+Jan 14, 2001: Visitor #11400
+Jan 21, 2001: Visitor #11500
+Jan 26, 2001: Visitor #11600
+Feb 01, 2001: Visitor #11700
+Feb 06, 2001: Visitor #11800
+Feb 11, 2001: Visitor #11900
+Feb 16, 2001: Visitor #12000
+Feb 22, 2001: Visitor #12100
+Feb 26, 2001: Visitor #12200
+Mar 03, 2001: Visitor #12300
+Mar 08, 2001: Visitor #12400
+Mar 12, 2001: Visitor #12500
+Mar 17, 2001: Visitor #12600
+Mar 21, 2001: Visitor #12700
+Mar 27, 2001: Visitor #12800
+Mar 29, 2001: Visitor #12900
+Apr 05, 2001: Visitor #13000
+Apr 11, 2001: Visitor #13100
+Apr 15, 2001: Visitor #13200
+Apr 22, 2001: Visitor #13300
+Apr 28, 2001: Visitor #13400
+May 05, 2001: Visitor #13500
+May 26, 2001: Visitor #13900
+May 31, 2001: Visitor #14000
+Jun 05, 2001: Visitor #14100
+Jun 12, 2001: Visitor #14200
+Dec 29, 2001: Visitor #17400 *
+Jan 03, 2002: Visitor #17500
+Jan 06, 2002: Visitor #17600
+Jan 09, 2002: Visitor #17700
+Jan 12, 2002: Visitor #17800
+Jan 15, 2002: Visitor #17900
+Jan 18, 2002: Visitor #18000
+Jan 21, 2002: Visitor #18100
+Jan 24, 2002: Visitor #18200
+Jan 29, 2002: Visitor #18300
+Feb 03, 2002: Visitor #18400
+Feb 08, 2002: Visitor #18500
+Feb 13, 2002: Visitor #18600
+Feb 18, 2002: Visitor #18700
+Feb 23, 2002: Visitor #18800
+Feb 28, 2002: Visitor #18900 *
+Mar 04, 2002: Visitor #19000
+Mar 08, 2002: Visitor #19100
+Mar 11, 2002: Visitor #19200
+Mar 14, 2002: Visitor #19300
+Mar 17, 2002: Visitor #19400
+Mar 21, 2002: Visitor #19500
+Mar 25, 2002: Visitor #19600
+Mar 28, 2002: Visitor #19700
+Mar 31, 2002: Visitor #19800
+Apr 04, 2002: Visitor #19900
+Apr 07, 2002: Visitor #20000
+Apr 09, 2002: Visitor #20100
+Apr 12, 2002: Visitor #20200
+
+Jul 18, 2002: Visitor #22400
+Jul 24, 2002: Visitor #22551
+
+Aug 10, 2002: Visitor #23000

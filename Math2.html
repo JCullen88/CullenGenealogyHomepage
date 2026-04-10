@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Random Normal Number Generator</TITLE>
+<META NAME="KEYWORDS" CONTENT="random, gaussian, normal, numbers, mathematics, number theory">
+<META NAME="DESCRIPTION" CONTENT="Simple Random Normal Number Generator">
+</HEAD>
+
+<BODY BACKGROUND="GraphB.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="Math.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="Math.html">Math Index</A>.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Random Normal<BR>Number Generator<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+<br><br>There are several approaches to the problem of generating a random series of numbers that are distributed normally, some better than others. There are random lookup tables, transformation functions, and other methods even more sophisticated. A few will be discussed here as time permits.
+
+<br><br>The normal distribution, sometimes referred to as the &quot;Bell Curve&quot;, is one of the key concepts of the Central Limit Theorem. The Normal Distribution describes data that is distributed normally, that is, randomly scattered but arranged around a central point as a graduated concentration. The equation for the Bell Curve is:
+
+<br><br><center><b>y = e <sup>( -1/2 . x^2)</sup></b></center>
+
+<br><br>This form calculates the ordinates of the Normal Distribution with <b>x</b> being the distance, plus or minus, from the arithmetic mean expressed in terms of the standard deviation <b>( x / s )</b>. The height of the ordinate is the percentage of the maximum ordinate which occurs at zero. In these terms, the equation describes the classic Bell Curve which has an arithmetic mean of zero and a standard deviation of one. In this form of the equation, the height of the ordinate at zero is equal to one. In order to determine the theoretical frequency for any value of <b>x</b>, you simply multiply by a constant, <b>1 / sqrt( 2 <sup> . </sup>pi )</b>, which works out to a decimal value of approximately <b>0.24197072</b>. Without this constant, the frequency of an ordinate is expressed in terms of the frequency of the ordinate when <b>x = 0</b>.
+
+<br><br>It is difficult to generate a random series of numbers that approaches a Normal Distribution because typical random number generators in computer languages are linear values between zero and one. An ideal random linear distribution is such that the theoretical frequency of any ordinate is equal to all others. The Normal Distribution also extends to plus or minus infinity while random number generators have a fixed, finite range.
+
+<br><br>To convert the linear random numbers to a Normal Distribution, we may take advantage of the equation for the Normal Distribution to obtain the theoretical frequency of our random data. We'll also need to extend the range of our random numbers to include the tail areas of the Normal Distribution. Simple math will be used to extend and center our data set to any values required, providing what we will call 'candidate' random numbers. A second random number, we'll call it the 'key' random, will be generated to be compared to the ordinate value obtained from the Normal Distribution equation. If our key fits, if it is less than the theoretical frequency of our ordinate as compared to the frequency of the arithmetic mean, then our 'candidate' random is accepted as a data point.
+
+<br><br>There are advantages and disadvantages to this method. Many calls to the random generator may have to be made to obtain one data point. For most applications, unless you require many millions of normally distributed random numbers, this will not be a problem. In fact, a random number of calls to the generator before accepting a data point is an advantage since you bypass having to accept consecutive values from the mathematical routine that simulates random numbers in the computer. There is a problem also of extending our range to plus or minus infinity - it isn't practical in this method. As we extend the range of our 'candidate' random numbers, even more calls to the random generator are required to obtain an accepted data point. The more we extend our range, the slower the routine runs... but the results are more accurate. There is a tradeoff between accuracy and speed which will show up as a standard deviation of the final data set that is some tiny amount less than one.
+
+
+<br><br><br><i>URL: https://jcullen88.github.io/CullenGenealogyHomepage/Math2.html</i>
+<br>&copy; July 12, 2006 - Jim Cullen - all rights reserved.
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="Math.html">Use your Back Button or click here to go to the Math Index</A></B></CENTER>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,9 @@
+The following code was removed. It goes 
+immediately after the hard rule after 
+the "What's New" section. Save until I'm 
+sure I won't want it back on.
+
+
+<A HREF="PuzzPage.html"><IMG SRC="Pzl.gif" HEIGHT="70" WIDTH="70" BORDER="0" ALIGN="LEFT" VALIGN="TOP"></A>
+Information on this page has been assembled from many different sources and could be very important if the last few pieces of family history can be found. Take a look - maybe you can help? The featured families this time are: Cullens from Wexford who settled in Manorhamilton, Co Leitrim; also Ardmoneen and Meenkeragh.
+<HR WIDTH="95%">

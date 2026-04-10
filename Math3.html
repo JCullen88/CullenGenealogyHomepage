@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Sums of Generalized Fibonacci Numbers</TITLE>
+<META NAME="KEYWORDS" CONTENT="fibonacci, numbers, sums, lucas, summation, mathematics, number theory">
+<META NAME="DESCRIPTION" CONTENT="Special Sums of Generalized Finonacci Numbers">
+</HEAD>
+
+<BODY BACKGROUND="GraphB.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="Math.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" border="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="Math.html">Math Index</A>.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" border="0" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" border="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" border="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Special Sums of<BR>Generalized<BR>Fibonacci Numbers<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+<br><br><center><b><font size="4">Brief Introduction to the Generalized Fibonacci Sequences</font></b></center>
+
+<br><br>The Fibonacci sequence and the 'Golden Mean' are fascinating mathematical subjects and have been studied extensively for the better part of two millenia. The prescence and effect of this singular ratio can be found in Art, Science, Nature, Religion, Mathematics, Philosophy, Architecture, and the inner workings of the human mind itself. For the most comprehensive source of information available on the Fibonacci Numbers, the 'Golden Mean', and other related topics, please visit <b>Dr. Ron Knott's</b> <b><a href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fib.htmll">Fibonacci Numbers and the Golden Section</a></b>, sponsored by the Mathematics Department of the University of Surrey, UK.
+
+<br><br>The Fibonacci Numbers are integers, members of the recursive integer sequence, the Fibonacci Sequence. The sequence begins; <b>{ 0, 1, 1, 2, 3, 5, 8, 13, 21, <sup>. . .</sup> }</b> and is recursive in that the value of any Fibonacci Number is the sum of the previous two Fibonacci Numbers. Each Fibonacci Number is referenced according to it's ordinal position in the list, with <b>Fibonacci( 0 )</b>, or just <b>F( 0 )</b>, being the first Fibonacci Number in the sequence and having the value <b>zero</b>. The generic variable <b>z</b> will be used as the ordinal and so the recursive property can be stated:
+
+<br><br><center><b>F( z ) = F( z - 1 ) + F( z - 2)</b></center>
+
+<br><br>The Fibonacci Sequence is actually just one of an infinite number of integer sequences of this type. Another well-known example is the Lucas Sequence. The Lucas Numbers have the same recursive properties as the Fibonacci Numbers but the Lucas Sequence begins with different values for the first two members of the sequence. The first few Lucas Numbers are; <b>{ 2, 1, 3, 4, 7, 11, 18, 29, <sup>. . .</sup> }</b>. To reference a Lucas Number we use <b>Lucas( z )</b>, or just <b>L( z )</b>. We can then say that the Lucas Sequence differs from the Fibonacci Sequence in that <b>L( 0 ) = 2</b> and <b>L( 1 ) = 1</b> while <b>F( 0 ) = 0</b> and <b>F( 1 ) = 1</b>. Since there are an infinite number of such sequences that can be identified by the first two values in the sequence, we will use the notation <b>G( z )</b> to indicate a Generalized Fibonacci Sequence. We will further indicate the starting values of the Generalized Sequence by using <b>G( 0 ) = a</b> and <b>G( 1 ) = b</b>. A specific Generalized Fibonacci Sequence and the ordinal position of interest can then be notated by <b>G( a, b, z )</b>. We can now restate the recursive property of the Fibonacci-type sequences as:
+
+<br><br><center><b>G( a, b, z ) = G( a, b, z - 1 ) + G( a, b, z - 2)</b></center>
+
+<br><br>One of the better known properties of the Fibonacci-type sequences ( and one that has generated much philosophical discussion ) is the fact that, as <b>z</b> approaches infinity, the ratio of <b>G( a, b, z )</b> to <b>G( a, b, z - 1 )</b> converges on the value of the <b>&quot;Golden Mean&quot;</b> or the <b>&quot;Golden Ratio&quot;</b>, an irrational number with a decimal value of approximately <b>1.61803398875</b> that has historically been denoted by the Greek letter <b>Phi</b>. In this paper I will use <b>Phi</b> to indicate this value which is equal to:
+
+<br><br><center><table width="40%" border="0" cellpadding="3"><tr align="right"><td><b>Phi = </b></td><td align="center"><b>Sqrt( 5 ) + 1<br><hr width="75%" size="2" color="#000000">2</b></td></tr></table></center>
+
+<br><br>and the related value, denoted by <b>phi</b>, which is both the reciprocal of <b>Phi</b> and the value of <b>Phi - 1</b>. Therefore <b>phi</b> has a decimal value of approximately <b>0.61803398875</b>, and I will use <b>phi</b> to denote this value in this paper. The value of <b>phi</b> is equal to:
+
+<br><br><center><table width="40%" border="0" cellpadding="3"><tr align="right"><td><b>phi = </b></td><td align="center"><b>Sqrt( 5 ) - 1<br><hr width="75%" size="2" color="#000000">2</b></td></tr></table></center>
+
+<br><br>The values <b>Phi</b> and <b>(-)phi</b> are the roots of the quadratic <b>x<sup>2</sup> - x - 1 = 0</b>. To demonstrate, take any pocket calculator and clear the display. Type in any number you may like. Perform this two-step procedure: take the reciprocal ( just press the <b>x<sup>-1</sup></b> button ) and then simply add one to the answer you get ( press <b>+ 1 =</b> ). Repeat the procedure: <b>x<sup>-1</sup> + 1 =</b>, reciprocal, add one, reciprocal, add one, etc. Eventually, the number showing in the display will converge on the value of <b>Phi</b>. When you take the reciprocal of this, then the value of <b>phi</b> will show in the display. Add one to this and you're back to displaying the value of <b>Phi</b> again! Any starting value ( except zero of course ) will result in the convergence of the display results to the values of <b>Phi</b> and <b>phi</b>.
+
+<br><br>We can use the values of <b>Phi</b> and <b>phi</b> to calculate Fibonacci Numbers directly instead of using the recursive relation to step our way through the Fibonacci Sequence. There are two forms of the equation: one for integer arguments and one for real arguments. The integer form of this equation is called the <b>'Binet Formula'</b> and it is:
+
+<br><br><center><table width="40%" border="0" cellpadding="3"><tr align="right"><td><b>F( z ) = </b></td><td align="center"><b>Phi<sup>z</sup> - ( -phi )<sup>z</sup><br><hr width="75%" size="2" color="#000000">Sqrt( 5 )</b></td></tr></table></center>
+
+<br><br>The Binet Formula allows us to calculate <b>F( 0 ), F( 1 ), F( 2 ),</b> and so on. But what if we want to calculate the value of <b>F( 1.5 )</b> or the value of <b>F( 3/7 )</b>? The second form of the equation allows for arguments that are not integers. The second form of the Fibonacci equation allows us to calculate a Fibonacci number for any <b>real</b> value of <b>z</b>, not just integer values of <b>z</b>. The results involve imaginary numbers but we will only be concerned with the real component of the results for our purposes. This form of the Fibonacci formula is:
+
+<br><br><center><table width="45%" border="0" cellpadding="3"><tr align="right"><td><b>Fib( z ) = </b></td><td align="center"><b>Phi<sup>z</sup> - cos( Pi * z ) * phi<sup>z</sup><br><hr width="75%" size="2" color="#000000">Sqrt( 5 )</b></td></tr></table></center>
+
+<br><br>I will use the notation <b>F( z )</b> and <b>Fib( z )</b> to refer to the above formulas. Either one of these formulas may be utilized to calculate the values for any Generalized Fibonacci Sequence by using the following relation:
+
+<br><br><center><table width="35%" border="0" cellpadding="3"><tr align="right"><td><b>G( a, b, z ) = </b></td><td align="center"><b>a * F( z - 1 ) + b * F( z )</b></td></tr></table></center>
+
+<br><br>There are of course an infinite number of Generalized Fibonacci Sequences, among them are the Fibonacci Sequence itself <b>G( 0, 1, z )</b> and the Lucas Sequence <b>G( 2, 1, z )</b>.
+
+<br><br>Having settled on the above definitions, we end the introduction to the Generalized Fibonacci Sequences. For more detailed information, please visit <b>Dr. Ron Knott's</b> <b><a href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fib.htmll">Fibonacci Numbers and the Golden Section</a></b>, the largest and most informative web site on the internet devoted to the study of the Fibonacci and related sequences, the Golden Section, and the Golden String. You may also download the <b><a href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibFormulae.pdf">PDF version</a></b> of the <b><a href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibFormulae.htmll">Fibonacci Formulae</a></b> which provides a much more complete review of mathematical formulae and relations regarding Generalized Fibonacci Numbers. Dr Ron Knott's website has been generously hosted by the Mathematics Department of the University of Surrey, UK.
+
+<br><br>Hardware support for much of the work on this page includes: Texas Instruments' Voyage-200 PLT ( 12MHz M68000 CPU ) for summations, numerical analysis, and some algebraic operations; Hewlett-Packard's HP49G+ ( 75MHz ARM CPU ) for summations and some algebraic operations; Microsoft Quick-Basic Ver4.5 for generation of tables of high-speed sums and cross-checking. The best stuff, as always, is worked out on pencil and paper ( CPU supplied by user ).
+
+
+
+<br>
+<br><br><center><b><font size="4">Special Summations of Generalized Fibonacci Sequences</font></b></center>
+
+
+<br><br>All summations and solutions given elsewhere in the literature will be credited. All other solutions have been developed by myself and, while some of my own solutions may possibly be given previously by another author, my solutions will have been developed independently of their work with no infringement on rights intended.
+
+<br><br>We begin with a surprisingly elegant observation ( Vajda - 1989) and ( Dunlap - 1997 ) involving summations of the Fibonacci and Lucas Numbers, specifically:
+
+<br><br><center><table width="70%" border="0" cellpadding="3"><tr align="center">
+
+<td><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>F( i )<br><hr width="95%" color="#000000">2<sup>i</sup></b></td><td><b><font size="4"> = 2</font></b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td>
+
+<td><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>L( i )<br><hr width="95%" color="#000000">2<sup>i</sup></b></td><td><b><font size="4"> = 6</font></b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td></tr></table></center>
+
+<br><br>which can be generalized for any real number ( <b>r</b> ) being raised to the power of <b>i</b> in the denominator. If you graph the results of the following summations, you will find an asymptote at <b>r = Phi</b> since there will be a value of zero in the denominator, resulting in an infinity. There are some useful generalized solutions for these kinds of summations involving the Fibonacci Sequence, such as:
+
+<br><br><center><table width="90%" border="0" cellpadding="3"><tr align="center">
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>F( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="center"><b> = </b></td><td align="center"><b>r<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td></tr>
+<tr align="center"><td><b>i = 1</b></td><td colspan="3">&nbsp;</td></tr></table></td>
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>F( i - 1 )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="center"><b> = </b></td><td align="center"><b>1<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td></tr>
+<tr align="center"><td><b>i = 1</b></td><td colspan="3">&nbsp;</td></tr></table></td></tr></table></center>
+
+<br><br>All summations of this type can be expressed by a generalized form which is:
+
+<br><br><center><table width="50%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>G( 1, r, d + 1 )<hr width="95%" color="#000000">r<sup>k</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = 1</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>Note that, due to the offset <b>d</b> in the Fibonacci Sequence, this form of the solution is true only for the summation beginning at <b>i = 1</b>. The summation beginning at <b>i =  0</b> requires a separate solution, which is:
+
+<br><br><center><table width="50%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>G( 1, r, d )<hr width="95%" color="#000000">r<sup>( k - 1 )</sup> <sup>.</sup> (r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>and, in fact, for any beginning point of the summation <b>i = m</b> the solution can be found in closed form by:
+
+<br><br><center><table width="55%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>G( 1, r, d + m )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>The summations given by Vajda and Dunlap, generalized for <b>r</b>, now have the forms:
+
+<br><br><center><table width="90%" border="0" cellpadding="3"><tr align="center">
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>F( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="center"><b> = </b></td><td align="center"><b>r<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td>
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>L( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> =&nbsp; &nbsp;2 +</b></td><td align="center"><b>r + 2<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td></tr></table></center>
+
+<br><br>These particular summations of course involve the Finonacci and Lucas sequences but it is possible to write the summation for any Generalized Fibonacci Sequence. This has already been done and this form of the summation ( Stan Rabinowitz - 1996 ) is:
+
+<br><br><center><table width="40%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> =&nbsp; &nbsp;a +</b></td><td align="center"><b>a + br<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td></tr>
+<tr align="center"><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+
+
+<br>
+<br><br><center><b><font size="4">General Forms for Special Summations of Generalized Fibonacci Sequences</font></b></center>
+
+
+
+<br><br>My interest in the general form of the summation given by Rabinowitz is that it is possible for the summation to be equal to <b>zero</b>. To explore this situation, I've altered the form of the summation in order to allow the summation to begin at any integer value ( <b>m</b> ) greater than or equal to zero. I've also added into the numerator the constant ( <b>k</b> ), which may be any real number. The new form of the summation is:
+
+<br><br><center><table width="30%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>G( a, b, i ) + k<br><hr width="95%" color="#000000">r<sup>i</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>As could have been expected, the sum depends linearly on the value you assign to the constant <b>k</b> with all other values being held constant. The measure of the linear dependence of the sum on the value of <b>k</b>, or the amount of change in the sum per unit change of the value of <b>k</b>, is a value dependent only on the values of <b>r</b> and <b>m</b>. This means that <b>k</b> has the same effect on the sum regardless of the values of <b>a</b> and <b>b</b> which define the Generalized Fibonacci Series in the summation.
+
+<br><br>The exact expression for the amount of change in the sum for a unit change in the value of <b>k</b> is:
+
+<br><br><center><table width="20%" border="0" cellpadding="3">
+<tr align="center"><td><b>r<sup>( 1 - m )</sup><hr width="60%" color="#000000">r - 1</b></td></tr></table></center>
+
+<br><br>   This expression being noted, I regarded the effect on the sum of increasing the value of <b>m</b>. Of course the sum decreased, and it decreased in an amount determined by the values of another Generalized Fibonacci Series! What I did from this point was to use this characteristic general series to determine the sum while <b>k</b> was held at the value of zero. At a given value of <b>m</b>, the sum would have a value determined by this series and, using the above expression for the change in the sum per change in <b>k</b>, I was able to determine the proper value of <b>k</b> to cause the sum to equal zero. The intent was to discover under what conditions the sum would equal out to zero. What actually happened however, was that I found something more useful - a formula for the infinite summation that worked. I first determined the value of <b>k</b> to bring the sum to zero, determined by a general fibonacci series:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr><td align="center"><b>( 1 - r )<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td><td align="left"><b><sup>.</sup> G[ ( r - 1 ) <sup>.</sup> b - ( r - 2 ) <sup>.</sup> a, b + ( r - 1 ) <sup>.</sup> a, m + 1 ]</b></td></tr></table></center>
+
+<br><br>which I then used in reverse... for a given <b>k</b> I could determine the difference between the "zero point" and <b>k</b> and, applying the fact that there is a linear change in the sum for this change in <b>k</b>, the sum could be determined. This means you take <b>k</b> and subtract the value above and then multiply by the step change in <b>k</b>. The final result, after just a little rearranging and cancelling, and after determining that:
+
+<br><br><center><b>G[ ( r - 1 ) <sup>.</sup> b - ( r - 2 ) <sup>.</sup> a, b + ( r - 1 ) <sup>.</sup> a, m + 1 ]</b></center>
+
+<br><br>is the same as stating:
+
+<br><br><center><b>r <sup>.</sup> G( a, b, m ) + G( a, b, m - 1 )</b></center>
+
+<br><br>you are left with the solution that:
+
+<br><br><center><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="7">&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>G( a, b, i ) + k<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> = r<sup>( 1 - m )</sup> <sup>.</sup></b></td><td><b><font size="7">[</font></b></td><td align="center"><b>k<hr width="95%" color="#000000">r - 1</b></td><td align="center"><b> + </b></td><td align="center"><b>r <sup>.</sup> G( a, b, m ) + G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td><td><b><font size="7">]</font></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="7">&nbsp;</td></tr></table></center>
+
+<br><br>You may also omit the constant value <b>k</b> from the summation and you are left with:
+
+<br><br><center><table width="65%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> = </b></td><td align="center"><b>r <sup>.</sup> G( a, b, m ) + G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+which is equivalent to:
+
+<br><br><center><table width="65%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> = </b></td><td><b>G( b + ar - a, br + a, m )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>which reduces to the solution given by Rabinowitz when <b>m</b> is set to <b>zero</b>. We can disregard the constant <b>k</b> from here on. These solutions for Generalized Fibonacci Sequences may be solved for the special cases of <b>G( 0, 1, z )</b> and <b>G( 2, 1, z )</b>, which are the Fibonacci and Lucas sequences respectively but there is little savings in complexity of the solutions in these cases, which are:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="5">&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>F( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> = r<sup>( 1 - m )</sup> <sup>.</sup></b></td><td><b><font size="7">[</font></b></td><td align="center"><b>G( r - 1, 1, m + 1 )<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td><td><b><font size="7">]</font></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="7">&nbsp;</td></tr></table></center>
+
+<br><br>and
+
+<br><br><center><table width="65%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="5">&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>L( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td align="right"><b> = r<sup>( 1 - m )</sup> <sup>.</sup></b></td><td><b><font size="7">[</font></b></td><td align="center"><b>G( 3 - r, 2 <sup>.</sup> r - 1, m + 1 )<hr width="95%" color="#000000">r<sup>2</sup> - r - 1</b></td><td><b><font size="7">]</font></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="7">&nbsp;</td></tr></table></center>
+
+<br><br>which can be immediately rewritten in the following forms:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b> = </b></td><td><b>r <sup>.</sup> F( m ) + F( m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>and
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>L( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b> = </b></td><td><b>r <sup>.</sup> L( m ) + L( m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>which are then simply restatements of the general case. Returning to the original solution ( without the constant <b>k</b> in the numerator ), restated here:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b> = </b></td></td><td><b>r <sup>.</sup> G( a, b, m ) + G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>we'll look at the limitations of some of the variables. The variable <b>r</b> must be a real number greater than zero but not equal to <b>Phi</b> since there is an asymptote there for all solutions, resulting in an infinity. The other root of <b>r<sup>2</sup> - r - 1</b> is the value <b>-phi</b> which won't concern us here since <b>r</b> is constrained to real numbers greater than zero. The value of <b>m</b> must be an integer and not less than zero. <b>a</b>, <b>b</b>, and <b>k</b> may be any real numbers. There are also some interesting roots for all Generalized Fibonacci Sequences <b>G( a, b, z )</b> when <b>a</b> is greater than <b>b</b> and <b>m = 0</b>. The roots appear when <b>r = ( a - b ) / a</b> and so are located between zero and one. There is another root but again does not concern us due to the constraints on the variable <b>r</b>.
+
+<br><br>We could further imagine at this point taking what we already know from the summation given earlier and repeated here:
+
+<br><br><center><table width="55%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>G( 1, r, d + m )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>and using that knowledge to extend the properties of another summation discussed earlier:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b> = </b></td></td><td><b>r <sup>.</sup> G( a, b, m ) + G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>This would give us the ability to find the closed form solution for summations of the form:
+
+<br><br><center><table width="30%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>We begin by splitting the Generalized Fibonacci summation into its Fibonacci component summations:
+
+<br><br><center><table width="75%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>F( i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td align="right"><b> =&nbsp; a <sup>.</sup></b></td><td><img src="Sigma.gif"></td><td><b>F( i + d - 1 )<hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td align="right"><b>+&nbsp; b <sup>.</sup></b></td><td><img src="Sigma.gif"></td><td><b>F( i + d )<hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td>&nbsp;</td><td>&nbsp;</td><td><b>i = m</b></td><td>&nbsp;</td><td>&nbsp;</td><td><b>i = m</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>and then combining the solutions of the individual summations:
+
+<br><br><center><table width="50%" border="0" cellpadding="3">
+<tr align="center"><td><b>a <sup>.</sup> G( 1, r, d + m - 1 )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td><td><b> + </b></td><td><b>b <sup>.</sup> G( 1, r, d + m )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr></table></center>
+
+<br><br>to reveal a closed-form solution for the summation of interest:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>a <sup>.</sup> G( 1, r, d + m - 1 ) + b <sup>.</sup> G( 1, r, d + m )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>which is equivalent to:
+
+<br><br><center><table width="60%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b> = </b></td><td><b>G( b + ar - a, br + a, d + m )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )</b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+
+
+<br>
+<br><br><center><b><font size="4">Another Special Summation of Generalized Fibonacci Sequences</font></b></center>
+
+
+
+<br><br>Another interesting set of summations, again from ( Vajda - 1989) and ( Dunlap - 1997 ) are given for the Fibonacci and Lucas Sequences:
+
+<br><br><center><table width="70%" border="0" cellpadding="3"><tr align="center">
+
+<td><table width="75%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>i <sup>.</sup> F( i )<br><hr width="95%" color="#000000">2<sup>i</sup></b></td><td><b><font size="4"> = 10</font></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td>
+
+<td><table width="75%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>i <sup>.</sup> L( i )<br><hr width="95%" color="#000000">2<sup>i</sup></b></td><td><b><font size="4"> = 22</font></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td></tr></table></center>
+
+<br><br>which, for the Fibonacci Sequence, has one useful form of generalization as follows:
+
+<br><br><center><table width="85%" border="0" cellpadding="3"><tr align="center">
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> F( i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td> = </td><td><b>r<sup>3</sup> + r<br><hr width="95%" color="#000000">( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td>
+
+<td><table width="80%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> F( i - 1 )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td> = </td><td><b>2r<sup>2</sup> - r<br><hr width="95%" color="#000000">( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></td></tr></table></center>
+
+<br><br>and can be used to rewrite the expressions for Generalized Fibonacci Sequences by splitting the Generalized Sequence summation into its Fibonacci Sequence components and noting that:
+
+<br><br><center><b>a <sup>.</sup> ( 2r<sup>2</sup> - r ) + b <sup>.</sup> ( r<sup>3</sup> + r ) = r <sup>.</sup> ( br<sup>2</sup> + 2ar + b - a )</b></center>
+
+<br><br>The final result is the generalized form of the summation as given by Rabinowitz ( 1996 ):
+
+<br><br><center><table width="55%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>r <sup>.</sup> ( b r<sup>2</sup> + 2 a r + b -a )<hr width="95%" color="#000000">( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>In the above summations, I've used <b>i=0;1</b> to indicate that the summation gives identical answers whether we start the summation at zero or one. The numerical results may be identical but the general solution, if one exists in closed form, will consist of two different algebraic statements that give numerically identical results. Another useful summation of this type is:
+
+<br><br><center><table width="55%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> F( i + d )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>G( r<sup>3</sup> + r, r<sup>3</sup> + 2r<sup>2</sup>, d )<hr width="95%" color="#000000">( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>and, like any summation of this variety where <b>i</b> is a factor in the numerator, gives the same answer whether the summation begins at zero or one. The solution is equivalent to:
+
+<br><br><center><table width="55%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td align="center"><b>i <sup>.</sup> F( i + d )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>r <sup>.</sup> G( r<sup>2</sup> + 1, r<sup>2</sup> + 2r, d )<hr width="95%" color="#000000">( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = 0;1</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>Again my interest was to uncover the generalized form of the summation, given previously by Rabinowitz, in order to allow the summation to begin at any integer value <b>m</b> greater than or equal to zero. This time however, no constant was added into the summation. The new form of the summation would then be:
+
+<br><br><center><table width="30%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle"><td align="center"><img src="Sigma.gif"></td><td align="center"><b>i <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>Based on numerical analysis that provided integer results, I took a stab at the form of the solution for the summation which turned out to be:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, m ) + q( r ) <sup>.</sup> G( a, b, m + 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>with an obvious extended form of:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, d + m ) + q( r ) <sup>.</sup> G( a, b, d + m + 1 )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>and an alternate form based on <b>G( a, b, m - 1 )</b> instead of <b>G( a, b, m + 1 )</b> which is:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, d + m ) + q( r ) <sup>.</sup> G( a, b, d + m - 1 )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr></table></center>
+
+<br><br>with <b>p( r )</b> and <b>q( r )</b> being functions of <b>r</b> producing the observed integers in the numerical analysis.I substituted in ascending values of <b>m</b> and <b>r</b> and then had the computer do the search for combinations of integer values for <b>p( r )</b> and <b>q( r )</b> that satisfied the known value for the summation (calculated numerically). The results revealed a pattern dependent on <b>r</b> and were, in part, as follows:
+
+<br><br><center><b>r = 2: [ 1 * 1 * m + 3 ] * F( m ) + [ 1 * m + ( 5 - 0 ) ] * F( m + 1 )
+<br>r = 3: [ 5 * 2 * m + 5 ] * F( m ) + [ 5 * m + ( 11 - 1 ) ] * F( m + 1 )
+<br>r = 4: [ 11 * 3 * m + 7 ] * F( m ) + [ 11 * m + ( 19 - 2 ) ] * F( m + 1 )
+<br>r = 5: [ 19 * 4 * m + 9 ] * F( m ) + [ 19 * m + ( 29 - 3 ) ] * F( m + 1 )</b></center>
+
+<br><br>with the series <b>1, 5, 11,</b> and <b>19</b> appearing as results of <b>( r<sup>2</sup> - r - 1 )</b> being applied to the r-values of <b>2, 3, 4,</b> and <b>5</b>. The final formula followed soon after with random testing after that for non-integer values (+/-) for <b>a, b, m</b> and <b>r</b>. The final form of the solution turns out to be:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, m ) + q( r ) <sup>.</sup> G( a, b, m + 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr>
+<tr align="left"><td colspan="4">with</td></tr>
+<tr align="center"><td colspan="4"><b>p( r ) = m r<sup>3</sup> - 2 m r<sup>2</sup> + 2 r + m - 1</b></td></tr>
+<tr align="left"><td colspan="4">and</td></tr>
+<tr align="center"><td colspan="4"><b>q( r ) = ( m + 1 ) r<sup>2</sup> - m r - m + 1</b></td></tr></table></center>
+
+<br><br>with the alternate solution, based on <b>G( a, b, m - 1 )</b> instead of <b>G( a, b, m + 1 )</b>, being as follows:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, m ) + q( r ) <sup>.</sup> G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr>
+<tr align="left"><td colspan="4">with</td></tr>
+<tr align="center"><td colspan="4"><b>p( r ) = m r<sup>3</sup> + ( 1 - m ) r<sup>2</sup> + ( 2 - m ) r</b></td></tr>
+<tr align="left"><td colspan="4">and</td></tr>
+<tr align="center"><td colspan="4"><b>q( r ) = ( m + 1 ) r<sup>2</sup> - m r - m + 1</b></td></tr></table></center>
+
+<br><br>and the obvious extended form given earlier remains with <b>p( r )</b> and <b>q( r )</b> unchanged:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i <sup>.</sup> G( a, b, i + d )<br><hr width="95%" color="#000000">r<sup>( i + k )</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, d + m ) + q( r ) <sup>.</sup> G( a, b, d + m - 1 )<hr width="95%" color="#000000">r<sup>( m + k - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>2</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr>
+<tr align="left"><td colspan="4">with</td></tr>
+<tr align="center"><td colspan="4"><b>p( r ) = m r<sup>3</sup> + ( 1 - m ) r<sup>2</sup> + ( 2 - m ) r</b></td></tr>
+<tr align="left"><td colspan="4">and</td></tr>
+<tr align="center"><td colspan="4"><b>q( r ) = ( m + 1 ) r<sup>2</sup> - m r - m + 1</b></td></tr></table></center>
+
+<br><br>This form of the solution is preferred though it does not generalize well for solutions of summations where the factor <b>i</b> in the numerator is raised to a power <b>k</b>. This form of the solution to the summation would have the general form:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i<sup>k</sup> <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, m ) + q( r ) <sup>.</sup> G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>k+1</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr>
+</table></center>
+
+<br><br>with <b>p(r)</b> and <b>q(r)</b> being polynomials of increasing order with <b>k</b>. As an example, for the specific case of <b>k=2</b>, the solution is:
+
+<br><br><center><table width="70%" border="0" cellpadding="3">
+<tr align="center"><td><b>inf</b></td><td colspan="3">&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><img src="Sigma.gif"></td><td><b>i<sup>2</sup> <sup>.</sup> G( a, b, i )<br><hr width="95%" color="#000000">r<sup>i</sup></b></td><td><b><font size="4"> = </font></b></td><td><b>p( r ) <sup>.</sup> G( a, b, m ) + q( r ) <sup>.</sup> G( a, b, m - 1 )<hr width="95%" color="#000000">r<sup>( m - 1 )</sup> <sup>.</sup> ( r<sup>2</sup> - r - 1 )<sup>3</sup></b></td></tr>
+<tr align="center"><td><b>i = m</b></td><td colspan="3">&nbsp;</td></tr>
+<tr align="left"><td colspan="4">with</td></tr>
+<tr align="center"><td colspan="4"><b>p( r ) = m<sup>2</sup>r<sup>5</sup> + ( -2m<sup>2</sup> + 2m + 1 )r<sup>4</sup> + ( -m<sup>2</sup> + 2m + 5 )r<sup>3</sup> + <br>( 2m<sup>2</sup> - 6m + 3 )r<sup>2</sup> + ( 2 - m )<sup>2</sup> r</b></td></tr>
+<tr align="left"><td colspan="4">and</td></tr>
+<tr align="center"><td colspan="4"><b>q( r ) = ( m + 1 )<sup>2</sup>r<sup>4</sup> + ( -2m<sup>2</sup> - 2m + 1 )r<sup>3</sup> + ( 6 - m<sup>2</sup> )r<sup>2</sup> + <br>( 2m<sup>2</sup> - 2m - 1 )r + ( m - 1 )<sup>2</sup></b></td></tr></table></center>
+
+<br><br>To anyone who has ever attempted polynomial approximations to recursive sequences, these polynomials should look very familiar. As we increase the <b>k</b> in the numerator's <b>i<sup>k</sup></b> factor, the polynomials quickly grow in size until the solution polynomials for even moderate values of <b>k</b> fill an entire sheet by themselves. The polynomials do exhibit a pattern however, and this pattern suggests a general solution involving recursive sequences of an unusual variety.
+
+
+
+<br><br>This document is in progress...
+
+
+<br><br><br><i>URL: https://jcullen88.github.io/CullenGenealogyHomepage/Math3.html</i>
+<br>&copy; 2004 - 2006: Jim Cullen - all rights reserved.
+<br>Last Update: October 03, 2006.
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="Math.html">Use your Back Button or click here to go to the Math Index</A></B></CENTER>
+
+</BODY>
+
+</HTML>

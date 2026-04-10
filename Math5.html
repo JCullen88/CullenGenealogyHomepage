@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Sums of Powers of the Natural Numbers</TITLE>
+<META NAME="KEYWORDS" CONTENT="harmonic, sums, zeta, psi, summation, mathematics, number theory">
+<META NAME="DESCRIPTION" CONTENT="Reciprocal Sums of the Powers of Natural Numbers">
+</HEAD>
+
+<BODY BACKGROUND="GraphB.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="Math.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" border="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="Math.html">Math Index</A>.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" border="0" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" border="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" border="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Sums of Powers<BR>of the Natural Numbers<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+<br><br><center><b><font size="4">The Harmonic Sum as an Introduction to Advanced Functions</font></b></center>
+
+<br><br>The <b>Harmonic Sum</b> is a deceivingly simple concept that quickly leads to devilish infinities and then, upon closer inspection, we are introduced to some elegant solutions when the sum is expressed in terms of some advanced functions. Few mathematical constructions are as rich in the deeper meanings of number theory. Some of the most profound, such as the <b>Riemann Hypothesis</b>, are tied to theorems involving the prime numbers and remain unsolved to this day.
+
+<br><br>So many important interconnected mathematical ideas are drawn into the analysis of such a simple concept as the <b>Harmonic Sum</b> that I'm surprised it isn't required study at the high school level or freshman college level. Even the calculators commonly used by these students lack ANY of the advanced functions necessary to evaluate the <b>Harmonic Sum</b> or related mathematical problems. The one exception would be the <b>Hewlett-Packard HP48/49/50</b> series scientific graphing calculators, the latest incarnation of which is the remarkable <b>HP50g</b>. Oddly enough it is not very likely that a high school or college student in the United States could be found using an HP calculator in their math studies. Whether or not there is an inference to be made here is a matter of opinion and, ultimately, depends on the skill of the user. To <b>Texas Instruments'</b> credit, <b>TI89/92/V200</b> devices may now be armed to the teeth with powerful calculator software suites such as <b>Bhuvanesh Bhatt's</b> excellent <b>Mathtools</b>, closing the gap with <b>HP</b> calculators in the areas of advanced special functions and number theory applications. Also, very capable and efficient functions may also be implemented by the individual user on either brand of calculator.
+
+<br><br>Preference of calculating devices aside, we begin with a cursory examination of the <b>Harmonic Sum</b>. We will cover the necessary areas in some detail, step by step for some of the more important concepts but we will quickly gain momentum after that. Where required, more detail will be given but I will avoid excess detail as much as is possible in order to preserve an unobstructed view of how the related concepts are interwoven into one mathematical tapestry. Standard texts should be consulted or online resources visited if more detailed information is desired in any one area. Links at the bottom of this page to articles located at <b><a href="http://mathworld.wolfram.com/">Wolfram's Mathworld</a></b> are provided as a starting point for further research.
+
+<br><br>The mathematical concept of the <b>Harmonic Sum</b> is not a difficult one. It is defined as the sum of the inverses of the natural numbers from one to infinity. This sum can be expressed as <b>H = 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + <sup>. . .</sup></b> or &quot; one, plus one half, plus one third, plus one fourth, plus one fifth, etc &quot;. Each term is smaller than the last and, as we approach infinity, the increments to the sum become infinitely small. Nothing could be simpler . . . and nothing could be further from the truth! The surprise here is that the sum does not converge - there is no finite number as a solution to the problem - the sum continues to increase towards infinity and the ultimate sum, as we approach infinity, is itself infinite in value. This can be expressed as a summation in the following way:
+
+<br><br><center><table width="25%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">H = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i</b></td><td><b>= infinity</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>Not only is the infinite sum <b>H</b> infinite in value but the finite sums <b>H<sub> n </sub></b>, which are the <b>n'th harmonic numbers</b> have no algebraic closed-form expressions as solutions. The finite sum is calculated by summing the inverses of the integers from one to some fixed number <b>n</b> instead of to infinity. Though the final sum is now some finite value, there is no closed-form algebraic solution to express the sum. In other words:
+
+<br><br><center><table width="20%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>n</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">H<sub> n </sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>has no simple algebraic solution. Just about anytime one encounters reciprocal expressions within a summation it can be expected that there will be difficulties in developing closed-form algebraic solutions for them. This doesn't mean that there can't be some other solution to be found in a simple expression involving some higher functions. In this case there is just such a solution to be found in the <b>Psi Function</b> ( pronounced 'sigh' ). For our purposes, this function will be first introduced as a solution to the <b>Harmonic Sum</b> rather than in the terms of its own definition. As we will use it and in its simplest form, the <b>Psi Function</b> requires an integer argument and returns a real number. It can be shown that:
+
+<br><br><center><table width="35%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>n</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">H<sub> n </sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i</b></td><td><b>= Psi( n + 1 ) - Psi( 1 )</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>where <b>( - ) Psi( 1 )</b> is numerically equal to and is the basic definition of a well known mathematical constant called the <b>Euler-Mascheroni Constant</b>. The value of this constant is approximately equal to <b>0.577215664902</b>. In the above summation however, <b>Psi( 1 )</b> is present only because our summation begins at one. If we were to redefine our summation as the sum of the inverses of the natural numbers from <b>m</b> to <b>n</b> then the solution would be:
+
+<br><br><center><table width="37%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>n</b></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">H<sub> n </sub> - H<sub>m-1</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i</b></td><td><b>= Psi( n + 1 ) - Psi( m )</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = m</b></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>which is a surprisingly elegant solution considering the alternative if the <b>Psi Function</b> was not utilized. So what is the <b>Psi Function</b>? It is the derivative of the natural logarithm of the <b>Gamma Function</b>. Basically, the <b>Gamma Function</b> is very similar to the factorial except the <b>Gamma Function</b> allows real numbers as arguments instead of integers only. For positive integers, <b>Gamma( n ) = ( n - 1 )!</b>. It is here, with the introduction of the <b>Gamma Function</b> within the definition of the <b>Psi Function</b>, that we first begin to overlap the domain of number theory and take our first steps towards the deeper meanings surrounding the <b>Prime Number Theorem</b> and the <b>Riemann Hypothesis</b>. Some may think that to be a silly statement but consider that the <b>Harmonic Sum</b> is just a special case of sums of inverses of powers of the natural numbers - which in turn evokes thoughts of the <b>Riemann Zeta Function</b>, the solution of which can have a form very similar to the solution given for the <b>Harmonic Sum</b>. If anything is intimately related to unsolved problems in analytic number theory then it would have to be the <b>Riemann Zeta Function</b> which has its roots with the <b>Harmonic Sum</b>...
+
+
+
+<br><br><br><center><b><font size="4">Reciprocal Sums of Higher Powers - Stepping Off Into The Deep End</font></b></center>
+
+
+
+<br><br>We'll go through that again, slower this time for the rest of us! Consider the same type of summation we considered in the above <b>Harmonic Sum</b> except that we will square each term in the sum - like this:
+
+<br><br><center><table width="45%" border="0" cellpadding="3">
+<tr align="center"><td><b><font size="4">H<sub> n,2 </sub></font></b></td><td>=</td><td>1<br><hr width="75%" size="1" color="#000000">( 1 )<sup>2</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 2 )<sup>2</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 3 )<sup>2</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 4 )<sup>2</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 5 )<sup>2</sup></td><td>+ <sup>. . .</sup></td></tr></table></center>
+
+<br><br>In this form the <b>Harmonic Sum</b> would be written as:
+
+<br><br><center><table width="45%" border="0" cellpadding="3">
+<tr align="center"><td><b><font size="4">H<sub> n,1 </sub></font></b></td><td>=</td><td>1<br><hr width="75%" size="1" color="#000000">( 1 )<sup>1</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 2 )<sup>1</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 3 )<sup>1</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 4 )<sup>1</sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">( 5 )<sup>1</sup></td><td>+ <sup>. . .</sup></td></tr></table></center>
+
+<br><br>One notices immediately that the <b>Harmonic Sum H<sub> n,1 </sub></b> has the same form as <b>H<sub> n,2 </sub></b>. The only difference is the power in the denominator. One may as well take the sums and rename them <b>H<sub> n,p </sub></b>, the subscript denoting the value of the power in the denominator. At first glance one would guess that <b>H<sub> n,2 </sub></b> would also result in a sum with an infinite value since we have squared each term in the summation. In fact the opposite occurs - we have squared the inverse of each term such that each term grows smaller much faster than in the <b>Harmonic Sum</b>. The end result is that the sum of the inverses of the squares of the natural numbers, from one to infinity, is a finite value - the summation converges. We will use a shorthand notation <b>S<sub> p </sub></b> to denote a summation of powers of natural numbers to explore some of the convergent values in the sums. Here is the first result for the sums of the inverses of the natural numbers <b>squared</b>, which can be written as:
+
+<br><br><center><table width="25%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>2</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> 2</sup></b></td><td><b><font size="4">=</font></b></td><td><b>pi<sup> 2<br><hr width="75%" size="1" color="#000000">6</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>where <b>pi</b> is the well-known ratio of the circumference to the diameter of a circle, roughly equal to <b>3.14159265359</b>. The value of <b>pi</b> squared over six is approximately <b>1.64493406685</b>. This is a curious result; that squaring the natuaral numbers and adding their inverses should result in a sum with the value of <b>pi</b> as a factor. A little curiosity and experimentation will get you everywhere so we try other integer values for the powers in the denominator. One soon discovers that the <b>even</b> powers result in summations whose limit is a simple expression involving <b>pi</b>. Here are the next three results, for powers in the denominator equal to <b>four</b>, <b>six</b>, and <b>eight</b>:
+
+<br><br><center><table width="90%" border="0" cellpadding="3">
+<tr align="center"><td>
+<table width="80%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>4</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> 4</sup></b></td><td><b><font size="4">=</font></b></td><td><b>pi<sup> 4<br><hr width="75%" size="1" color="#000000">90</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+</td><td>
+<table width="80%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>6</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> 6</sup></b></td><td><b><font size="4">=</font></b></td><td><b>pi<sup> 6<br><hr width="75%" size="1" color="#000000">945</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+</td><td>
+<table width="80%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>8</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> 8</sup></b></td><td><b><font size="4">=</font></b></td><td><b>pi<sup> 8<br><hr width="75%" size="1" color="#000000">9450</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+</td></tr></table></center>
+
+<br><br>This pattern will continue for higher even powers; the limit will be equal to that power of <b>pi</b> multiplied by some rational number or fraction. At this point we begin to drag in new mathematical concepts such as the <b>Bernoulli Numbers</b>, which are partially responsible for the rational numbers that the powers of <b>pi</b> are multiplied by in the above summations. Take note at this point that the <b>odd</b> powers are not nearly as elegant as the even powers, at least not in terms of the powers of <b>pi</b> and the <b>Bernoulli Numbers</b>. We might however attempt to revisit the <b>Psi Function</b> to see if perhaps the summations may be better behaved in terms of this function. The answer is <b>yes</b> but we should first discuss a more complete definition of the <b>Psi Function</b>.
+
+<br><br><br>It has already been mentioned that the <b>Psi Function</b> is the derivative of the natural logarithm of the <b>Gamma Function</b>. This is the base definition, often notated as <b>Psi<sub>0</sub>( x )</b> or the zero'th derivative of <b>Psi( x )</b>. We may continue taking derivatives of the <b>Psi Function</b> and increase our subscript appropriately, such that <b>Psi<sub>g</sub>( x )</b> denotes the <b>g'th derivative</b> of <b>Psi( x )</b>. This is the generalization of the <b>Psi Function</b> that is commonly called the <b>Polygamma Function</b>. Using this new definition, we will compose the solutions of the first eight sums of the inverses of the powers of the natural numbers; the powers from <b>one</b> through <b>eight</b>. In addition, the summations will be evaluated from a lower limit <b>( m )</b> to an upper limit <b>( n )</b>. The odd powers are on the left side of the table and the even powers are on the right. All solutions, the values to which the summations converge, are given in terms of <b>Psi<sub>g</sub>( x )</b>.
+
+<br><br><center><table width="50%" border="1" cellpadding="5">
+<tr align="center"><td colspan="4"><table width="40%" border="0" cellpadding="3"><tr align="center"><td>&nbsp;</td><td><b>n</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>p</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> p</sup></b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = m</b></td><td>&nbsp;</td></tr></table></td></tr>
+
+<tr align="center"><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td></tr>
+<tr align="center"><td><b>1</b></td><td>Psi<sub>0</sub>( n + 1 ) - Psi<sub>0</sub>( m )<br><hr width="80%" size="1" color="#000000">0 !</td>
+<td><b>2</b></td><td>Psi<sub>1</sub>( m ) - Psi<sub>1</sub>( n + 1 )<br><hr width="80%" size="1" color="#000000">1 !</td></tr>
+<tr align="center"><td><b>3</b></td><td>Psi<sub>2</sub>( n + 1 ) - Psi<sub>2</sub>( m )<br><hr width="80%" size="1" color="#000000">2 !</td>
+<td><b>4</b></td><td>Psi<sub>3</sub>( m ) - Psi<sub>3</sub>( n + 1 )<br><hr width="80%" size="1" color="#000000">3 !</td></tr>
+<tr align="center"><td><b>5</b></td><td>Psi<sub>4</sub>( n + 1 ) - Psi<sub>4</sub>( m )<br><hr width="80%" size="1" color="#000000">4 !</td>
+<td><b>6</b></td><td>Psi<sub>5</sub>( m ) - Psi<sub>5</sub>( n + 1 )<br><hr width="80%" size="1" color="#000000">5 !</td></tr>
+<tr align="center"><td><b>7</b></td><td>Psi<sub>6</sub>( n + 1 ) - Psi<sub>6</sub>( m )<br><hr width="80%" size="1" color="#000000">6 !</td>
+<td><b>8</b></td><td>Psi<sub>7</sub>( m ) - Psi<sub>7</sub>( n + 1 )<br><hr width="80%" size="1" color="#000000">7 !</td></tr></table></center>
+
+<br><br>Note that in the above table, when <b>Power = 1</b>, we have the same result as the <b>Harmonic Sum</b>. They are one and the same since <b>Psi<sub>0</sub>( x )</b> is just <b>Psi( x )</b> and, by definition, <b>0! = 1</b> in the denominator ( the fact that <b>0! = 1</b> is itself a hotly debated topic ). Note also the difference between the even powers and the odd powers: the numerators are negated for the even powers as compared to the <b>Harmonic Sum</b> which is an odd power of <b>one</b>. Now that the solutions are in table form we can play with the limits of the summations to see how it changes the solutions. We may learn a few things. First we'll push the upper limit of the summations to infinity as follows:
+
+<br><br><center><table width="40%" border="1" cellpadding="5">
+<tr align="center"><td colspan="4"><table width="50%" border="0" cellpadding="3"><tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>p</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> p</sup></b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = m</b></td><td>&nbsp;</td></tr></table></td></tr>
+
+<tr align="center"><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td></tr>
+<tr align="center"><td><b>1</b></td><td> - Psi<sub>0</sub>( m )<br><hr width="80%" size="1" color="#000000">0 !</td>
+<td><b>2</b></td><td>Psi<sub>1</sub>( m )<br><hr width="80%" size="1" color="#000000">1 !</td></tr>
+<tr align="center"><td><b>3</b></td><td> - Psi<sub>2</sub>( m )<br><hr width="80%" size="1" color="#000000">2 !</td>
+<td><b>4</b></td><td>Psi<sub>3</sub>( m )<br><hr width="80%" size="1" color="#000000">3 !</td></tr>
+<tr align="center"><td><b>5</b></td><td> - Psi<sub>4</sub>( m )<br><hr width="80%" size="1" color="#000000">4 !</td>
+<td><b>6</b></td><td>Psi<sub>5</sub>( m )<br><hr width="80%" size="1" color="#000000">5 !</td></tr>
+<tr align="center"><td><b>7</b></td><td> - Psi<sub>6</sub>( m )<br><hr width="80%" size="1" color="#000000">6 !</td>
+<td><b>8</b></td><td>Psi<sub>7</sub>( m )<br><hr width="80%" size="1" color="#000000">7 !</td></tr></table></center>
+
+<br><br>What has happened is that, as the upper limit <b>( n )</b> approaches <b>infinity</b>, the value of <b>Psi<sub>g</sub>( n )</b> becomes vanishingly small, and we are left with the term for the lower limit. This form of summation, when the lower limit is variable, is actually the definition of what is known as the <b>Hurwitz Zeta Function</b>, what we could call a generalization of the <b>Riemann Zeta Function</b> where we can begin our summation at some other point besides one. From the table above we can also deduce a well known relationship between the <b>Hurwitz Zeta Function</b> and the <b>Polygamma Function</b>. We could also let the lower limit <b>( m )</b> of the summation defining the <b>Riemann Zeta Function</b> assume the value of <b>one</b> but the results will be uninteresting <b><i>unless</i></b> we set the upper limit <b>( n )</b> to <b>infinity</b> as in the above table. In this case we also have a set of vanished terms and the results are as follows:
+
+<br><br><center><table width="40%" border="1" cellpadding="5">
+<tr align="center"><td colspan="4"><table width="50%" border="0" cellpadding="3"><tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">S<sub>p</sub> = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" color="#000000">i<sup> p</sup></b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td></tr></table></td></tr>
+
+<tr align="center"><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td><td width="9%"><b>Power<br>( p )</b></td><td width="41%"><b>Sum</b></td></tr>
+<tr align="center"><td><b>1</b></td><td> - Psi<sub>0</sub>( 1 )<br><hr width="80%" size="1" color="#000000">0 !</td>
+<td><b>2</b></td><td>Psi<sub>1</sub>( 1 )<br><hr width="80%" size="1" color="#000000">1 !</td></tr>
+<tr align="center"><td><b>3</b></td><td> - Psi<sub>2</sub>( 1 )<br><hr width="80%" size="1" color="#000000">2 !</td>
+<td><b>4</b></td><td>Psi<sub>3</sub>( 1 )<br><hr width="80%" size="1" color="#000000">3 !</td></tr>
+<tr align="center"><td><b>5</b></td><td> - Psi<sub>4</sub>( 1 )<br><hr width="80%" size="1" color="#000000">4 !</td>
+<td><b>6</b></td><td>Psi<sub>5</sub>( 1 )<br><hr width="80%" size="1" color="#000000">5 !</td></tr>
+<tr align="center"><td><b>7</b></td><td> - Psi<sub>6</sub>( 1 )<br><hr width="80%" size="1" color="#000000">6 !</td>
+<td><b>8</b></td><td>Psi<sub>7</sub>( 1 )<br><hr width="80%" size="1" color="#000000">7 !</td></tr></table></center>
+
+<br><br>Using the results in the last few tables, it would be easy enough for just about anyone to immediately write down the resulting value for the summation of inverse natural numbers to any integer power. This is a function in itself: one supplies the argument, in this case the power <b>( p )</b>, and the expression for the value to which the sum converges is returned by the function. This is in fact the purest form of the <b>Riemann Zeta Function</b>. It is also clear from the above table that the appearance of powers of <b>pi</b> in the sums of the even powers is due to the <b>Psi Function</b>. In fact there is a well known expression for the even powers that includes this power of <b>pi</b> in the formula:
+
+<br><br><center><table width="28%" border="0" cellpadding="3">
+<tr><td colspan="2"><b>For even integer p > 0<br>&nbsp;</b></td></tr>
+<tr align="center"><td><font size="4">Z<sub>R</sub>( p ) =</font></td><td>2<sup> p-1</sup> &nbsp; abs( B<sub>p</sub> ) &nbsp; pi<sup> p</sup><br><hr width="80%" size="1" color="#000000">p !</td></tr></table></center>
+
+<br><br>where <b>abs( B<sub>p</sub> )</b> is the <b>absolute value</b> of the <b>p'th Bernoulli Number</b>. There are no such elegant formulas known for odd values of <b>p</b>. There are some very complicated expressions that do contain powers of <b>pi</b> for odd <b>p</b> but it would not be practical to discuss them here since, once the power of <b>pi</b> is extracted, the remainder of the expression is nothing like the rational numbers that accompany the powers of <b>pi</b> for even values of <b>p</b>.
+
+<br><br>Congratulations, you now have a seat-of-the-pants understanding of one of the most important special functions of all time in physics and mathematics. The <b>Riemann Zeta Function</b> is deeply rooted in fundamental mathematics and it turns up in studies of definite integrals, number theory, and the <b>Prime Number Theorem</b>. The notation I will use for the <b>Riemann Zeta Function</b> on this page is <b>Z<sub>R</sub>( p )</b>. Now we can state the basic definition of the <b>Riemann Zeta Function</b>:
+
+<br><br><center><table width="45%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">Z<sub>R</sub>( p ) = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" size="1" color="#000000">i<sup> p</sup></b></td><td><b> = </b></td><td><b>(-1)<sup> p</sup>&nbsp; <sup>.</sup> Psi<sub>p-1</sub>( 1 )<br><hr width="80%" size="1" color="#000000">( p - 1 ) !</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 1</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>and the <b>Hurwitz Zeta Function</b>:
+
+<br><br><center><table width="45%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">Z<sub>H</sub>( p , a ) = </font></b></td><td><img src="Sigma.gif"></td><td><b>1<br><hr width="95%" size="1" color="#000000">( i + a )<sup> p</sup></b></td><td><b> = </b></td><td><b>(-1)<sup> p</sup>&nbsp; <sup>.</sup> Psi<sub>p-1</sub>( a )<br><hr width="80%" size="1" color="#000000">( p - 1 ) !</b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>i = 0</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></center>
+
+<br><br>where I have used <b>( -1 )<sup> p</sup></b> to control the sign of the answer depending on whether <b>( p )</b> is an odd or even power. I could have instead just included an absolute value around the <b>Psi Function</b> to ensure that the result would always be positive. The <b>Hurwitz Zeta Function</b> is one generalization of the <b>Riemann Zeta Function</b> where the summation begins at some number, other than one, and then the summation carries on to infinity from there, in the same spirit that the <b>Incomplete Gamma Function</b> serves the <b>Gamma Function</b>. Using this definition, one can say that <b>Z<sub>H</sub>( p , 0 )</b> is the same as <b>Z<sub>R</sub>( p )</b>. The <b>Riemann Zeta Function</b> may also be expressed as an infinite product involving the prime numbers. This is an intriguing expression but not altogether unexpected; due to the fundamental theorem of arithmetic there are many other expressions that contain the natural numbers in their terms that can be reformulated as expressions involving the prime numbers. In this case, the infinite product definition of the <b>Riemann Zeta Function</b> is known as the <b>Euler Product</b>. It was uncovered in the 18'th century by Leonhard Euler and is:
+
+<br><br><center><table width="35%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">Z<sub>R</sub>( s ) = </font></b></td><td><img src="Produ.gif"></td><td><b>1<br><hr width="95%" size="1" color="#000000"> 1 - ( P<sub> k </sub> )<sup> - s </sup></b></td></tr>
+<tr align="center"><td>&nbsp;</td><td><b>k = 1</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>where <b>P<sub> k </sub></b> is the <b>k'th Prime Number</b>. Though the definition based on the prime numbers is correct, it is not a very practical method for calculating the <b>Riemann Zeta Function</b>, especially for the lower arguments. As an example, while calculating <b>Z<sub> R </sub>( 2 )</b>, ten primes will give us just two digits of accuracy. One hundred primes gives us just four digits of accuracy and one thousand primes still only gives us a five digits of accuracy - and that's if we are willing to wait for the calculation results. There are ways to accelerate these kinds of calculations but the infinite product is still not a very practical way to evaluate the <b>Riemann Zeta Function</b>. These infinite products involving the prime numbers do serve a greater purpose in number theory and also stand as examples of the elegance and consistency often encountered in advanced mathematics.
+
+<br><br>Notice that in the infinite sum formula given for the even powers which involve the <b>Bernoulli Numbers</b>, it seems that the alternating sign nature of the <b>Psi Function</b> should be attributed to the presence of the <b>Bernoulli Numbers</b>. However, earlier on we attributed this alternating sign to the <b>Gamma Function</b> within the definition of the <b>Psi Function</b>. So which is correct, or is this a sign that the <b>Gamma Function</b> is somehow related to the <b>Bernoulli Numbers</b>? Now we have an infinite product formula that has no alternating signs at all! It is after all a matter of definition; whatever you use to express another quantity must take into account exactly how it is related to that quantity and these interrelations are not always on equal terms.
+
+
+<br><br>Though we know it as the <b>Riemann Zeta Function</b>, Bernhard Riemann didn't actually enter the picture until about mid-19'th century when he extended the use of the <b>Zeta Function</b> to the complex plane. A century earlier, a now famous Swiss mathematician by the name of Leonhard Euler forged the link between the <b>Harmonic Sum</b>, the <b>Zeta Function</b>, and the <b>Prime Numbers</b>. Euler, knowing the <b>Harmonic Sum</b> was divergent ( has an infinite sum ), wondered if the <b>Harmonic Sum of Primes</b> was also divegent. He managed to split the <b>Harmonic Sum</b> into two series, one prime and one not prime, using a clever workaround in order to avoid the rules of infinite sums. In the end Euler had another proof of an infinite number of primes, he found that the <b>Harmonic Sum of Primes</b> was divergent, and he was able to express the <b>Zeta Function</b> as an infinite product involving only the <b>Prime Numbers</b>.
+
+
+
+<br><br><br><center><b><font size="4">Going Beyond The Infinite for the Other Side of the Story</font></b></center>
+
+
+
+<br><br>Having progressed from <b>Harmonic Sums</b> to the <b>Riemann Zeta Function</b>, and having touched on the concept of the <b>Prime Number Theorem</b> as it relates to the <b>Riemann Hypothesis</b>, we find we are at a good point to pause and take a closer look at some of the unsettled issues with the nature of the summations we have considered thus far. During our observations, we've managed to draw in so many concepts and advanced functions that it's easy to lose sight of what the basic driving force is behind the form and behavior of the resulting expressions. As is often the case in mathematics - when you've arrived at some advanced stage of finding solutions without finding reasons - going back to inspect a generalization of the problem by reformulating with inverses or negatives of key values will often provide much needed insight into the nature of the solutions you are finding.
+
+<br><br>In our case, note that we began with the <b>Harmonic Sum</b> and worked our way through to the <b>Riemann Zeta Function</b>, looking at specific as well as general cases of these forms of expressions. We have neglected to fully investigate one key parameter . . . before you read on you may want to try scanning quickly through everything again and seeing if you can spot it. Give up yet? It's hard to blame anyone for missing it since the concept doesn't come naturally but - we also want to look at <i>negative</i> powers! In our <b>Harmonic Sums</b>, <b>Psi Function</b>, and the <b>Zeta Function</b>, we've inspected the 'sums of the powers of natural numbers' where the 'power' has always been greater than zero.
+
+
+
+<br><br><br><hr width="80%"><br><br><center><b><font size="4">Appendix 1: Numeric Evaluation of the Bernoulli Numbers</font></b></center>
+
+
+<br><br>The <b>Bernoulli Numbers</b> are rational numbers that are very important in number theory and analytics. They also appear in series expansions of trigonometric functions and special forms of summations. The <b>Bernoulli Numbers</b> are difficult to evaluate quickly - for the same basic reasons that integer factoring is difficult to do quickly. The <b>Bernoulli Numbers</b> seem almost random in nature even though there are precise regular patterns that can be constructed to obtain their exact values. The most elegant of these constructions is based on the divisors of the natural numbers which in turn is determined by the distribution of the <b>Prime Numbers</b> - explaining the importance of the <b>Bernoulli Numbers</b> in number theory. We will use <b>B<sub> n </sub></b> to notate the <b>n'th Bernoulli Number</b>. which can be evaluated by using the following summation involving the <b>Prime Numbers</b>:
+
+<br><br><center><table width="35%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td>&nbsp;</td><td><b>inf</b></td><td>&nbsp;</td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">B<sub> 2 n </sub> = </font></b></td><td><b>2 <sup> . </sup> ( -1 )<sup> n-1 </sup><sup> . </sup> ( 2 n ) !<hr width="95%" size="1" color="#000000">( 2 pi )<sup> 2 n </sup></b></td><td><img src="Sigma.gif"></td><td><b>P<sup> -2n </sup></b></td></tr>
+<tr align="center"><td>&nbsp;</td><td>&nbsp;</td><td><b>P = 1</b></td><td>&nbsp;</td></tr></table></center>
+
+<br><br>where <b>P</b> are the <b>Prime Numbers</b>. The process is tediously slow however and there are better methods for the task. These usually involve some advanced functions, recursive methods, or double sums that are nearly as time consuming to evaluate so some shortcuts need to be considered to quickly return precise estimates of the <b>Bernoulli Numbers</b>. Modern methods for quickly evaluating exact values by calculating the numerator and denominator of <b>B<sub> n </sub></b> separately have been developed in recent years. However, I will again assume evaluation of the <b>Bernoulli Numbers</b> is to be performed on a handheld calculating device and so I will again present routines for exact or at least 11 or 12 digits of accuracy to be utilized as a floating-point result. There are other routines in the literature, again tediously slow for high values of <b>B<sub> n </sub></b>, that will calculate exact rationals for all <b>B<sub> n </sub></b>.
+
+<br><br>Review again what we discussed regarding the definition of the <b>Riemann Zeta Function</b> - recall that the <b>Bernoulli Numbers</b> are part of one formula for calculating <b>Z<sub> R </sub>( p )</b> for even values of <b>p</b>. Here <b>n</b> will be our value of <b>p</b>. This works out just fine since we don't need an expression for odd values of <b>p</b> since the odd <b>Bernoulli Numbers</b> are all equal to zero by definition. When <b>n</b> is very large then <b>Z<sub> R </sub>( n )</b> is very very close to equalling one. So, for a large enough value of <b>n</b>, we can assume that <b>Z<sub> R </sub>( n ) = 1</b> and rearrange the formula to solve for the value of <b>B<sub> n </sub></b>. Some years ago Simon Plouffe made use of just such a shortcut, along with several other innovations, in his record-breaking work with the calculation of the <b>Bernoulli Numbers</b>. In our calculation eleven or twelve significant digits will suffice and <b>Z<sub> R </sub>( n ) = 1</b> to this level of precision roughly when <b>n > 38</b>. Calculating the <b>Bernoulli Numbers</b>, in floating-point format, is then a very quick calculation that is simply:
+
+<br><br><center><table width="25%" border="0" cellpadding="4">
+<tr><td colspan="2"><b>for even integer n > 38</b></td></tr>
+<tr valign="middle" align="center"><td><b><font size="4">B<sub> n </sub> = </font></b></td><td><b>2 <sup> . </sup> n ! <sup> . </sup> ( - 1 )<sup> ( n/2-1 )</sup><br><hr width="95%" size="1" color="#000000">( 2 pi )<sup> n </sup></b></td></tr>
+</table></center>
+
+<br><br>For <b>B<sub> n </sub></b> where <b>n < 40</b>, I've opted to store the rational values of the even <b>Bernoulli Numbers</b> in a list to be used as a look-up table as needed. Odd <b>Bernoulli Numbers</b> are again equal to zero by definition. This was done as a tradeoff between memory and speed. In this way, nearly instantaneous results at a precision of 12 significant digits for the Bernoulli Numbers</b> can be obtained. When <b>n < 40</b> the exact rational expression from the list is returned. When <b>n > 38</b> the value returned is a real number in floating-point format.
+
+
+
+<br><br><br><hr width="80%"><br><br><center><b><font size="4">Appendix 2: Numeric Evaluation of the Psi Function Psi<sub> 0 </sub>( x )</font></b></center>
+
+
+<br><br>One of the first things to take note of is that the <b>Psi Function</b> approaches the <b>Natural Logarithm</b> as the argument approaches infinity. The convergence is very gradual however so using <b>ln ( x )</b> is no substitute for <b>Psi ( x )</b>, even at relatively high values substituted for <b>x</b>. As an example, <b>ln( 1000 ) = 6.90775527898</b> while <b>Psi<sub> 0 </sub>( 1000 ) = 6.90725519565</b> so there is barely four digits of agreement between the two, even at <b>x = 1000</b>.
+
+<br><br>There are several ways to get a closer estimate of <b>Psi<sub> 0 </sub>( x )</b>. One that I dreamt up for myself and had used for many years is one simple formula that gives six or seven digits of accuracy at <b>x = 10</b>, eight digits of accuracy at <b>x = 25</b>, about nine digits of accuracy at <b>x = 50</b>, and nearly the full 12 digits of accuracy by the time one reaches <b>x = 100</b>. This simple formula, taken from my own notes written during the Summer of 2000, is the following:
+
+<br><br><center><table width="30%" border="0" cellpadding="3"><tr align="center">
+<td>Psi<sub> 0 </sub>( x ) = </td><td>ln ( x<sup> 2</sup> - x )<br><hr width="95%" size="1" color="#000000">2</td><td> + </td>
+<td> 1 <br><hr width="95%" size="1" color="#000000">6 x<sup> 2</sup> - 6 x +1</td></tr></table></center>
+
+<br><br>The formula is very simple, easy to remember, and calculates extremely fast for either real or complex arguments. For more digits of accuracy it is generally no problem to then apply the recurrence relation to lift a low argument to a higher one where accuracy is better, then backstep the results to the lower argument. This recurrence formula defines how the value of <b>Psi<sub> 0</sub>( x + 1 )</b> is related to the value of <b>Psi<sub> 0</sub>( x )</b> and is as follows:
+
+<br><br><center><table width="25%" border="0" cellpadding="3"><tr align="center">
+<td> Psi<sub> 0 </sub>( x + 1 ) = Psi<sub> 0 </sub>( x ) + x<sup> -1 </sup> </td></tr></table></center>
+
+<br><br>which is simply a matter of subtracting a series of reciprocals. To apply the recurrence relation you subtract the reciprocal of the elevated argument ( minus one ) and the result is then the value of <b>Psi</b> for the elevated argument ( minus one ). Example: <b>Psi( 17.3 ) - 1/16.3 = Psi( 16.3 )</b>. It is even possible to evaluate negative values of <b>x</b> if the reflection formula for <b>Psi<sub> 0 </sub>( x )</b> is used. This property states:
+
+<br><br><center><table width="40%" border="0" cellpadding="3"><tr align="center">
+<td>Psi<sub> 0 </sub>( - x ) = Psi<sub> 0 </sub>( x ) + pi / tan [ pi ( x + 1 ) ]</td></tr></table></center>
+
+<br><br>where <b>pi = 3.14159265358979</b> approximately. For more precise evaluation of the <b>Psi Function</b>, professional math software packages and calculating devices usually employ the <b>Asymptotic Expansion</b> expression for <b>Psi<sub> 0 </sub>( x )</b>. For most purposes, only the first few terms of the expansion are required. The expression again involves the <b>Bernoulli Numbers</b> but, since only a few terms are usually needed, these can be simply squirreled away as constants within the calculation itself. The expression is:
+
+<br><br><center><table width="78%" border="0" cellpadding="3">
+<tr align="center"><td><b><font size="4">Psi<sub> 0 </sub></font></b></td><td>=</td><td>ln ( x )</td><td>-</td><td>1<br><hr width="75%" size="1" color="#000000">2 x</td><td>-</td><td>1<br><hr width="75%" size="1" color="#000000">12 x<sup> 2 </sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">120 x<sup> 4 </sup></td><td>-</td><td>1<br><hr width="75%" size="1" color="#000000">252 x<sup> 6 </sup></td><td>+</td><td>1<br><hr width="75%" size="1" color="#000000">240 x<sup> 8 </sup></td><td>-</td><td>1<br><hr width="75%" size="1" color="#000000">132 x<sup> 10 </sup></td><td>+ <sup>. . .</sup></td></tr></table></center>
+
+<br><br>which will be rewritten in code as nested multiplications of <b>x<sup> 2 </sup></b> and constants to avoid having to calculate time-consuming higher powers of <b>x</b>. Generally one will find that only the terms up to the one involving <b>x<sup> 8 </sup></b> are used and the <b>Asymptotic Expansion</b> is also good for real or complex numbers. The expression is then very accurate as long as the argument <b>x</b> is greater than about 16. If <b>x = 16</b> then the term <b>( 240 x<sup> 8 </sup> )<sup> -1 </sup> = 9.7 E -13</b>, representing just about twelve digits of accuracy. For arguments below this limiting value of 16, the recurrence property is again utilized to maintain precision in the numerical results. For my own implementation, which was written specifically for small arguments, I've included terms up to <b>x<sup> 14 </sup></b> so that only 9 iterations of the recurrence relation are required instead of 16. If the derivative of the above expansion is taken multiple times it is also possible to calculate higher derivatives of the <b>Psi Function</b> and so is also a handy formula for evaluating the <b>Polygamma Function</b> though actual practice of this method is easier said than done, especially for higher derivatives. The <b>Asymptotic Expansion</b> is based on the following summation which converges fairly quickly to the required value of <b>Psi<sub> 0 </sub>( x )</b>:
+
+<br><br><center><table width="35%" border="0" cellpadding="3">
+<tr align="center"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>inf</td><td>&nbsp;</td></tr>
+<tr align="center"><td>Psi<sub> 0 </sub>( x ) = ln ( x ) - </td><td>1<br><hr width="85%" size="1" color="#000000">2 x</td><td> - </td><td><img src="Sigma.gif"></td><td>B<sub> 2 k </sub><br><hr width="95%" size="1" color="#000000">2 k<sup> . </sup>x<sup> 2 k </sup></td></tr>
+<tr align="center"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>k = 1</td><td>&nbsp;</td></tr></table></center>
+
+
+
+<br><br><br><hr width="80%"><br><br><center><b><font size="4">Appendix 3: Numeric Evaluation of the Polygamma Function Psi<sub> n </sub>( x )</font></b></center>
+
+
+
+
+
+
+<br><br><br><hr width="80%"><br><br><center><b><font size="4">End Notes And Links To More Information On Relevant Mathematical Topics</font></b></center>
+
+
+<br><br><center><table width="85%" border="1" cellpadding="10"><tr><td><b><i>Besides the standard texts, perhaps the greatest online mathematical resource is <a href="http://mathworld.wolfram.com">Wolfram's Mathworld</a>, from the makers of <b>Mathematica</b> software. Hardware support for much of the work on this page includes: Texas Instruments' Voyage-200 PLT ( 12MHz M68000 CPU ) for summations, algorithmic work, numerical analysis, and some algebraic operations with the help of Bhuvanesh Bhatt's <b>Mathtools</b> calculator software; Hewlett-Packard's HP50G ( 75MHz ARM CPU ) for summations and some algebraic operations involving advanced functions; Microsoft Quick-Basic Ver4.5 for generation of tables of high-speed numeric sums and cross-checking. The best stuff, as always, is worked out on pencil and paper ( CPU supplied by user ).</i></b></td></tr></table></center>
+
+<br><br><br><b>For more information, please refer to the following articles at <a href="http://mathworld.wolfram.com">Wolfram's Mathworld</a></b>.
+
+<br><br><center><table width="60%" border="1" cellpadding="10"><tr><td>
+<ul><li><a href="http://mathworld.wolfram.com/RiemannZetaFunction.htmll">The Riemann Zeta Function</a></li>
+<li><a href="http://mathworld.wolfram.com/PolygammaFunction.htmll"> The Polygamma ( Psi ) Function</a></li>
+<li><a href="http://mathworld.wolfram.com/DigammaFunction.htmll">The Digamma Function</a></li>
+<li><a href="http://mathworld.wolfram.com/BernoulliNumber.htmll">The Bernoulli Numbers</a></li>
+<li><a href="http://mathworld.wolfram.com/RiemannHypothesis.htmll">The Riemann Hypothesis</a></li>
+<li><a href="http://mathworld.wolfram.com/PrimeNumberTheorem.htmll">Prime Number Theorem</a></li>
+<li><a href="http://mathworld.wolfram.com/RiemannZetaFunctionZeros.htmll">Zeroes of the Riemann Zeta Function</a></li>
+<li><a href="http://mathworld.wolfram.com/GammaFunction.htmll">The Gamma Function</a></li>
+<li><a href="http://mathworld.wolfram.com/EulerProduct.htmll">Euler's Prime Product</a></li>
+</ul></td></tr></table></center>
+
+
+<br><br><br><i>URL: https://jcullen88.github.io/CullenGenealogyHomepage/Math5.html</i>
+<br>&copy; 2006 - 2007: Jim Cullen - all rights reserved.
+<br>Last Update: June 13, 2007.
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="Math.html">Use your Back Button or click here to go to the Math Index</A></B></CENTER>
+
+</BODY>
+
+</HTML>

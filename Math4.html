@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Lucas and Perrin Probablistic Prime Tests</TITLE>
+<META NAME="KEYWORDS" CONTENT="integer, numbers, prime, test, ,perrin, lucas, mathematics, number theory">
+<META NAME="DESCRIPTION" CONTENT="Lucas and Perrin Probablistic Prime Tests">
+</HEAD>
+
+<BODY BACKGROUND="GraphB.jpg" BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<A HREF="Math.html"><IMG SRC="up.gif" WIDTH="35" HEIGHT="21" BORDER="0" ALIGN="TOP" ALT="Up a Level"></A><FONT SIZE="2"><B><I>Click the arrow to go up a level to the <A HREF="Math.html">Math Index</A>.</I></B></FONT>
+<CENTER><TABLE WIDTH="98%" BORDER="1" BORDERCOLOR="#000000" BGCOLOR="#000000" CELLPADDING="0"><TR ALIGN="CENTER"><TD><FONT SIZE="2" COLOR="#00FF00">Follow the above link or click the graphic below to visit the Homepage.</FONT></TD></TR></TABLE>
+<BR><TABLE WIDTH="98%" BORDER="0">
+<TR ALIGN="CENTER"><TD><A HREF="index.html"><IMG SRC="IconArms.gif" BORDER="0" WIDTH="80" HEIGHT="84" ALT="Homepage"></A></TD><TD><FONT SIZE="6"><B>Lucas &amp; Perrin<BR>Probablisitic Prime Tests<BR></FONT><FONT SIZE="3"><I>Jim Cullen</I></FONT></B></TD></TR></TABLE></CENTER>
+<HR WIDTH="98%">
+
+
+
+<br><br>Texas Instruments produces several excellent graphing scientific calculators, among them are the TI-83, TI-84, TI-89 Titanium ( which succeeds the TI-89 ), the TI-92 ( pretty much obsolete now ), the TI-92+, and the TI Voyage 200 PLT. These high-end devices have a function for determining the primality of integers; on the TI-89 and up the function is implemented as <b>ISPRIME( n )</b> where <b>n</b> is any integer. The calculator returns a boolean value; <b>true</b> if the integer <b>n</b> is prime, and <b>false</b> if the integer <b>n</b> is composite ( has factors besides itself and one ). The internal routine involves trial division up to very large integers and an unknown 'Monte Carlo' technique ( if this is actually a separate part of the test besides trial division ). The <b>ISPRIME()</b> function is not perfect however, and there are integers that are declared <b>'prime'</b> when in fact they are composite. This is not a 'bug' in the operating system but a demonstration of the nature of probablistic primality testing. All true primes are declared prime but some composites are also declared prime so the mathematical filter is not perfect. No primality testing algorithm is 100% foolproof - yet.
+
+<br><br>Though the probability of a composite integer being declared prime by the <b>ISPRIME()</b> function is extremely low, examples of such integers are known. The function <b>ISPRIME()</b> by itself is not foolproof but performing multiple tests on an integer makes the determination of primality much more powerful. There are several possible quick routines one can implement in TI-Basic to double-check the calculator's determination of the primality of an integer. Here we will discuss two of them involving recurrent sequences; the Lucas and Perrin Probablistic Prime Tests. Coding for the calculator is provided and should work on the TI-89/92/V200 family of devices.
+
+
+<br><br><br><center><font size="4"><b>Lucas Probablistic Prime Test</b></font></center>
+
+<br>The Lucas Probablistic Prime Test is based on the fact that the z'th term of the Lucas Sequence is congruent to <b>1 mod z</b>, if <b>z</b> is prime. The Lucas Sequence is one of the Generalized Fibonacci sequences in which <b>G( 0 ) = a = 2, G( 1 ) = b = 1,</b> and the sequence is defined by taking <b>G( z ) = G( z - 1 ) + G( z - 2 )</b>. In other words, any Lucas Number is simply the sum of the previous two Lucas Numbers, with the intitial values set to <b>2</b> and <b>1</b>. The Lucas sequence begins; <b>2, 1, 3, 4, 7, 11, 18, 29, ...</b> For more information on the Lucas and other recurrent sequences, see the introduction on the <b><a href="Math3.html">Special Sums of Generalized Fibonacci Sequences</a></b> page.
+
+<br><br>The straight-forward Q-Matrix method for calculating the values of a Generalized Fibonacci Sequence <b>G(a,b,z)</b> is:
+
+<br><br><center><b>G( a, b, z ) = [ [ 1 1 ] [ 1 0 ] ]<sup>z</sup> * [ [ b ] [ a ] ] = [ [ G( a, b, z + 1 ) ] [ G( a, b, z ) ] ]</b></center>
+
+<br><br>We will use the Q-Matrix instead of simple recursion or a variation of Binet's Formula because the matrix method is faster and will return exact integer results for large values of <b>z</b>. Below is the function code for the TI-89/92/V200 family of calculators. The bit of code that looks like <b><text>\->\</text></b> is the right arrow key for the storing of a value to a variable.
+
+<p><center><table width="50%" border="1" bgcolor="#FFFFCC" cellpadding="5"><tr align="center"><td><b>Lucas Probablistic Prime Test<br>Function Code for TI-89/92/V200 Series Calculators</b></td></tr>
+<tr valign="top"><td><b>
+:lucp(z)<br>
+:Func : Local a,b,t<br>
+:[[1,1][1,0]] \->\ a : z \->\ b : [[1,0][0,1]] \->\ t<br>
+:Loop<br>
+:If mod(b,2)=1 : mod(t*a,z) \->\ t<br>
+:int(b/2) \->\ b<br>
+:If b=0 : Exit<br>
+:mod(a^2,z) \->\ a<br>
+:EndLoop<br>
+:if mod(2*t[2,2]+t[1,2],z)=1 : return true<br>
+:return false<br>
+:EndFunc
+</b></td></tr></table></center>
+
+<br><br>Since the results are taken <b>mod z</b>, we can speed up the calculation by using modular exponentiation on the matrix and checking that the result is congruent to <b>1 mod z</b>. The modular exponentiation is built into the function so no separate routine needs to be called in its place. If the result of the modular exponentiation is congruent to <b>1 mod z</b> then the function returns 'true', meaning that either <b>z</b> is prime or is a pseudoprime for this test. If the result is <b>NOT</b> congruent to <b>1 mod z</b>, then <b>z</b> is definitely <b>NOT</b> prime. This is the key for understanding what a probablistic prime test is; if the number fails the test then it is guaranteed to NOT be a prime number... if the number passes the test then it is <b>probably</b> a prime number OR that number may be one of the pseudoprimes for that test. A pseudoprime is a composite number that fools the test; the test passes the pseudoprime off as prime while actually the number has two or more factors.
+
+<br><br>The format for using the Lucas Prime Test on the calculator is <b>lucp( z )</b> with <b>z</b> being a positive integer. Here are some examples:
+
+<blockquote><b>lucp( 13 )</b> returns <b>'true'</b></blockquote>
+
+<blockquote><b>lucp( 319 )</b> returns <b>'false'</b> since <b>( 319 = 11 * 29 )</b></blockquote>
+
+<blockquote><b>lucp( 651693055693681 )</b> returns <b>'false'</b> in 5.37 sec</blockquote>
+
+<blockquote><b>lucp( 705 )</b> returns <b>'true'</b> though <b>705</b> is obviously <b>NOT</b> a prime number since <b>( 705 = 3 * 5 * 47 )</b></blockquote>
+
+<blockquote><b>lucp( 2465 )</b> returns <b>'true'</b> though again <b>2465</b> is <b>NOT</b> a prime number since <b>( 2465 = 5 * 17 * 29 )</b>. These last two examples should be enough to demonstrate the fact that there are numbers that fool this test.</blockquote>
+
+<br>The number <b>651693055693681</b> is a Carmichael Number, a composite integer that passes the simple Fermat Test to any base besides one of its prime factors: <b>72931, 87517, or 102103</b>. ( The Fermat Test is another probablistic prime test that checks whether <b>b ^ ( n - 1 ) mod n</b> is equal to <b>1</b>. If it is then <b>n</b> is probably prime. ) Numbers such as these may fool the Fermat test but won't fool both the Lucas and Fermat test.
+
+<br><br>One last note. Don't confuse this simple Lucas probable prime test with the more comprehensive Lucas-Lehmer test that is based on the same principles.
+
+
+
+<br><br><br><center><font size="4"><b>Perrin Probablistic Prime Test</b></font></center>
+
+<br>The Perrin Prime test is based on a property of another recurrent sequence. The terms of the Perrin Sequence have the special property such that <b>P( z )</b> is congruent to <b>0 mod z</b>, if <b>z</b> is a prime number (or is a pseudoprime as in the Lucas Test). For a given integer <b>z</b> the function returns <b>'true'</b> if <b>z</b> is determined to be prime and returns <b>'false'</b> if <b>z</b> is composite.
+
+<br><br>The Perrin Sequence is similiar to the Fibonacci and Lucas Sequences. In the case of the Perrin Sequence, we set <b>P( 0 ) = 3, P( 1 ) = 0, P( 2 ) = 2</b> and then define the sequence as <b>P( z ) = P( z - 2 ) + P( z - 3 )</b>. The Perrin Sequence begins <b>3, 0, 2, 3, 2, 5, 5, 7, 10, 12, 17, ...</b>  and can also be expressed in matrix form:
+
+<br><br><center><b>P( z ) = [ [ 0 1 1 ] [ 1 0 0 ] [ 0 1 0 ] ]<sup>( z - 2 )</sup> * [ [ P( 2 ) ] [ P( 1 ) ] [ P( 0 ) ] ] = [ [ P( z + 2 ) ] [ P( z + 1 ) ] [ P( z ) ] ]</b></center>
+
+<br><br>Again, since we are also taking terms of the sequence <b>mod z</b>, we can use modular exponentiation to speed up the calculation. This is built into the function code itself so no external powermod function file is required.
+
+<br><br>Just as in the Lucas test, if the function returns <b>'false'</b> then the argument is definitely <b>NOT</b> prime. If the function returns <b>'true'</b> then <b>z</b> is PROBABLY prime. Actually, <b>z</b> is extremely likely to be a prime number since the Perrin pseudoprimes are so extremely rare.
+
+<br><br>Perrin Pseudoprimes are composite numbers that pass the Perrin Test; the function returns <b>'true'</b> when the number is actually NOT a prime number. Perrin Pseudoprimes are very rare, fewer are found for this test than is found for many other tests. The only two Perrin Pseudoprimes found less than a million are <b>271,441</b> and <b>904,631</b>. Contrast this with the two lowest pseudoprimes for the Lucas test - <b>705</b> and <b>2465</b>.
+
+<br><br>Below is the function code for the TI-89/92/V200 family of calculators:
+
+<p><center><table width="50%" border="1" bgcolor="#FFFFCC" cellpadding="5"><tr align="center"><td><b>Perrin Probablistic Prime Test<br>Function Code for TI-89/92/V200 Series Calculators</b></td></tr>
+<tr valign="top"><td><b>
+:perrp(z)<br>
+:Func : Local a,b,t<br>
+:[[0,1,1][1,0,0][0,1,0]] \->\ a : z-2 \->\b<br>
+:[[1,0,0][0,1,0][0,0,1]] \->\ t<br>
+:Loop<br>
+:If mod(b,2)=1 : mod(t*a,z) \->\ t<br>
+:(b-mod(b,2))/2 \->\ b<br>
+:If b=0 : Exit<br>
+:mod(a^2,z) \->\ a<br>
+:EndLoop<br>
+:if mod((t*[[2][0][3]])[1,1],z)=0 : return true<br>
+:return false<br>
+:EndFunc<br>
+</b></td></tr></table></center>
+
+<br>The format for this test is <b>perrp( z )</b> with <b>z</b> a positive integer. Here are some examples:
+
+<blockquote><b>perrp( 41 )</b> returns <b>'true'</b></blockquote>
+
+<blockquote><b>perrp( 93 )</b> returns <b>'false'  ( 93 = 3 * 31 )</b></blockquote>
+
+<blockquote><b>perrp( 651693055693681 )</b> returns <b>'false'</b> in 9.11 sec so our example Carmichael Number didn't fool the Perrin test either. Notice that it took the Perrin test longer to run due to a larger matrix but the Perrin test is also more powerful.</blockquote>
+
+<blockquote><b>perrp( 271441 )</b> returns <b>'true'</b> in 3.00 sec</blockquote>
+
+<blockquote><b>perrp( 904631 )</b> returns <b>'true'</b> in 3.47 sec</blockquote>
+
+<br>The above two examples demonstrate the existence of Perrin Pseudoprimes - integers that fool the Perrin test. Both <b>271441</b> and <b>904631</b> are composite integers, not prime. Their factorizations are; <b>( 271441 = 521 * 521 )</b> and <b>( 904631 = 7 * 13 * 9941 )</b>.
+
+    
+
+    
+
+
+<br><br>
+<br><i>TITLE: Lucas and Perrin Probablistic Prime Tests</i>
+<br><i>URL: https://jcullen88.github.io/CullenGenealogyHomepage/Math4.html</i>
+<br>&copy; October 12, 2006 - Jim Cullen - all rights reserved.
+
+<HR WIDTH="95%"><BR>
+<CENTER><B><A HREF="Math.html">Use your Back Button or click here to go to the Math Index</A></B></CENTER>
+
+</BODY>
+
+</HTML>

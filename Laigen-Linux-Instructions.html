@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Laigen: GPG Instructions for Linux</title>
+</head>
+
+<body style="background-image: url('Build.jpg');color:white;">
+
+<a href="Laigen1.html"><img src="up.gif" alt=""></a><i style="font-size: small;"><b>Click the arrow to go up a level to the <a href="Laigen1.html" style="color:lightskyblue;">Laigen Main Page</a></b></i><br><br>
+
+<center><h1 style="margin:0;">Instructions for verifying Laigen2.zip on Linux</h1></center><br><hr width="98%">
+
+<div style="display:flexbox;align-items:center;margin:1.5em 25%;">
+<p>Download both <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i> and place them in the same folder.</p>
+<p>Make sure you have OpenPGP-compliant software installed. Most Linux-based distros come with <a href="https://gnupg.org/" target="_blank" style="color:lightskyblue;">GnuPG</a> installed already, so that is what will be used in the examples here.</p>
+<h3>Import signing key</h3>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>gpg --keyserver hkp://keys.openpgp.org:80 --recv-key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
+</pre>
+<br>
+<h3>Verify that the key was imported correctly</h3>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>gpg --list-key --with-fingerprint 8585F6FECA38F889</span>
+</pre>
+<p>The output should look like this:</p>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>pub   rsa4096 2026-04-13 [SC] [expires: 2028-04-12]</span>
+<span>      EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
+<span>uid           [ unknown] Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;</span>
+</pre>
+<p><b>MAKE SURE</b> that the signing key's fingerprint, shown below:</p>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
+</pre>
+<p>matches the fingerprint in your output.</p>
+<br>
+<h3>Verify authenticity of Laigen2.zip</h3>
+<p>Make sure you're in the same directory as <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i>!</p>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>gpg --verify Laigen2.zip.asc Laigen2.zip</span>
+</pre>
+<p>You should see this output:</p>
+<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<span>gpg: Signature made Mon 13 Apr 2026 02:50:41 PM EDT</span>
+<span>gpg:                using RSA key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
+<span>gpg:                issuer "bjacullen01@proton.me"</span>
+<span>gpg: Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
+</pre>
+<p>GPG will most likely show you a warning, right under the output shown above, that the key's user ID is not certified with a trusted signature. <u>This is expected, and is not a problem!</u></p>
+</div><br>
+
+<center>
+<hr width="98%"><br>
+<a href="Laigen1.html" style="color:lightskyblue;"><b>Use your Back Button or click here to go the Laigen Main Page</b></a>
+</center><br>
+
+</body>
+</html>

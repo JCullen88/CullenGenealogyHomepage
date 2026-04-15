@@ -12,7 +12,8 @@
 
 <div style="display:flexbox;align-items:center;margin:1.5em 25%;">
 <p>Download both <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i> and place them in the same folder.</p>
-<p>Make sure you have OpenPGP-compliant software installed. Most Linux-based distros come with <a href="https://gnupg.org/" target="_blank" style="color:lightskyblue;">GnuPG</a> installed already, so that is what will be used in the examples here.</p>
+<p><a style="color:lightskyblue;"href="https://openpgp.org/"target="_blank">OpenPGP</a>-compliant software is needed to verify authenticity. <a style="color:lightskyblue;"href="https://gnupg.org/"target="_blank">GnuPG</a> is what will be used in the instructions below. If you're using another kind of OpenPGP-compliant software, you should look for instructions written specifically for your choice of software.</p>
+<p>If you're using GnuPG, the instructions below apply to all platforms when using a terminal, even on mobile.</p>
 <h3>Import signing key</h3>
 <pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
 <span>gpg --keyserver hkp://keys.openpgp.org:80 --recv-key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>

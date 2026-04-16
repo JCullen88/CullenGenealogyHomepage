@@ -22,33 +22,33 @@
 <p><a href="https://openpgp.org/"target="_blank">OpenPGP</a>-compliant software is needed to verify authenticity. <a href="https://gnupg.org/"target="_blank">GnuPG</a> is what will be used in the instructions below. If you're using another kind of OpenPGP-compliant software, you should look for instructions written specifically for your choice of software.</p>
 <p>If you're using GnuPG, the instructions below apply to all platforms when using a terminal, even on mobile.</p>
 <h3>Import signing key</h3>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --keyserver hkp://keys.openpgp.org:80 --recv-key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
 </pre>
 <br>
 <h3>Verify that the key was imported correctly</h3>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --list-key --with-fingerprint 8585F6FECA38F889</span>
 </pre>
 <p>The output should look like this:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>pub   rsa4096 2026-04-13 [SC] [expires: 2028-04-12]</span>
 <span>      EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
 <span>uid           [ unknown] Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;</span>
 </pre>
 <p><b>MAKE SURE</b> that the signing key's fingerprint, shown below:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
 </pre>
 <p>matches the fingerprint in your output.</p>
 <br>
 <h3>Verify authenticity of Laigen2.zip</h3>
 <p>Make sure you're in the same directory as <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i>!</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --verify Laigen2.zip.asc Laigen2.zip</span>
 </pre>
 <p>You should see this output:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg: Signature made Mon 13 Apr 2026 02:50:41 PM EDT</span>
 <span>gpg:                using RSA key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
 <span>gpg:                issuer "bjacullen01@proton.me"</span>

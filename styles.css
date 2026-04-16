@@ -1,0 +1,13 @@
+.main { /* This class only appears in Laigen-Verify.html so far */
+    display: grid;
+    grid-auto-rows: auto;
+    margin: 1.5em 25%;
+}
+
+@media only screen and (max-width:1280px) { /* At 1280 pixels width and below, apply these rules */
+    .main { 
+        display:grid;
+        grid-auto-rows:auto;
+        margin: 1.5em 0;
+    }
+}

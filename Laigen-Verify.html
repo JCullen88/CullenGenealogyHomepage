@@ -2,65 +2,67 @@
 <html>
 <head>
 <title>Laigen - Verification Instructions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
 <style>
-    p {
-        font-weight: bold;
-    }
+    p {font-weight: bold;}
+    a {color:lightskyblue;}
+    h1 {margin:0;}
 </style>
 </head>
 
 <body style="background-image: url('Build.jpg');color:white;">
 
-<a href="Laigen1.html"><img src="up.gif" alt=""></a><i style="font-size: small;"><b>Click the arrow to go up a level to the <a href="Laigen1.html" style="color:lightskyblue;">Laigen Main Page</a></b></i><br><br>
+<a href="Laigen1.html"><img src="up.gif" alt=""></a><i style="font-size: small;"><b>Click the arrow to go up a level to the <a href="Laigen1.html">Laigen Main Page</a></b></i><br><br>
 
-<center><h1 style="margin:0;">Instructions for verifying Laigen2.zip</h1></center><br><hr width="98%">
+<center><h1>Instructions for verifying Laigen2.zip</h1></center><br><hr width="98%">
 
-<div style="display:flexbox;align-items:center;margin:1.5em 25%;">
+<div class="main">
 <p>Download both <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i> and place them in the same folder.</p>
-<p><a style="color:lightskyblue;"href="https://openpgp.org/"target="_blank">OpenPGP</a>-compliant software is needed to verify authenticity. <a style="color:lightskyblue;"href="https://gnupg.org/"target="_blank">GnuPG</a> is what will be used in the instructions below. If you're using another kind of OpenPGP-compliant software, you should look for instructions written specifically for your choice of software.</p>
+<p><a href="https://openpgp.org/"target="_blank">OpenPGP</a>-compliant software is needed to verify authenticity. <a href="https://gnupg.org/"target="_blank">GnuPG</a> is what will be used in the instructions below. If you're using another kind of OpenPGP-compliant software, you should look for instructions written specifically for your choice of software.</p>
 <p>If you're using GnuPG, the instructions below apply to all platforms when using a terminal, even on mobile.</p>
 <h3>Import signing key</h3>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --keyserver hkp://keys.openpgp.org:80 --recv-key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
 </pre>
 <br>
 <h3>Verify that the key was imported correctly</h3>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --list-key --with-fingerprint 8585F6FECA38F889</span>
 </pre>
 <p>The output should look like this:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>pub   rsa4096 2026-04-13 [SC] [expires: 2028-04-12]</span>
 <span>      EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
 <span>uid           [ unknown] Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;</span>
 </pre>
 <p><b>MAKE SURE</b> that the signing key's fingerprint, shown below:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
 </pre>
 <p>matches the fingerprint in your output.</p>
 <br>
 <h3>Verify authenticity of Laigen2.zip</h3>
 <p>Make sure you're in the same directory as <i>Laigen2.zip</i> and <i>Laigen2.zip.asc</i>!</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg --verify Laigen2.zip.asc Laigen2.zip</span>
 </pre>
 <p>You should see this output:</p>
-<pre style="overflow:auto;background-color:black;margin:0;padding:1em;line-height:1.4;">
+<pre class="terminal-block">
 <span>gpg: Signature made Mon 13 Apr 2026 02:50:41 PM EDT</span>
 <span>gpg:                using RSA key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
 <span>gpg:                issuer "bjacullen01@proton.me"</span>
 <span>gpg: Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
 </pre><br>
-<div style="margin:0;background-color:#282828;border:3px solid black;padding:5px;padding-left:1em;display:flex;align-items:center;">
+<div class="note-head">
 <b><u>Note</u></b></div>
-<div style="margin:0;background-color:#5a5a5a;border:3px solid black;border-top:none;padding:1em;padding-bottom:0;">
-<p style="margin:0; margin-bottom:1em;line-height:1.4;">GPG will most likely show you a warning, right under the output shown above, that the key's User ID is not certified with a trusted signature.</p>
+<div class="note-body">
+<p>GPG will most likely show you a warning, right under the output shown above, that the key's User ID is not certified with a trusted signature.</p>
 <p><u style="color:#80dd80;">This is expected, and is not a problem!</u></p>
 <p>As long as the output shows:</p>
-<span style="font-family:monospace;border:1px solid black;background-color:#494949;">Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
+<span class="loc">Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
 <p>and the key's fingerprint is:</p>
-<span style="font-family:monospace;border:1px solid black;background-color:#494949">EFBA 7D9E C0EE 464C 489D B45F 8585 F6FE CA38 F889</span>
+<span class="loc">EFBA 7D9E C0EE 464C 489D B45F 8585 F6FE CA38 F889</span>
 <p>then you've verified that <i>Laigen2.zip</i> is intact and has not been tampered with!</p>
 </div>
 </div>
@@ -68,7 +70,7 @@
 
 <center>
 <hr width="98%"><br>
-<a href="Laigen1.html" style="color:lightskyblue;"><b>Use your Back Button or click here to go the Laigen Main Page</b></a>
+<a href="Laigen1.html"><b>Use your Back Button or click here to go the Laigen Main Page</b></a>
 </center><br>
 
 </body>

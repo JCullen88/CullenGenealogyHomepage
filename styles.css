@@ -1,0 +1,41 @@
+.main { /* This class only appears in Laigen-Verify.html so far */
+    display: grid;
+    grid-auto-rows: auto;
+    margin: 1.5em 25%;
+}
+
+.terminal-block { /* Appears only on Laigen-Verify.html, neat way to display terminal commands and output */
+    overflow: auto;
+    background-color:black;
+    margin:0;
+    padding:1em;
+    line-height:1.4;
+}
+
+.loc { /* loc, short for 'line of code'. Appears only on Laigen-Verify.html, used to place monospace text inline with regular text */
+    font-family: monospace;
+    border: 1px solid black;
+    background-color: #494949;
+    line-height: 1.2rem;
+}
+
+.note-head { /* Appears only on Laigen-Verify.html, used to create a note 'window' */
+    margin: 0;
+    padding: 6px 1em;
+    background-color: #282828;
+    border: 3px solid black;
+}
+
+.note-body { /* same as above */
+    margin: 0;
+    padding: 0 1em;
+    background-color: #5a5a5a;
+    border: 3px solid black;
+    border-top: none;
+}
+
+@media only screen and (max-width:1280px) { /* At 1280 pixels width and below, apply these rules */
+    .main { 
+        margin: 1.5em 0;
+    }
+}

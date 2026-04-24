@@ -1,10 +1,228 @@
-.main { /* This class only appears in Laigen-Verify.html so far */
-    display: grid;
-    grid-auto-rows: auto;
-    margin: 1.5em 25%;
+/* ==================================================== */
+/* ==================== MAIN PAGES ==================== */
+/* ==================================================== */
+
+body { /* just used to get rid of margin for body */
+    margin: 0;
 }
 
-.terminal-block { /* Appears only on Laigen-Verify.html, neat way to display terminal commands and output */
+.main { /* Main 'container', used to create layout of page */
+    display: grid;
+    width: auto;
+    grid-auto-rows: auto;
+    margin: 0 25%;
+}
+
+.content { /* this contains all of the contents of the page, except for mainpages-nav, header, and footer */
+    width: auto;
+}
+
+.mainpages-nav { /* This is for the buttons at the top left on all the main pages, like index.html */
+    margin: 0 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mainpages-nav a { /* used to set the width for the links in mainpages-nav, otherwise they are wider than the GIFs :( */
+    margin-top: 0.5em;
+    width: 61px;
+    /* border: 1px solid white; */
+}
+
+.mainpages-nav .online-since { /* used to style the 'ONLINE SINCE 1996' text */
+    margin: 0.5em;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.header { /* contains links to homepage, and whatever else we decide to put in it */
+    border-bottom: 3px solid black;
+    position: static;
+    width: auto;
+    margin-left: 5.8em;
+    padding: 1em;
+    top: 0;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header .whatsnew { /* 1st column in header. Only contains 'whatsnew' button, hence the name */
+    display: flex;
+    justify-self: start;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    max-width: fit-content;
+    max-height: 52px;
+}
+
+.header .whatsnew a {
+    text-decoration: none;
+    color: inherit;
+    min-width: fit-content;
+    max-height: 52px;
+    padding: 17px;
+}
+
+.header .whatsnew:hover {
+    background-color: red;
+}
+
+.header-images { /* 2nd column in header. centers images */
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-images img { /* control size of main images in header */
+    width: auto;
+    height: 8em;
+}
+
+.header .nav-menu { /* 3rd column in header, rules for the headers dropdown menu */
+    grid-column: 3;
+    position: relative;
+    max-width: fit-content;
+    justify-self: end;
+}
+
+.header .nav-menu-btn { /* rules for the nav button, the thing you hover over to see the menu */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    min-width: 160px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .nav-menu:hover .nav-menu-btn { /* when the list is visible, turn the button red */
+    background-color: red;
+}
+
+.header .nav-menu-btn img { /* resizes the SVG image in the nav menu button */
+    max-height: 28px;
+}
+
+.header .nav-menu-content { /* rules for the list of options in the dropdown menu */
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    justify-self: end;
+    min-width: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header .nav-menu-content hr { /* needed to not make it look like the list was split in places */
+    width: 96%;
+}
+
+.header .nav-menu-content a { /* stop the links from being blue and underlined, also makes the link fill the entire block instead of just being text */
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.header .nav-menu-content a:hover { /* makes the block you're hovering over turn different color */
+    background-color: #cc0000;
+}
+
+.header .nav-menu:hover .nav-menu-content { /* when you hover over the nav menu button, display the list */
+    display: block;
+}
+
+.main-welcome h1, h2{ /* Only on index.html, just removes margin from text. This could be removed and be done in-line instead */
+    margin: 0;
+}
+
+footer { /* self-explanatory, section at very bottom of page containing additional info and links */
+    width: auto;
+    min-height: 150px;
+    margin: 0;
+    margin-left: 91px;
+    border-top: 5px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: lightskyblue;
+}
+
+.footer-links { /* 1st column in footer, contains the original text found at bottom of page */
+    grid-column: 1;
+    margin: 1em;
+}
+
+footer .important-links { /* 2st column in footer, contains most important (i think) links for the site */
+    grid-column: 2;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .important-links p {
+    font-weight: bold;
+}
+
+footer .important-links a {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer .important-links a:hover {
+    text-decoration: underline;
+}
+
+footer .decor { /* 3rd column in footer, didn't know what to put here so i just threw in the site logo. we can put something else here instead if need arises */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+footer img {
+    width: auto;
+    height: 124px;
+}
+
+/* ======================================================= */
+/* ==================== LAIGEN VERIFY ==================== */
+/* ======================================================= */
+
+.terminal-block { /* neat way to display terminal commands and output */
     overflow: auto;
     background-color:black;
     margin:0;
@@ -12,21 +230,21 @@
     line-height:1.4;
 }
 
-.loc { /* loc, short for 'line of code'. Appears only on Laigen-Verify.html, used to place monospace text inline with regular text */
+.loc { /* loc, short for 'line of code', used to place monospace text inline with regular text */
     font-family: monospace;
     border: 1px solid black;
     background-color: #494949;
     line-height: 1.2rem;
 }
 
-.note-head { /* Appears only on Laigen-Verify.html, used to create a note 'window' */
+.note-head { /* This and the block below are used to create a note 'window'. note-head is like the title bar on a window in Windows */
     margin: 0;
     padding: 6px 1em;
     background-color: #282828;
     border: 3px solid black;
 }
 
-.note-body { /* same as above */
+.note-body { /* note-body contains the actual content of the note */
     margin: 0;
     padding: 0 1em;
     background-color: #5a5a5a;
@@ -34,7 +252,23 @@
     border-top: none;
 }
 
-@media only screen and (max-width:1280px) { /* At 1280 pixels width and below, apply these rules */
+/* ==================================================================== */
+/* ==================== LAYOUT FOR SMALLER SCREENS ==================== */
+/* ==================================================================== */
+
+/* At 1600 pixels width and below, apply these rules */
+@media only screen and (max-width:1600px) {
+    .header .welcome {
+        font-size: 1.12rem;
+    }
+
+    .header .nav-menu-content {
+        max-height: 460px;
+    }
+}
+
+/* RULES FOR TABLET AND PHONE SCREENS | At 1280 pixels width and below, apply these rules */
+@media only screen and (max-width:1280px) {
     .main { 
         margin: 1.5em 0;
     }

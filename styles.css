@@ -7,77 +7,27 @@ body { /* just used to get rid of margin for body */
 }
 
 .main { /* Main 'container', used to create layout of page */
-    display: grid;
     width: auto;
-    grid-auto-rows: auto;
     margin: 0 25%;
+    justify-content: center;
 }
 
 .content { /* this contains all of the contents of the page, except for mainpages-nav, header, and footer */
     width: auto;
 }
 
-.mainpages-nav { /* This is for the buttons at the top left on all the main pages, like index.html */
-    margin: 0 0.5em;
-    display: flex;
-    flex-direction: column;
-    width: min-content;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.mainpages-nav a { /* used to set the width for the links in mainpages-nav, otherwise they are wider than the GIFs :( */
-    margin-top: 0.5em;
-    width: 61px;
-    /* border: 1px solid white; */
-}
-
-.mainpages-nav .online-since { /* used to style the 'ONLINE SINCE 1996' text */
-    margin: 0.5em;
-    color: red;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-}
-
 .header { /* contains links to homepage, and whatever else we decide to put in it */
     border-bottom: 3px solid black;
     position: static;
     width: auto;
-    margin-left: 5.8em;
-    padding: 1em;
+    padding-bottom: 1.5em;
     top: 0;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: space-evenly;
-}
-
-.header .whatsnew { /* 1st column in header. Only contains 'whatsnew' button, hence the name */
-    display: flex;
-    justify-self: start;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    max-width: fit-content;
-    max-height: 52px;
-}
-
-.header .whatsnew a {
-    text-decoration: none;
-    color: inherit;
-    min-width: fit-content;
-    max-height: 52px;
-    padding: 17px;
-}
-
-.header .whatsnew:hover {
-    background-color: red;
 }
 
 .header-images { /* 2nd column in header. centers images */
@@ -89,17 +39,80 @@ body { /* just used to get rid of margin for body */
 
 .header-images img { /* control size of main images in header */
     width: auto;
-    height: 8em;
+    height: 10em;
 }
 
-.header .nav-menu { /* 3rd column in header, rules for the headers dropdown menu */
+.header .nav {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .mainpages-nav { /* This is for the buttons at the top left on all the main pages, like index.html */
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+    background-color: black;
+    border: 6px inset red;
+}
+
+.nav .mainpages-nav img {
+    width: auto;
+    height: 61px;
+}
+
+.nav .mainpages-nav a { /* used to set the width for the links in mainpages-nav, otherwise they are wider than the GIFs :( */
+    margin: 0.5em;
+    width: fit-content;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+
+.nav .mainpages-nav a:hover {
+    border: 2px solid red;
+}
+
+.nav .whatsnew { /* 1st column in header. Only contains 'whatsnew' button, hence the name */
+    margin-right: 1px;
+    display: flex;
+    justify-self: start;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    max-width: fit-content;
+    height: 52px;
+}
+
+.nav .whatsnew a {
+    text-decoration: none;
+    color: inherit;
+    min-width: fit-content;
+    padding: 17px;
+}
+
+.nav .whatsnew:hover {
+    background-color: red;
+}
+
+.nav .nav-menu { /* 3rd column in header, rules for the headers dropdown menu */
+    margin-left: 1px;
     grid-column: 3;
     position: relative;
     max-width: fit-content;
     justify-self: end;
 }
 
-.header .nav-menu-btn { /* rules for the nav button, the thing you hover over to see the menu */
+.nav .nav-menu-btn { /* rules for the nav button, the thing you hover over to see the menu */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,21 +121,23 @@ body { /* just used to get rid of margin for body */
     font-weight: bold;
     padding: 12px;
     min-width: 160px;
+    height: 52px;
     border: none;
     cursor: pointer;
 }
 
-.header .nav-menu:hover .nav-menu-btn { /* when the list is visible, turn the button red */
+.nav .nav-menu:hover .nav-menu-btn { /* when the list is visible, turn the button red */
     background-color: red;
 }
 
-.header .nav-menu-btn img { /* resizes the SVG image in the nav menu button */
+.nav .nav-menu-btn img { /* resizes the SVG image in the nav menu button */
     max-height: 28px;
 }
 
-.header .nav-menu-content { /* rules for the list of options in the dropdown menu */
+.nav .nav-menu-content { /* rules for the list of options in the dropdown menu */
     display: none;
     position: absolute;
+    border: 3px solid red;
     background-color: black;
     color: white;
     justify-self: end;
@@ -132,11 +147,11 @@ body { /* just used to get rid of margin for body */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.header .nav-menu-content hr { /* needed to not make it look like the list was split in places */
+.nav .nav-menu-content hr { /* needed to not make it look like the list was split in places */
     width: 96%;
 }
 
-.header .nav-menu-content a { /* stop the links from being blue and underlined, also makes the link fill the entire block instead of just being text */
+.nav .nav-menu-content a { /* stop the links from being blue and underlined, also makes the link fill the entire block instead of just being text */
     color: white;
     padding: 1em;
     text-decoration: none;
@@ -144,23 +159,33 @@ body { /* just used to get rid of margin for body */
     display: block;
 }
 
-.header .nav-menu-content a:hover { /* makes the block you're hovering over turn different color */
+.nav .nav-menu-content a:hover { /* makes the block you're hovering over turn different color */
     background-color: #cc0000;
 }
 
-.header .nav-menu:hover .nav-menu-content { /* when you hover over the nav menu button, display the list */
+.nav .nav-menu:hover .nav-menu-content { /* when you hover over the nav menu button, display the list */
     display: block;
 }
 
-.main-welcome h1, h2{ /* Only on index.html, just removes margin from text. This could be removed and be done in-line instead */
+.main-welcome {
+    margin: 1.5em;
+}
+
+.main-welcome h1 { /* Only on index.html, just removes margin from text. This could be removed and be done in-line instead */
     margin: 0;
+}
+
+.more-nav-btns {
+    margin: 1em 0;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer { /* self-explanatory, section at very bottom of page containing additional info and links */
     width: auto;
     min-height: 150px;
     margin: 0;
-    margin-left: 91px;
     border-top: 5px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -207,15 +232,31 @@ footer .important-links a:hover {
 }
 
 footer .decor { /* 3rd column in footer, didn't know what to put here so i just threw in the site logo. we can put something else here instead if need arises */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+footer .center-decor-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer img {
     width: auto;
-    height: 124px;
+    height: 112px;
+}
+
+footer .online-since { /* used to style the 'ONLINE SINCE 1996' text */
+    color: red;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 /* ======================================================= */
@@ -270,6 +311,90 @@ footer img {
 /* RULES FOR TABLET AND PHONE SCREENS | At 1280 pixels width and below, apply these rules */
 @media only screen and (max-width:1280px) {
     .main { 
-        margin: 1.5em 0;
+        margin: 1.5em 0.5em;
+    }
+
+    .header-images img {
+        height: 6.5em;
+    }
+
+    .nav .mainpages-nav a {
+        border: none;
+    }
+
+    .nav .mainpages-nav img {
+        height: 30px;
+    }
+
+    .nav .whatsnew {
+        font-size: 0.6rem;
+    }
+
+    .nav-menu .nav-menu-content {
+        max-height: 400px;
+        min-width: 300px;
+    }
+
+    .main-welcome {
+        margin: 0;
+    }
+
+    .main-welcome h1 {
+        font-size: 1.6rem;
+    }
+
+    .more-nav-btns {
+        justify-self: center;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .more-nav-btns img {
+        margin: 1px;
+        width: auto;
+        height: auto;
+    }
+
+    footer {
+        
+        font-size: 0.6rem;
+    }
+
+    footer .decor {
+        align-items: end;
+        justify-content: start;
+    }
+
+    footer img {
+        height: 61px;
+    }
+
+    footer .online-since {
+        font-size: 0.8rem;
+    }
+}
+
+/* For Galaxy Z Fold users (why is it so thin? Samsung make it wider pls) */
+@media only screen and (max-width:344px) {
+    .nav-menu .nav-menu-content {
+        max-height: 500px;
+        min-width: 300px;
+    }
+
+    footer img {
+        width: 36px;
+        height: auto;
+    }
+
+    footer .online-since {
+        font-size: 0.6rem;
+    }
+}
+
+/* Anyone on smaller screens height-wise */
+@media only screen and (max-height:600px) {
+    .nav-menu .nav-menu-content {
+        max-height: 340px;
     }
 }

@@ -278,6 +278,11 @@ footer .online-since { /* used to style the 'ONLINE SINCE 1996' text */
     line-height: 1.2rem;
 }
 
+.note {
+    display: flex;
+    flex-direction: column;
+}
+
 .note-head { /* This and the block below are used to create a note 'window'. note-head is like the title bar on a window in Windows */
     margin: 0;
     padding: 6px 1em;

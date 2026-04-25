@@ -335,6 +335,10 @@ footer .online-since { /* used to style the 'ONLINE SINCE 1996' text */
         min-width: 300px;
     }
 
+    .nav .nav-menu:hover .nav-menu-btn {
+        background-color: black;
+    }
+
     .main-welcome {
         margin: 0;
     }

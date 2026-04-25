@@ -38,8 +38,8 @@
 </div>
 
 <div class="nav-menu">
-<button class="nav-menu-btn">Site Pages<img src="menu-icon.svg" alt="Menu"></button>
-<div class="nav-menu-content">
+<button href="javascript:void(0);" onclick="toggleMenu()" class="nav-menu-btn">Site Pages<img src="menu-icon.svg" alt="Menu"></button>
+<div class="nav-menu-content" id="dropDownList">
     <a href="/">Home</a>
     <a href="WhatsNew.html">What's New? (Last Update: 19 APR 2026)</a>
     <a href="DailyLog.html">&nbsp;&nbsp;&nbsp;The Daily Log</a>
@@ -150,6 +150,19 @@
 </div>
 </div>
 </footer>
+
+<script>
+function toggleMenu() {
+    var list = document.getElementById("dropDownList");
+    if (outerWidth <= 1280) { /* dont change style if not on mobile, else list gets stuck open */
+        if (list.style.display === "block") {
+            list.style.display = "none";
+        } else {
+            list.style.display = "block";
+        }
+    }
+}
+</script>
 
 </body>
 

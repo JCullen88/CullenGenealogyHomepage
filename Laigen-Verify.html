@@ -23,22 +23,23 @@
 <p>If you're using GnuPG, the instructions below apply to all platforms when using a terminal, even on mobile.</p>
 <h3>Import signing key</h3>
 <pre class="terminal-block">
-<span>gpg --keyserver hkp://keys.openpgp.org:80 --recv-key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
+<span>gpg --keyserver keys.openpgp.org --recv-key 9578F98FA389921993A04A742D41270933F04B9B</span>
 </pre>
 <br>
 <h3>Verify that the key was imported correctly</h3>
 <pre class="terminal-block">
-<span>gpg --list-key --with-fingerprint 8585F6FECA38F889</span>
+<span>gpg --list-key --with-fingerprint 2D41270933F04B9B</span>
 </pre>
 <p>The output should look like this:</p>
 <pre class="terminal-block">
-<span>pub   rsa4096 2026-04-13 [SC] [expires: 2028-04-12]</span>
-<span>      EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
-<span>uid           [ unknown] Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;</span>
+<span>pub   rsa4096 2026-03-12 [SC]</span>
+<span>      9578 F98F A389 9219 93A0  4A74 2D41 2709 33F0 4B9B</span>
+<span>uid           [ unknown] Brandon Cullen &lt;bjacullen01@proton.me&gt;</span>
+<span>sub   rsa4096 2026-03-12 [E]</span>
 </pre>
 <p><b>MAKE SURE</b> that the signing key's fingerprint, shown below:</p>
 <pre class="terminal-block">
-<span>EFBA 7D9E C0EE 464C 489D  B45F 8585 F6FE CA38 F889</span>
+<span>9578 F98F A389 9219 93A0  4A74 2D41 2709 33F0 4B9B</span>
 </pre>
 <p>matches the fingerprint in your output.</p>
 <br>
@@ -49,10 +50,10 @@
 </pre>
 <p>You should see this output:</p>
 <pre class="terminal-block">
-<span>gpg: Signature made Mon 13 Apr 2026 02:50:41 PM EDT</span>
-<span>gpg:                using RSA key EFBA7D9EC0EE464C489DB45F8585F6FECA38F889</span>
+<span>gpg: Signature made Sat 09 May 2026 12:01:51 AM EDT</span>
+<span>gpg:                using RSA key 9578F98FA389921993A04A742D41270933F04B9B</span>
 <span>gpg:                issuer "bjacullen01@proton.me"</span>
-<span>gpg: Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
+<span>gpg: Good signature from "Brandon Cullen &lt;bjacullen01@proton.me&gt;" [unknown]</span>
 </pre><br>
 <div class="note">
 <div class="note-head">
@@ -61,9 +62,9 @@
 <p>GPG will most likely show you a warning, right under the output shown above, that the key's User ID is not certified with a trusted signature.</p>
 <p><u style="color:#80dd80;">This is expected, and is not a problem!</u></p>
 <p>As long as the output shows:</p>
-<span class="loc">Good signature from "Brandon Cullen (Signing Key) &lt;bjacullen01@proton.me&gt;" [unknown]</span>
+<span class="loc">Good signature from "Brandon Cullen &lt;bjacullen01@proton.me&gt;" [unknown]</span>
 <p>and the key's fingerprint is:</p>
-<span class="loc">EFBA 7D9E C0EE 464C 489D B45F 8585 F6FE CA38 F889</span>
+<span class="loc">9578 F98F A389 9219 93A0 4A74 2D41 2709 33F0 4B9B</span>
 <p>then you've verified that <i>Laigen2.zip</i> is intact and has not been tampered with!</p>
 </div>
 </div>

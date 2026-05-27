@@ -7,6 +7,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script defer src="https://cdn.jsdelivr.net/npm/x_ite@15.0.3/dist/x_ite.min.js"></script>
+<style>
+    .wrap-game-window {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 1em;
+        background-color: #670000;
+    }
+
+    .wrap-game-window p {
+        margin: 0;
+        margin-top: 0.8em;
+    }
+
+    x3d-canvas {
+        width: 320px;
+        height: 240px;
+    }
+</style>
 </HEAD>
 
 <BODY BACKGROUND="Build.jpg" BGCOLOR="#000000" TEXT="#ffffff" LINK="#ffffff" VLINK="#ffffff" ALINK="#ffffff">
@@ -44,11 +63,14 @@
 <li>Freelook - Ctrl, then click and drag</li>
 </ul>
 
+<div class="wrap-game-window">
 <x3d-canvas 
     contentScale="1.0"
     update="auto"
     src="Laigen2.wrl">
 </x3d-canvas>
+<p>VRML viewer <a href="https://create3000.github.io/x_ite/" target="_blank">X_ITE</a>, created by <a href="https://github.com/create3000" target="_blank">create3000</a></p>
+</div>
 
 </CENTER>
 

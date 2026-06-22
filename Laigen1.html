@@ -25,6 +25,35 @@
         width: 320px;
         height: 240px;
     }
+
+    /* Resize game window for different screen widths */
+    @media (min-width: 481px) and (max-width: 768px) {
+        x3d-canvas {
+            width: 400px;
+            height: 300px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        x3d-canvas {
+            width: 640px;
+            height: 480px;
+        }
+    }
+
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        x3d-canvas {
+            width: 800px;
+            height: 600px;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        x3d-canvas {
+            width: 1280px;
+            height: 720px;
+        }
+    }
 </style>
 </HEAD>
 

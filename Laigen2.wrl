@@ -767,7 +767,7 @@ geometry Cylinder {radius .5 height 4}} ]}
 Transform { translation 80 4 67 rotation 1 0 -.7 -.7 children [USE ExitPipe]}
 Anchor { children [
 Transform { translation 90 1 73 children [USE Crystal2]} ]
-url "Laigen3.htm" description "Congratulations! You've escaped!"}
+url "Laigen3.html" description "Congratulations! You've escaped!"}
 DEF C1*2 Transform { translation 91.25 0 60.5 children [USE ExitPanel
 DEF TC1*2 TimeSensor {cycleInterval .05 loop FALSE}
 DEF PC1*2 PositionInterpolator {key [0,1]
